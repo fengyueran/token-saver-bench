@@ -1,0 +1,30 @@
+{
+  "codex": "0.158.0",
+  "fixture": {
+    "repository": "https://github.com/koajs/koa",
+    "commit": "824c1cf8de9a91a2941973b25dc8a3d3029b9e4f",
+    "dependencyLockSha256": "549a966f20aa64670f5812456dd793559d1dca24753be50773e4d4d32cc5ea1c"
+  },
+  "tools": {
+    "caveman": {
+      "commit": "2fd153c67988e980fb0b2455c90832159a6a5a25"
+    },
+    "ponytail": {
+      "commit": "e3ba2aa6f1e6f0bc4d69eb09c9f0d0a93af56156"
+    },
+    "rtk": {
+      "commit": "7efbaef462911f0fcb112c8a01025dc90f280617",
+      "runtimeVersion": "0.49.0"
+    },
+    "headroom": {
+      "commit": "d13e1966f820220b482a33c30bde1e926743939a",
+      "runtimeVersion": "0.39.1",
+      "runtimeSource": "PyPI release; repository checkout used for integration inspection only"
+    },
+    "codegraph": {
+      "commit": "290e03f7bc582b8726a104428f39bc178bac30bd",
+      "runtimeVersion": "1.6.0",
+      "runtimeSource": "npm release; repository checkout used for integration inspection only"
+    }
+  }
+}
