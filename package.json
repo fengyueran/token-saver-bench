@@ -9,13 +9,6 @@
   },
   "scripts": {
     "test": "node --test test/*.test.js",
-    "plan": "node bin/bench.js plan",
-    "smoke": "node bin/bench.js smoke",
-    "pilot": "node bin/pilot.js",
-    "audit": "node bin/audit.js",
-    "verify:pilots": "node bin/verify-pilots.js",
-    "setup": "node bin/setup.js",
-    "campaign": "node bin/campaign.js",
-    "report": "node bin/report.js"
+    "real-dev": "node bin/real-development.js"
   }
 }

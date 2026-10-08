@@ -1,25 +1,21 @@
-import { readFile } from 'node:fs/promises';
 import { createRequire } from 'node:module';
 import { createHash } from 'node:crypto';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 
 const require = createRequire(import.meta.url);
+const ponytailCommit = 'e3ba2aa6f1e6f0bc4d69eb09c9f0d0a93af56156';
 
 export async function instructionArm(root, arm) {
   if (arm === 'baseline')
     return { instructions: '', evidence: { kind: 'none' } };
-  if (!['caveman', 'ponytail'].includes(arm))
-    throw new Error(`Arm not ready: ${arm}`);
-  const source = path.join(root, '.cache/tools', arm);
-  const locks = JSON.parse(
-    await readFile(path.join(root, 'config/sources-lock.json'), 'utf8'),
-  );
+  if (arm !== 'ponytail') throw new Error(`Arm not ready: ${arm}`);
+  const source = path.join(root, '.cache/tools/ponytail');
   const commit = execFileSync('git', ['rev-parse', 'HEAD'], {
     cwd: source,
     encoding: 'utf8',
   }).trim();
-  if (commit !== locks.tools[arm].commit)
+  if (commit !== ponytailCommit)
     throw new Error('Tool commit mismatch');
   const dirty = execFileSync(
     'git',
@@ -27,14 +23,9 @@ export async function instructionArm(root, arm) {
     { cwd: source, encoding: 'utf8' },
   );
   if (dirty.trim()) throw new Error('Tool source has tracked modifications');
-  const instructions =
-    arm === 'caveman'
-      ? (
-          await readFile(path.join(source, 'skills/caveman/SKILL.md'), 'utf8')
-        ).replace(/^---[\s\S]*?---\s*/, '')
-      : require(
-          path.join(source, 'hooks/ponytail-instructions.js'),
-        ).getPonytailInstructions('full');
+  const instructions = require(
+    path.join(source, 'hooks/ponytail-instructions.js'),
+  ).getPonytailInstructions('full');
   return {
     instructions,
     evidence: {
