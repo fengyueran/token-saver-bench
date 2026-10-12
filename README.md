@@ -1,27 +1,42 @@
 # Token Saver Bench
 
-本项目为抖音视频验证：在日常开发任务中，安装省 Token 工具是否真的值得。结果同时考察模型用量、任务质量和耗时；没有供应商计费明细时，不把 Token 换算成美元费用。
+**五个省 Token 工具，完整开发任务算下来到底省没省？** 本仓库提供实验结果、评测源码、任务与配置说明。
 
-## 当前实验
+本次观察到 Caveman 的输出缩减和 RTK 的未缓存输入缩减，但还没有足够证据证明稳定的整项任务总 Token 收益。结果来自 Codex CLI、`gpt-5.6-sol`／medium，每工具与同任务 baseline 四次配对；不跨任务排名，不推算费用或订阅额度。
 
-第一批只比较 **Codex CLI `gpt-6-sol` / `medium` 的原生组与 Ponytail full 指令组**。任务来自两个固定版本的开源项目：[Memos 批量归档](task-cards/memos-bulk-archive.md)和[HTTPie 下载完整性](task-cards/httpie-download-integrity.md)。每题四对、两组交错运行，共 16 次新模型调用。固定 Prompt、验收器、调用顺序、停止条件和计量口径见[日常开发场景运行协议](docs/real-development-protocol.md)。
+## 从视频过来，先看这里
 
-目前只完成各组一次试跑、独立验收校准和离线运行预检；**16 次正式批次尚未启动，没有可发布的节省率或工具排名**。试跑不计入正式样本。Memos 还需要浏览器质量复核。
+- **结论与五工具使用建议**：[实验总结](docs/token-saver-experiment-summary.md)。
+- **逐次结果**：[Caveman／Ponytail／CodeGraph](docs/decision-study-results.md)（[JSON](docs/decision-study-results.json)／[CSV](docs/decision-study-results.csv)）；[RTK／Headroom](docs/output-study-results.md)（[JSON](docs/output-study-results.json)／[CSV](docs/output-study-results.csv)）。
+- **实验怎么做**：[实验协议](docs/benchmark-protocol.md)。
+- **版本、接入和重跑限制**：[复现指南](docs/reproduction-guide.md)。配置是本次评测的固定方案，不是可直接覆盖个人全局配置的安装包。
 
-Cursor 将作为**编辑器 Agent＋用户指定的 Claude 模型**另做同环境对照；先固定编辑器内的工具激活方式和正式运行顺序。Cursor 与 Codex CLI 的原始 Token 数分别报告，不跨模型、编辑器或任务相加。
+## 下载后能做什么
 
-## 运行
-
-需要 Node.js 22+、Codex CLI、pnpm，以及本地已备好的固定项目副本和依赖。所有真实模型调用会消耗账号额度。运行器不会修改用户全局 Codex、Claude、MCP 或插件配置。
+阅读结果无需安装依赖。基础检查需要 Node.js >= 22；根项目没有第三方 npm 运行依赖。解压或克隆后，在项目根目录执行：
 
 ```bash
-npm test
-npm run real-dev -- plan
-npm run real-dev -- preflight
-npm run real-dev -- prepare
-npm run real-dev -- start
+# 不调用模型，也不需要历史 runs/ 或 .cache/
+node --test test/scenario-events.test.js test/output-study.test.js
+node bin/decision-study.js candidate
+npm run real-dev -- scenario-plan
 ```
 
-`plan`、`preflight`、`prepare` 不调用模型。`start` 按冻结顺序串行执行 16 次真实调用；若中断，使用 `npm run real-dev -- resume <campaign-id>` 只继续尚未开始的位置。原始事件、使用量与独立验收保存在被 Git 忽略的 `runs/`；不得用成功重跑替换失败、超时或未激活的样本。
+这些命令验证计量与计划逻辑、展示候选任务，**不运行真实 Agent，也不代表完成实验复现**。
 
-仓库中先前微任务实验的运行入口和设计文档已移除。它的原始记录继续保留在本地 `runs/` 供追溯，不参与本实验或视频结论。
+完整 `npm test` 还包含依赖固定源码、工具构建产物和本地缓存的集成测试；干净下载缺少这些资源时会失败。先按[复现指南](docs/reproduction-guide.md)了解限制，不要将测试通过等同于真实工具接入成功。
+
+## 重跑限制
+
+目前不能仅靠下载一键重跑：正式运行依赖固定源码与工具构建、私有历史审阅证据，部分接入绑定 macOS。具体缺口见[复现指南](docs/reproduction-guide.md)。当前交付是结果、源码与方法；真实重跑需重新准备和校准，会消耗模型额度。
+
+## 文件怎么读
+
+| 路径 | 内容 |
+| --- | --- |
+| `docs/` | 实验总结、各批次结果、协议与复现说明 |
+| `task-cards/`、`prompts/` | 任务要求与实际模型提示 |
+| `src/`、`bin/` | 评测运行器及工具接入代码 |
+| `verifiers/`、`test/`、`requirements/` | 独立验收、测试与固定 Python 依赖 |
+
+`.cache/`、`runs/`、`node_modules/`、认证与原始日志不属于观众下载内容。不要直接打包整个本地工作目录；历史源码与结果保留以便追溯，不作为默认快速开始入口。
