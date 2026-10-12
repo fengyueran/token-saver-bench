@@ -1,9 +1,11 @@
 import { create } from "@bufbuild/protobuf";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { fireEvent, render, screen, waitFor, within } from "@testing-library/react";
+import { fireEvent, render, renderHook, screen, waitFor, within } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import Home from "@/pages/Home";
+import i18n from "@/i18n";
+import { useTranslate } from "@/utils/i18n";
 import { State } from "@/types/proto/api/v1/common_pb";
 import { type Memo, MemoSchema } from "@/types/proto/api/v1/memo_service_pb";
 
@@ -17,7 +19,15 @@ const fixture = vi.hoisted(() => ({
   maxColumns: 1 as 0 | 1,
   selectedSpaceName: undefined as string | undefined,
   contextFilter: undefined as string | undefined,
+  confirmMessages: [] as string[],
+  confirmApproved: false,
 }));
+
+it("resolves actual catalog labels without prescribing implementation translation keys", async () => {
+  await i18n.changeLanguage("en");
+  const { result } = renderHook(() => useTranslate());
+  expect(result.current("common.archive")).toBe("Archive");
+});
 
 vi.mock("@/hooks/useMemoQueries", async (importOriginal) => ({
   ...(await importOriginal<typeof import("@/hooks/useMemoQueries")>()),
@@ -44,7 +54,7 @@ vi.mock("@/contexts/MemoFilterContext", async (importOriginal) => ({
   useMemoFilterContext: () => ({ filters: fixture.filters, memoView: undefined, removeFilter: vi.fn() }),
 }));
 vi.mock("@/contexts/SpaceContext", () => ({
-  useSpaceContext: () => ({ memoFilter: fixture.contextFilter, selectedSpaceName: fixture.selectedSpaceName, creatorUsername: undefined }),
+  useSpaceContext: () => ({ memoFilter: fixture.contextFilter, selectedSpaceName: fixture.selectedSpaceName, creatorUsername: "alice" }),
 }));
 vi.mock("@/contexts/AppSidebarContext", () => ({ useAppSidebar: () => ({ setQuickFindOpen: vi.fn() }) }));
 vi.mock("@/contexts/InstanceContext", () => ({ useInstance: () => ({ profile: { instanceUrl: "" }, memoRelatedSetting: { reactions: [] } }) }));
@@ -59,33 +69,11 @@ vi.mock("@/hooks", () => ({
 }));
 vi.mock("@/hooks/useCurrentUser", () => ({ default: () => ({ name: "users/alice", username: "alice" }) }));
 vi.mock("@/hooks/useMemoSuggestions", () => ({ useMemoSuggestions: () => [] }));
-vi.mock("react-hot-toast", () => ({ default: { error: fixture.toastError, success: fixture.toastSuccess } }));
-vi.mock("@/utils/i18n", async (importOriginal) => ({
-  ...(await importOriginal<typeof import("@/utils/i18n")>()),
-  useTranslate: () => (key: string, values?: Record<string, number | string>) => {
-    const messages: Record<string, string> = {
-      "memo.select-memos": "Select memos",
-      "memo.cancel-selection": "Cancel selection",
-      "memo.select-memo": "Select memo {{name}}",
-      "memo.archive-selected": "Archive selected {{count}}",
-      "memo.confirm-archive-title": "Archive selected memos?",
-      "memo.confirm-archive-description": "Archive {{count}} selected memos?",
-      "memo.confirm-archive": "Archive selected memos",
-      "memo.cancel-archive": "Cancel",
-      "memo.bulk-archive-result": "{{succeeded}} succeeded, {{failed}} failed",
-      "memo.bulk-archive.enter": "Select memos",
-      "memo.bulk-archive.cancel": "Cancel selection",
-      "memo.bulk-archive.cancel-confirm": "Cancel",
-      "memo.bulk-archive.select-memo": "Select memo {{name}}",
-      "memo.bulk-archive.archive-selected": "Archive {{count}} selected memos",
-      "memo.bulk-archive.confirm-title": "Archive selected memos?",
-      "memo.bulk-archive.confirm-description": "Archive {{count}} selected memos?",
-      "memo.bulk-archive.confirm": "Archive {{count}} memos",
-      "memo.bulk-archive.partial-result": "{{succeeded}} succeeded, {{failed}} failed",
-    };
-    return (messages[key] ?? key).replace(/\{\{(\w+)\}\}/g, (_, name: string) => String(values?.[name] ?? ""));
-  },
-}));
+vi.mock("react-hot-toast", async (importOriginal) => {
+  const original = await importOriginal<typeof import("react-hot-toast")>();
+  const toast = Object.assign(vi.fn(), { error: fixture.toastError, success: fixture.toastSuccess });
+  return { ...original, default: toast, toast };
+});
 vi.mock("@/components/MemoEditor", () => ({ default: () => null }));
 vi.mock("@/components/MemoContent/MentionResolutionContext", async (importOriginal) => ({
   ...(await importOriginal<typeof import("@/components/MemoContent/MentionResolutionContext")>()),
@@ -107,8 +95,27 @@ function renderHome() {
   return { ...rendered, rerenderHome: () => rendered.rerender(ui()) };
 }
 
+function confirmArchive(count: number) {
+  const dialog = screen.queryByRole("dialog");
+  if (dialog) {
+    expect(dialog).toHaveTextContent(String(count));
+    fireEvent.click(within(dialog).getByRole("button", { name: /^(archive|confirm)/i }));
+  } else {
+    expect(fixture.confirmMessages.at(-1)).toMatch(new RegExp(`\\b${count}\\b`));
+    fixture.confirmApproved = true;
+    fireEvent.click(screen.getByRole("button", { name: /archive.*selected/i }));
+  }
+}
+
 describe("bulk archive acceptance", () => {
-  beforeEach(() => {
+  beforeEach(async () => {
+    await i18n.changeLanguage("en");
+    fixture.confirmMessages = [];
+    fixture.confirmApproved = false;
+    vi.spyOn(window, "confirm").mockImplementation((message) => {
+      fixture.confirmMessages.push(String(message));
+      return fixture.confirmApproved;
+    });
     fixture.memos = [
       create(MemoSchema, { name: "memos/owned-1", content: "First owned memo", creator: "users/alice", state: State.NORMAL }),
       create(MemoSchema, { name: "memos/owned-2", content: "Second owned memo", creator: "users/alice", state: State.NORMAL }),
@@ -134,14 +141,12 @@ describe("bulk archive acceptance", () => {
     try {
       renderHome();
       fireEvent.click(screen.getByRole("button", { name: /select memos|批量归档/i }));
-      expect(screen.queryByRole("checkbox", { name: /memos\/other/ })).not.toBeInTheDocument();
-      fireEvent.click(screen.getByRole("checkbox", { name: /memos\/owned-1/ }));
-      fireEvent.click(screen.getByRole("checkbox", { name: /memos\/owned-2/ }));
+      expect(screen.queryByRole("checkbox", { name: /memos\/other|Another user.s memo/i })).not.toBeInTheDocument();
+      fireEvent.click(screen.getByRole("checkbox", { name: /memos\/owned-1|First owned memo/i }));
+      fireEvent.click(screen.getByRole("checkbox", { name: /memos\/owned-2|Second owned memo/i }));
       fireEvent.click(screen.getByRole("button", { name: /archive.*selected/i }));
       expect(fixture.updateMemo).not.toHaveBeenCalled();
-      const dialog = screen.getByRole("dialog", { name: /archive.*memos|confirm archive/i });
-      expect(dialog).toHaveTextContent("2");
-      fireEvent.click(within(dialog).getByRole("button", { name: /^(archive|confirm)/i }));
+      confirmArchive(2);
       await waitFor(() => expect(fixture.updateMemo).toHaveBeenCalledTimes(2));
       expect(fixture.updateMemo.mock.calls).toEqual(
         expect.arrayContaining([
@@ -160,27 +165,29 @@ describe("bulk archive acceptance", () => {
     });
     renderHome();
     fireEvent.click(screen.getByRole("button", { name: /select memos|批量归档/i }));
-    fireEvent.click(screen.getByRole("checkbox", { name: /memos\/owned-1/ }));
-    fireEvent.click(screen.getByRole("checkbox", { name: /memos\/owned-2/ }));
+    fireEvent.click(screen.getByRole("checkbox", { name: /memos\/owned-1|First owned memo/i }));
+    fireEvent.click(screen.getByRole("checkbox", { name: /memos\/owned-2|Second owned memo/i }));
     fireEvent.click(screen.getByRole("button", { name: /archive.*selected/i }));
-    fireEvent.click(within(screen.getByRole("dialog", { name: /archive.*memos|confirm archive/i })).getByRole("button", { name: /^(archive|confirm)/i }));
+    confirmArchive(2);
     await waitFor(() => {
       const status = screen.queryByRole("status")?.textContent ?? "";
       const toast = fixture.toastError.mock.calls.map(([message]) => String(message)).join(" ");
       expect(`${status} ${toast}`).toMatch(/1.*1/);
     });
-    expect(screen.getByRole("checkbox", { name: /memos\/owned-2/ })).toBeChecked();
-    const succeededCheckbox = screen.queryByRole("checkbox", { name: /memos\/owned-1/ });
+    expect(screen.getByRole("checkbox", { name: /memos\/owned-2|Second owned memo/i })).toBeChecked();
+    const succeededCheckbox = screen.queryByRole("checkbox", { name: /memos\/owned-1|First owned memo/i });
     if (succeededCheckbox) expect(succeededCheckbox).not.toBeChecked();
   });
 
   it("clears a pending selection when the Home tag filter changes", async () => {
     const page = renderHome();
     fireEvent.click(screen.getByRole("button", { name: /select memos|批量归档/i }));
-    fireEvent.click(screen.getByRole("checkbox", { name: /memos\/owned-1/ }));
+    fireEvent.click(screen.getByRole("checkbox", { name: /memos\/owned-1|First owned memo/i }));
     fixture.filters = [{ factor: "tagSearch", value: "getting-started" }];
     page.rerenderHome();
-    await waitFor(() => expect(screen.queryByRole("button", { name: /select memos|批量归档/i })).toBeInTheDocument());
+    await waitFor(() => {
+      for (const checkbox of screen.queryAllByRole("checkbox")) expect(checkbox).not.toBeChecked();
+    });
     expect(fixture.updateMemo).not.toHaveBeenCalled();
   });
 });

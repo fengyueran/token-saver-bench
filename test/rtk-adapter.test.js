@@ -1,0 +1,41 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
+import os from 'node:os';
+import path from 'node:path';
+import { prepareRtkAdapter, auditRtkHooks, assertRtkActivation } from '../src/rtk-adapter.js';
+const root = process.cwd();
+const binaryPath = path.join(root, '.cache/source-build-2026-10-08/rtk-target/release/rtk');
+test('RTK adapter installs only private project hooks and preserves hook fields', async (t) => {
+  const workspace = await fs.mkdtemp(path.join(os.tmpdir(), 'rtk-adapter-'));
+  t.after(() => fs.rm(workspace, { recursive: true, force: true }));
+  const adapter = await prepareRtkAdapter({ workspace, binaryPath });
+  const hooks = JSON.parse(await fs.readFile(adapter.hooksPath, 'utf8'));
+  assert.equal(hooks.hooks.PreToolUse[0].matcher, 'Bash');
+  assert.ok(adapter.hostArgs.includes('projects.' + JSON.stringify(workspace) + '.trust_level="trusted"'));
+  const { execute } = await import('../src/process.js');
+  const payload = { hook_event_name: 'PreToolUse', permission_mode: 'default', tool_name: 'Bash', tool_use_id: 'x', tool_input: { command: 'git status', timeout: 30000 } };
+  const response = await execute(process.execPath, [adapter.loggerPath, 'pre'], { input: JSON.stringify(payload), env: adapter.env });
+  assert.equal(response.code, 0);
+  assert.deepEqual(JSON.parse(response.stdout).hookSpecificOutput.updatedInput, { command: 'rtk git status', timeout: 30000 });
+  assert.equal((await fs.stat(adapter.directory)).mode & 0o777, 0o700);
+  assert.equal(adapter.env.RTK_DB_PATH.startsWith(workspace), true);
+});
+test('RTK setup rejects binary drift and refuses replacing project hooks', async (t) => {
+  const workspace = await fs.mkdtemp(path.join(os.tmpdir(), 'rtk-adapter-'));
+  t.after(() => fs.rm(workspace, { recursive: true, force: true }));
+  await assert.rejects(prepareRtkAdapter({ workspace, binaryPath: process.execPath }), /binary hash/);
+  await fs.mkdir(path.join(workspace, '.codex'));
+  await fs.writeFile(path.join(workspace, '.codex/hooks.json'), '{}');
+  await assert.rejects(prepareRtkAdapter({ workspace, binaryPath }), /already exists/);
+});
+test('hook audit requires actual execution evidence and retains null unknown exits', () => {
+  const pre = { phase: 'pre', payload: { tool_use_id: 'a', tool_input: { command: 'git status' } }, response: { hookSpecificOutput: { updatedInput: { command: 'rtk git status' } } }, exitCode: 0 };
+  assert.equal(auditRtkHooks([pre]).automaticHostIntegrationVerified, false);
+  assert.throws(() => assertRtkActivation(auditRtkHooks([pre])), /not verified/);
+  const post = { phase: 'post', payload: { tool_use_id: 'a', tool_input: { command: 'rtk git status' }, tool_response: { exit_code: 1, stdout: 'failed' } } };
+  const audit = auditRtkHooks([pre, post]);
+  assert.equal(audit.automaticHostIntegrationVerified, true);
+  assert.equal(audit.records[0].exitCode, 1);
+  assert.equal(auditRtkHooks([pre, { ...post, payload: { ...post.payload, tool_response: {} } }]).records[0].exitCode, null);
+});

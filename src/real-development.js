@@ -4,15 +4,16 @@ import { access, readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { instructionArm } from './arms.js';
 import { fingerprint } from './fingerprint.js';
+import { inspectPythonEnvironment, validatePythonEnvironment } from './python-environment.js';
 
 export const realDevelopmentTasks = Object.freeze({
   memos: {
     source: '.cache/candidate-memos',
     commit: 'b1fa9aefcc22fde5774b7f6cf0b3e19fc67acc6e',
     prompt: 'prompts/memos-bulk-archive.txt',
-    promptHash: '29ac76a8b7005f1f0bb0edef6b8c15351a74c386a17b7510bbad77b570264f05',
+    promptHash: 'ba4f0c9fa1c55ddceb088b42775917ff048bfce88a698bef8ad9a9f6f6db1c23',
     verifier: 'verifiers/memos-bulk-archive.test.tsx',
-    verifierHash: 'e095782c2b67ee03e3405d9e206684bb193a2ffa7456074966a2b76df6445bde',
+    verifierHash: '3c0575d47ae7df27371e7fa98c96fe66a484a50fb589940dbe361ab1cde1fec4',
   },
   httpie: {
     source: '.cache/candidate-httpie',
@@ -27,7 +28,7 @@ export const realDevelopmentTasks = Object.freeze({
 const extraFiles = Object.freeze({
   'memos-browser-checklist': ['verifiers/memos-bulk-archive-manual.md', '58de52b59d16e589c042773f31603a8c0777ca9ee6fb72ee9b679ba6913bb1b5'],
   'memos-verifier-runner': ['verifiers/run-memos-bulk-archive.sh', '69525d525256edd7368bc362fc8c81322e409dcbdfa05b56d503bbb06f1a84f9'],
-  'memos-home-test-adapter': ['src/memos-test-adapter.js', '6bca955dfdabd2e8da96d3e0b42b95d8ad4dcdf4c855163008269aa7a13a013f'],
+  'memos-home-test-adapter': ['src/memos-test-adapter.js', '545c976385d749238b9cf3126159eb9babe58928fb000da6c93d9c98c6610942'],
 });
 const instructionHash = 'da4fb09cff2f6726691ce6591cebc38c95597d79da132e49c6fa2665c4e8a3ff';
 const pairs = [
@@ -54,7 +55,7 @@ export function createRealDevelopmentSchedule() {
       task,
       pair,
       arm,
-      model: 'gpt-6-sol',
+      model: 'gpt-5.6-sol',
       reasoningEffort: 'medium',
     })),
   );
@@ -66,7 +67,7 @@ export async function preflightRealDevelopment(root, options = {}) {
   for (const folder of ['src', 'bin', 'verifiers', 'prompts'])
     identity[`${folder}Files`] = await fingerprint(path.join(root, folder));
   identity.packageJson = sha256(await readFile(path.join(root, 'package.json')));
-  identity.protocolDocument = sha256(await readFile(path.join(root, 'docs/real-development-protocol.md')));
+  identity.protocolDocument = sha256(await readFile(path.join(root, 'docs/benchmark-protocol.md')));
   const checkFile = async (id, file, expected) => {
     try {
       const actual = sha256(await readFile(file));
@@ -111,7 +112,7 @@ export async function preflightRealDevelopment(root, options = {}) {
   }
   for (const [id, file] of [
     ['memos-dependencies', '.cache/candidate-memos/web/node_modules/.bin/vitest'],
-    ['httpie-dependencies', '.cache/candidate-httpie/.venv/bin/python'],
+    ['httpie-dependencies', '.cache/runtime/httpie-python311/bin/python'],
   ]) {
     try {
       await access(path.join(root, file));
@@ -130,17 +131,19 @@ export async function preflightRealDevelopment(root, options = {}) {
     checks.push({ id: 'memos-pnpm-version', ok: false, error: error.message });
   }
   try {
-    const python = path.join(root, '.cache/candidate-httpie/.venv/bin/python');
-    const dependencies = execFileSync(python, ['-m', 'pip', 'freeze'], {
-      encoding: 'utf8', timeout: 30000,
-    });
-    identity.httpiePythonDependencies = sha256(dependencies);
-    checks.push({ id: 'httpie-python-dependencies', ok: dependencies.trim().length > 0,
-      sha256: identity.httpiePythonDependencies });
+    const python = options.httpiePython ?? path.join(root, '.cache/runtime/httpie-python311/bin/python');
+    const lock = await readFile(path.join(root, 'requirements/httpie-python311.txt'), 'utf8');
+    const snapshot = inspectPythonEnvironment(python);
+    const validation = validatePythonEnvironment(snapshot, lock);
+    identity.httpiePythonDependencies = { lockSha256: sha256(lock), snapshot };
+    checks.push({ id: 'httpie-python-dependencies', ...validation,
+      lockSha256: sha256(lock) });
   } catch (error) {
     checks.push({ id: 'httpie-python-dependencies', ok: false, error: error.message });
   }
   return {
+    scope: 'codex-ponytail-subset',
+    formalReady: false,
     ready: checks.every(({ ok }) => ok),
     checks,
     schedule: identity.schedule,
@@ -150,9 +153,9 @@ export async function preflightRealDevelopment(root, options = {}) {
 }
 
 export function buildRealDevelopmentArgs(workspace, arm, instructions = '') {
-  if (!['baseline', 'ponytail'].includes(arm)) throw new Error('Unknown arm');
+  if (!['baseline', 'ponytail', 'caveman'].includes(arm)) throw new Error('Unknown arm');
   if (!path.isAbsolute(workspace)) throw new Error('Absolute workspace required');
-  if (arm === 'ponytail' && !instructions) throw new Error('Ponytail instructions missing');
+  if (arm !== 'baseline' && !instructions) throw new Error('Tool instructions missing');
   const overrides = [
     'model_reasoning_effort="medium"',
     'skills.include_instructions=false',
@@ -168,10 +171,10 @@ export function buildRealDevelopmentArgs(workspace, arm, instructions = '') {
     `shell_environment_policy.set.PYTHONPATH=${JSON.stringify(workspace)}`,
     `shell_environment_policy.set.PATH=${JSON.stringify(path.join(workspace, '.venv/bin') + path.delimiter + process.env.PATH)}`,
   ];
-  if (arm === 'ponytail') overrides.push(`developer_instructions=${JSON.stringify(instructions)}`);
+  if (arm !== 'baseline') overrides.push(`developer_instructions=${JSON.stringify(instructions)}`);
   return [
     'exec', '--ignore-user-config', '--ignore-rules', '--ephemeral', '--json',
-    '--model', 'gpt-6-sol', ...overrides.flatMap((override) => ['-c', override]),
+    '--model', 'gpt-5.6-sol', ...overrides.flatMap((override) => ['-c', override]),
     '--sandbox', 'workspace-write', '--cd', workspace, '-',
   ];
 }

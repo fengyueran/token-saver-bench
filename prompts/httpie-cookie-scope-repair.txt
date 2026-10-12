@@ -1,0 +1,7 @@
+修复 HTTPie 的会话 Cookie 清理问题，并提供可运行的回归测试。
+
+复现：同一个显式 --session 文件依次访问 127.0.0.1 与 localhost，两者各设置同名 same Cookie；随后 127.0.0.1 返回 same=; Max-Age=0; Path=/。当前 localhost 的 same Cookie 也消失，后续访问 localhost 无法复用自己的会话。
+
+要求：过期处理按 Cookie 的实际 domain、path 和 name 定位，不误删其他主机或路径的同名 Cookie。既要支持 Max-Age=0，也要支持过期 Expires；有无显式 Domain、重定向链、多条 Set-Cookie 都要保持各响应的来源作用域。不要误接受其他域的恶意 Set-Cookie，也不要改变 --session-read-only 和旧会话文件的兼容行为。
+
+请追踪请求、响应解析、CookieJar 和会话持久化的实际调用链，修复共享根因。运行相关项目测试，最后用中文简要说明根因、修复位置、实际验证结果及剩余限制。不要修改或绕过评测环境，也不要访问真实网站或使用真实账号。测试仅使用本地合成服务与临时会话文件。

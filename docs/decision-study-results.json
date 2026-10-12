@@ -1,0 +1,3112 @@
+{
+  "scope": "Codex CLI daily development decision study",
+  "model": "gpt-5.6-sol",
+  "reasoningEffort": "medium",
+  "agentTimeoutMs": null,
+  "modelFallback": false,
+  "providerResolvedModel": null,
+  "observedAt": "2026-10-10T11:30:54.186Z",
+  "planHash": "2ef474f89a034e095120a3a25c48fb87dee14d36cde5ed15276a15320ce78d05",
+  "completed": 32,
+  "total": 32,
+  "rows": [
+    {
+      "id": "decision-memos-attachment-filename-search-block-1-baseline",
+      "phase": "new-task",
+      "task": "memos-attachment-filename-search",
+      "arm": "baseline",
+      "block": 1,
+      "status": "completed",
+      "firstQuality": true,
+      "quality": true,
+      "feedbackRounds": 0,
+      "diagnosisQuality": null,
+      "parentEvidenceVerified": null,
+      "usage": {
+        "inputTokens": 1280324,
+        "cachedInputTokens": 1215616,
+        "uncachedInputTokens": 64708,
+        "outputTokens": 11771,
+        "totalTokens": 1292095
+      },
+      "fullWorkflowUsage": null,
+      "agentDurationMs": 233189.87716700003,
+      "fullWorkflowAgentDurationMs": null,
+      "humanInterventionMs": null,
+      "actualCostUsd": null,
+      "setup": {
+        "durationMs": null,
+        "installDurationMs": null,
+        "indexDurationMs": null,
+        "version": null,
+        "sourceCommit": null,
+        "globalConfigurationModified": null,
+        "scope": "no tool installation measured",
+        "freshInstallTotalMs": null,
+        "maintenanceHumanTimeMs": null
+      },
+      "manualReviewEvidenceVerified": true,
+      "rounds": [
+        {
+          "index": 0,
+          "quality": true,
+          "executionPassed": true,
+          "sourceScopePassed": true,
+          "automatedPassed": true,
+          "modelEvidence": "local-turn-context",
+          "providerResolvedModel": null,
+          "activation": {
+            "status": "not-applicable",
+            "nativeIntegration": null,
+            "instructionCount": null,
+            "isolationPassed": null,
+            "catalogCount": null,
+            "budgetWarnings": null,
+            "cliCallCount": null,
+            "mcpCallCount": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "decision-memos-attachment-filename-search-block-1-ponytail",
+      "phase": "new-task",
+      "task": "memos-attachment-filename-search",
+      "arm": "ponytail",
+      "block": 1,
+      "status": "completed",
+      "firstQuality": true,
+      "quality": true,
+      "feedbackRounds": 0,
+      "diagnosisQuality": null,
+      "parentEvidenceVerified": null,
+      "usage": {
+        "inputTokens": 1662319,
+        "cachedInputTokens": 1600000,
+        "uncachedInputTokens": 62319,
+        "outputTokens": 12518,
+        "totalTokens": 1674837
+      },
+      "fullWorkflowUsage": null,
+      "agentDurationMs": 264543.587125,
+      "fullWorkflowAgentDurationMs": null,
+      "humanInterventionMs": null,
+      "actualCostUsd": null,
+      "setup": {
+        "durationMs": 246.76729199999954,
+        "installDurationMs": null,
+        "indexDurationMs": null,
+        "version": "4.10.0",
+        "sourceCommit": "e3ba2aa6f1e6f0bc4d69eb09c9f0d0a93af56156",
+        "globalConfigurationModified": false,
+        "scope": "pre-downloaded fixed source; private installation only",
+        "freshInstallTotalMs": null,
+        "maintenanceHumanTimeMs": null
+      },
+      "manualReviewEvidenceVerified": true,
+      "rounds": [
+        {
+          "index": 0,
+          "quality": true,
+          "executionPassed": true,
+          "sourceScopePassed": true,
+          "automatedPassed": true,
+          "modelEvidence": "local-turn-context",
+          "providerResolvedModel": null,
+          "activation": {
+            "status": "activated",
+            "nativeIntegration": null,
+            "instructionCount": 1,
+            "isolationPassed": true,
+            "catalogCount": 0,
+            "budgetWarnings": 0,
+            "cliCallCount": null,
+            "mcpCallCount": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "decision-httpie-cookie-scope-repair-block-1-baseline",
+      "phase": "new-task",
+      "task": "httpie-cookie-scope-repair",
+      "arm": "baseline",
+      "block": 1,
+      "status": "completed",
+      "firstQuality": true,
+      "quality": true,
+      "feedbackRounds": 0,
+      "diagnosisQuality": null,
+      "parentEvidenceVerified": null,
+      "usage": {
+        "inputTokens": 1423632,
+        "cachedInputTokens": 1352832,
+        "uncachedInputTokens": 70800,
+        "outputTokens": 17239,
+        "totalTokens": 1440871
+      },
+      "fullWorkflowUsage": null,
+      "agentDurationMs": 452380.749917,
+      "fullWorkflowAgentDurationMs": null,
+      "humanInterventionMs": null,
+      "actualCostUsd": null,
+      "setup": {
+        "durationMs": null,
+        "installDurationMs": null,
+        "indexDurationMs": null,
+        "version": null,
+        "sourceCommit": null,
+        "globalConfigurationModified": null,
+        "scope": "no tool installation measured",
+        "freshInstallTotalMs": null,
+        "maintenanceHumanTimeMs": null
+      },
+      "manualReviewEvidenceVerified": false,
+      "rounds": [
+        {
+          "index": 0,
+          "quality": true,
+          "executionPassed": true,
+          "sourceScopePassed": true,
+          "automatedPassed": true,
+          "modelEvidence": "local-turn-context",
+          "providerResolvedModel": null,
+          "activation": {
+            "status": "not-applicable",
+            "nativeIntegration": null,
+            "instructionCount": null,
+            "isolationPassed": null,
+            "catalogCount": null,
+            "budgetWarnings": null,
+            "cliCallCount": null,
+            "mcpCallCount": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "decision-httpie-cookie-scope-repair-block-1-codegraph",
+      "phase": "new-task",
+      "task": "httpie-cookie-scope-repair",
+      "arm": "codegraph",
+      "block": 1,
+      "status": "completed",
+      "firstQuality": true,
+      "quality": true,
+      "feedbackRounds": 0,
+      "diagnosisQuality": null,
+      "parentEvidenceVerified": null,
+      "usage": {
+        "inputTokens": 2002448,
+        "cachedInputTokens": 1903232,
+        "uncachedInputTokens": 99216,
+        "outputTokens": 15127,
+        "totalTokens": 2017575
+      },
+      "fullWorkflowUsage": null,
+      "agentDurationMs": 531877.5405840001,
+      "fullWorkflowAgentDurationMs": null,
+      "humanInterventionMs": null,
+      "actualCostUsd": null,
+      "setup": {
+        "durationMs": null,
+        "installDurationMs": 24.509332999936305,
+        "indexDurationMs": 733.1129580000415,
+        "version": "1.6.0",
+        "sourceCommit": "290e03f7bc582b8726a104428f39bc178bac30bd",
+        "globalConfigurationModified": null,
+        "scope": "pre-downloaded fixed source; private installation only",
+        "freshInstallTotalMs": null,
+        "maintenanceHumanTimeMs": null
+      },
+      "manualReviewEvidenceVerified": false,
+      "rounds": [
+        {
+          "index": 0,
+          "quality": true,
+          "executionPassed": true,
+          "sourceScopePassed": true,
+          "automatedPassed": true,
+          "modelEvidence": "local-turn-context",
+          "providerResolvedModel": null,
+          "activation": {
+            "status": "activated",
+            "nativeIntegration": null,
+            "instructionCount": null,
+            "isolationPassed": null,
+            "catalogCount": null,
+            "budgetWarnings": null,
+            "cliCallCount": 4,
+            "mcpCallCount": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "decision-httpie-cookie-scope-repair-block-1-caveman",
+      "phase": "new-task",
+      "task": "httpie-cookie-scope-repair",
+      "arm": "caveman",
+      "block": 1,
+      "status": "completed",
+      "firstQuality": true,
+      "quality": true,
+      "feedbackRounds": 0,
+      "diagnosisQuality": null,
+      "parentEvidenceVerified": null,
+      "usage": {
+        "inputTokens": 2537798,
+        "cachedInputTokens": 2450944,
+        "uncachedInputTokens": 86854,
+        "outputTokens": 14343,
+        "totalTokens": 2552141
+      },
+      "fullWorkflowUsage": null,
+      "agentDurationMs": 559962.1997090001,
+      "fullWorkflowAgentDurationMs": null,
+      "humanInterventionMs": null,
+      "actualCostUsd": null,
+      "setup": {
+        "durationMs": 1.1386670002248138,
+        "installDurationMs": null,
+        "indexDurationMs": null,
+        "version": null,
+        "sourceCommit": "2fd153c67988e980fb0b2455c90832159a6a5a25",
+        "globalConfigurationModified": false,
+        "scope": "pre-downloaded fixed source; private installation only",
+        "freshInstallTotalMs": null,
+        "maintenanceHumanTimeMs": null
+      },
+      "manualReviewEvidenceVerified": false,
+      "rounds": [
+        {
+          "index": 0,
+          "quality": true,
+          "executionPassed": true,
+          "sourceScopePassed": true,
+          "automatedPassed": true,
+          "modelEvidence": "local-turn-context",
+          "providerResolvedModel": null,
+          "activation": {
+            "status": "activated",
+            "nativeIntegration": null,
+            "instructionCount": 1,
+            "isolationPassed": true,
+            "catalogCount": 0,
+            "budgetWarnings": 0,
+            "cliCallCount": null,
+            "mcpCallCount": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "decision-memos-attachment-filename-search-block-2-ponytail",
+      "phase": "new-task",
+      "task": "memos-attachment-filename-search",
+      "arm": "ponytail",
+      "block": 2,
+      "status": "completed",
+      "firstQuality": true,
+      "quality": true,
+      "feedbackRounds": 0,
+      "diagnosisQuality": null,
+      "parentEvidenceVerified": null,
+      "usage": {
+        "inputTokens": 920719,
+        "cachedInputTokens": 852352,
+        "uncachedInputTokens": 68367,
+        "outputTokens": 11586,
+        "totalTokens": 932305
+      },
+      "fullWorkflowUsage": null,
+      "agentDurationMs": 292316.58412500005,
+      "fullWorkflowAgentDurationMs": null,
+      "humanInterventionMs": null,
+      "actualCostUsd": null,
+      "setup": {
+        "durationMs": 223.34545799996704,
+        "installDurationMs": null,
+        "indexDurationMs": null,
+        "version": "4.10.0",
+        "sourceCommit": "e3ba2aa6f1e6f0bc4d69eb09c9f0d0a93af56156",
+        "globalConfigurationModified": false,
+        "scope": "pre-downloaded fixed source; private installation only",
+        "freshInstallTotalMs": null,
+        "maintenanceHumanTimeMs": null
+      },
+      "manualReviewEvidenceVerified": true,
+      "rounds": [
+        {
+          "index": 0,
+          "quality": true,
+          "executionPassed": true,
+          "sourceScopePassed": true,
+          "automatedPassed": true,
+          "modelEvidence": "local-turn-context",
+          "providerResolvedModel": null,
+          "activation": {
+            "status": "activated",
+            "nativeIntegration": null,
+            "instructionCount": 1,
+            "isolationPassed": true,
+            "catalogCount": 0,
+            "budgetWarnings": 0,
+            "cliCallCount": null,
+            "mcpCallCount": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "decision-memos-attachment-filename-search-block-2-baseline",
+      "phase": "new-task",
+      "task": "memos-attachment-filename-search",
+      "arm": "baseline",
+      "block": 2,
+      "status": "completed",
+      "firstQuality": true,
+      "quality": true,
+      "feedbackRounds": 0,
+      "diagnosisQuality": null,
+      "parentEvidenceVerified": null,
+      "usage": {
+        "inputTokens": 880809,
+        "cachedInputTokens": 833152,
+        "uncachedInputTokens": 47657,
+        "outputTokens": 12196,
+        "totalTokens": 893005
+      },
+      "fullWorkflowUsage": null,
+      "agentDurationMs": 492924.393041,
+      "fullWorkflowAgentDurationMs": null,
+      "humanInterventionMs": null,
+      "actualCostUsd": null,
+      "setup": {
+        "durationMs": null,
+        "installDurationMs": null,
+        "indexDurationMs": null,
+        "version": null,
+        "sourceCommit": null,
+        "globalConfigurationModified": null,
+        "scope": "no tool installation measured",
+        "freshInstallTotalMs": null,
+        "maintenanceHumanTimeMs": null
+      },
+      "manualReviewEvidenceVerified": true,
+      "rounds": [
+        {
+          "index": 0,
+          "quality": true,
+          "executionPassed": true,
+          "sourceScopePassed": true,
+          "automatedPassed": true,
+          "modelEvidence": "local-turn-context",
+          "providerResolvedModel": null,
+          "activation": {
+            "status": "not-applicable",
+            "nativeIntegration": null,
+            "instructionCount": null,
+            "isolationPassed": null,
+            "catalogCount": null,
+            "budgetWarnings": null,
+            "cliCallCount": null,
+            "mcpCallCount": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "decision-httpie-cookie-scope-repair-block-2-codegraph",
+      "phase": "new-task",
+      "task": "httpie-cookie-scope-repair",
+      "arm": "codegraph",
+      "block": 2,
+      "status": "completed",
+      "firstQuality": true,
+      "quality": true,
+      "feedbackRounds": 0,
+      "diagnosisQuality": null,
+      "parentEvidenceVerified": null,
+      "usage": {
+        "inputTokens": 2100580,
+        "cachedInputTokens": 2012032,
+        "uncachedInputTokens": 88548,
+        "outputTokens": 15291,
+        "totalTokens": 2115871
+      },
+      "fullWorkflowUsage": null,
+      "agentDurationMs": 566339.3539580001,
+      "fullWorkflowAgentDurationMs": null,
+      "humanInterventionMs": null,
+      "actualCostUsd": null,
+      "setup": {
+        "durationMs": null,
+        "installDurationMs": 26.274667000000136,
+        "indexDurationMs": 735.6884590000004,
+        "version": "1.6.0",
+        "sourceCommit": "290e03f7bc582b8726a104428f39bc178bac30bd",
+        "globalConfigurationModified": null,
+        "scope": "pre-downloaded fixed source; private installation only",
+        "freshInstallTotalMs": null,
+        "maintenanceHumanTimeMs": null
+      },
+      "manualReviewEvidenceVerified": false,
+      "rounds": [
+        {
+          "index": 0,
+          "quality": true,
+          "executionPassed": true,
+          "sourceScopePassed": true,
+          "automatedPassed": true,
+          "modelEvidence": "local-turn-context",
+          "providerResolvedModel": null,
+          "activation": {
+            "status": "activated",
+            "nativeIntegration": null,
+            "instructionCount": null,
+            "isolationPassed": null,
+            "catalogCount": null,
+            "budgetWarnings": null,
+            "cliCallCount": 3,
+            "mcpCallCount": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "decision-httpie-cookie-scope-repair-block-2-caveman",
+      "phase": "new-task",
+      "task": "httpie-cookie-scope-repair",
+      "arm": "caveman",
+      "block": 2,
+      "status": "completed",
+      "firstQuality": true,
+      "quality": true,
+      "feedbackRounds": 0,
+      "diagnosisQuality": null,
+      "parentEvidenceVerified": null,
+      "usage": {
+        "inputTokens": 2560680,
+        "cachedInputTokens": 2469504,
+        "uncachedInputTokens": 91176,
+        "outputTokens": 13049,
+        "totalTokens": 2573729
+      },
+      "fullWorkflowUsage": null,
+      "agentDurationMs": 515764.8255419999,
+      "fullWorkflowAgentDurationMs": null,
+      "humanInterventionMs": null,
+      "actualCostUsd": null,
+      "setup": {
+        "durationMs": 1.3097080000443384,
+        "installDurationMs": null,
+        "indexDurationMs": null,
+        "version": null,
+        "sourceCommit": "2fd153c67988e980fb0b2455c90832159a6a5a25",
+        "globalConfigurationModified": false,
+        "scope": "pre-downloaded fixed source; private installation only",
+        "freshInstallTotalMs": null,
+        "maintenanceHumanTimeMs": null
+      },
+      "manualReviewEvidenceVerified": false,
+      "rounds": [
+        {
+          "index": 0,
+          "quality": true,
+          "executionPassed": true,
+          "sourceScopePassed": true,
+          "automatedPassed": true,
+          "modelEvidence": "local-turn-context",
+          "providerResolvedModel": null,
+          "activation": {
+            "status": "activated",
+            "nativeIntegration": null,
+            "instructionCount": 1,
+            "isolationPassed": true,
+            "catalogCount": 0,
+            "budgetWarnings": 0,
+            "cliCallCount": null,
+            "mcpCallCount": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "decision-httpie-cookie-scope-repair-block-2-baseline",
+      "phase": "new-task",
+      "task": "httpie-cookie-scope-repair",
+      "arm": "baseline",
+      "block": 2,
+      "status": "completed",
+      "firstQuality": false,
+      "quality": true,
+      "feedbackRounds": 1,
+      "diagnosisQuality": null,
+      "parentEvidenceVerified": null,
+      "usage": {
+        "inputTokens": 2262552,
+        "cachedInputTokens": 2185216,
+        "uncachedInputTokens": 77336,
+        "outputTokens": 17726,
+        "totalTokens": 2280278
+      },
+      "fullWorkflowUsage": null,
+      "agentDurationMs": 506428.9690419999,
+      "fullWorkflowAgentDurationMs": null,
+      "humanInterventionMs": null,
+      "actualCostUsd": null,
+      "setup": {
+        "durationMs": null,
+        "installDurationMs": null,
+        "indexDurationMs": null,
+        "version": null,
+        "sourceCommit": null,
+        "globalConfigurationModified": null,
+        "scope": "no tool installation measured",
+        "freshInstallTotalMs": null,
+        "maintenanceHumanTimeMs": null
+      },
+      "manualReviewEvidenceVerified": false,
+      "rounds": [
+        {
+          "index": 0,
+          "quality": false,
+          "executionPassed": true,
+          "sourceScopePassed": true,
+          "automatedPassed": false,
+          "modelEvidence": "local-turn-context",
+          "providerResolvedModel": null,
+          "activation": {
+            "status": "not-applicable",
+            "nativeIntegration": null,
+            "instructionCount": null,
+            "isolationPassed": null,
+            "catalogCount": null,
+            "budgetWarnings": null,
+            "cliCallCount": null,
+            "mcpCallCount": null
+          }
+        },
+        {
+          "index": 1,
+          "quality": true,
+          "executionPassed": true,
+          "sourceScopePassed": true,
+          "automatedPassed": true,
+          "modelEvidence": "local-turn-context",
+          "providerResolvedModel": null,
+          "activation": {
+            "status": "not-applicable",
+            "nativeIntegration": null,
+            "instructionCount": null,
+            "isolationPassed": null,
+            "catalogCount": null,
+            "budgetWarnings": null,
+            "cliCallCount": null,
+            "mcpCallCount": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "decision-memos-attachment-filename-search-block-3-baseline",
+      "phase": "new-task",
+      "task": "memos-attachment-filename-search",
+      "arm": "baseline",
+      "block": 3,
+      "status": "completed",
+      "firstQuality": true,
+      "quality": true,
+      "feedbackRounds": 0,
+      "diagnosisQuality": null,
+      "parentEvidenceVerified": null,
+      "usage": {
+        "inputTokens": 2313445,
+        "cachedInputTokens": 2234240,
+        "uncachedInputTokens": 79205,
+        "outputTokens": 16529,
+        "totalTokens": 2329974
+      },
+      "fullWorkflowUsage": null,
+      "agentDurationMs": 409977.83200000017,
+      "fullWorkflowAgentDurationMs": null,
+      "humanInterventionMs": null,
+      "actualCostUsd": null,
+      "setup": {
+        "durationMs": null,
+        "installDurationMs": null,
+        "indexDurationMs": null,
+        "version": null,
+        "sourceCommit": null,
+        "globalConfigurationModified": null,
+        "scope": "no tool installation measured",
+        "freshInstallTotalMs": null,
+        "maintenanceHumanTimeMs": null
+      },
+      "manualReviewEvidenceVerified": true,
+      "rounds": [
+        {
+          "index": 0,
+          "quality": true,
+          "executionPassed": true,
+          "sourceScopePassed": true,
+          "automatedPassed": true,
+          "modelEvidence": "local-turn-context",
+          "providerResolvedModel": null,
+          "activation": {
+            "status": "not-applicable",
+            "nativeIntegration": null,
+            "instructionCount": null,
+            "isolationPassed": null,
+            "catalogCount": null,
+            "budgetWarnings": null,
+            "cliCallCount": null,
+            "mcpCallCount": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "decision-memos-attachment-filename-search-block-3-ponytail",
+      "phase": "new-task",
+      "task": "memos-attachment-filename-search",
+      "arm": "ponytail",
+      "block": 3,
+      "status": "completed",
+      "firstQuality": true,
+      "quality": true,
+      "feedbackRounds": 0,
+      "diagnosisQuality": null,
+      "parentEvidenceVerified": null,
+      "usage": {
+        "inputTokens": 2717020,
+        "cachedInputTokens": 2628352,
+        "uncachedInputTokens": 88668,
+        "outputTokens": 15451,
+        "totalTokens": 2732471
+      },
+      "fullWorkflowUsage": null,
+      "agentDurationMs": 450674.1700419998,
+      "fullWorkflowAgentDurationMs": null,
+      "humanInterventionMs": null,
+      "actualCostUsd": null,
+      "setup": {
+        "durationMs": 225.6158329998143,
+        "installDurationMs": null,
+        "indexDurationMs": null,
+        "version": "4.10.0",
+        "sourceCommit": "e3ba2aa6f1e6f0bc4d69eb09c9f0d0a93af56156",
+        "globalConfigurationModified": false,
+        "scope": "pre-downloaded fixed source; private installation only",
+        "freshInstallTotalMs": null,
+        "maintenanceHumanTimeMs": null
+      },
+      "manualReviewEvidenceVerified": true,
+      "rounds": [
+        {
+          "index": 0,
+          "quality": true,
+          "executionPassed": true,
+          "sourceScopePassed": true,
+          "automatedPassed": true,
+          "modelEvidence": "local-turn-context",
+          "providerResolvedModel": null,
+          "activation": {
+            "status": "activated",
+            "nativeIntegration": null,
+            "instructionCount": 1,
+            "isolationPassed": true,
+            "catalogCount": 0,
+            "budgetWarnings": 0,
+            "cliCallCount": null,
+            "mcpCallCount": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "decision-httpie-cookie-scope-repair-block-3-caveman",
+      "phase": "new-task",
+      "task": "httpie-cookie-scope-repair",
+      "arm": "caveman",
+      "block": 3,
+      "status": "completed",
+      "firstQuality": true,
+      "quality": true,
+      "feedbackRounds": 0,
+      "diagnosisQuality": null,
+      "parentEvidenceVerified": null,
+      "usage": {
+        "inputTokens": 1382561,
+        "cachedInputTokens": 1295744,
+        "uncachedInputTokens": 86817,
+        "outputTokens": 12826,
+        "totalTokens": 1395387
+      },
+      "fullWorkflowUsage": null,
+      "agentDurationMs": 468731.708125,
+      "fullWorkflowAgentDurationMs": null,
+      "humanInterventionMs": null,
+      "actualCostUsd": null,
+      "setup": {
+        "durationMs": 1.119166999999834,
+        "installDurationMs": null,
+        "indexDurationMs": null,
+        "version": null,
+        "sourceCommit": "2fd153c67988e980fb0b2455c90832159a6a5a25",
+        "globalConfigurationModified": false,
+        "scope": "pre-downloaded fixed source; private installation only",
+        "freshInstallTotalMs": null,
+        "maintenanceHumanTimeMs": null
+      },
+      "manualReviewEvidenceVerified": false,
+      "rounds": [
+        {
+          "index": 0,
+          "quality": true,
+          "executionPassed": true,
+          "sourceScopePassed": true,
+          "automatedPassed": true,
+          "modelEvidence": "local-turn-context",
+          "providerResolvedModel": null,
+          "activation": {
+            "status": "activated",
+            "nativeIntegration": null,
+            "instructionCount": 1,
+            "isolationPassed": true,
+            "catalogCount": 0,
+            "budgetWarnings": 0,
+            "cliCallCount": null,
+            "mcpCallCount": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "decision-httpie-cookie-scope-repair-block-3-baseline",
+      "phase": "new-task",
+      "task": "httpie-cookie-scope-repair",
+      "arm": "baseline",
+      "block": 3,
+      "status": "completed",
+      "firstQuality": true,
+      "quality": true,
+      "feedbackRounds": 0,
+      "diagnosisQuality": null,
+      "parentEvidenceVerified": null,
+      "usage": {
+        "inputTokens": 1934248,
+        "cachedInputTokens": 1854720,
+        "uncachedInputTokens": 79528,
+        "outputTokens": 18581,
+        "totalTokens": 1952829
+      },
+      "fullWorkflowUsage": null,
+      "agentDurationMs": 670198.555416,
+      "fullWorkflowAgentDurationMs": null,
+      "humanInterventionMs": null,
+      "actualCostUsd": null,
+      "setup": {
+        "durationMs": null,
+        "installDurationMs": null,
+        "indexDurationMs": null,
+        "version": null,
+        "sourceCommit": null,
+        "globalConfigurationModified": null,
+        "scope": "no tool installation measured",
+        "freshInstallTotalMs": null,
+        "maintenanceHumanTimeMs": null
+      },
+      "manualReviewEvidenceVerified": false,
+      "rounds": [
+        {
+          "index": 0,
+          "quality": true,
+          "executionPassed": true,
+          "sourceScopePassed": true,
+          "automatedPassed": true,
+          "modelEvidence": "local-turn-context",
+          "providerResolvedModel": null,
+          "activation": {
+            "status": "not-applicable",
+            "nativeIntegration": null,
+            "instructionCount": null,
+            "isolationPassed": null,
+            "catalogCount": null,
+            "budgetWarnings": null,
+            "cliCallCount": null,
+            "mcpCallCount": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "decision-httpie-cookie-scope-repair-block-3-codegraph",
+      "phase": "new-task",
+      "task": "httpie-cookie-scope-repair",
+      "arm": "codegraph",
+      "block": 3,
+      "status": "completed",
+      "firstQuality": true,
+      "quality": true,
+      "feedbackRounds": 0,
+      "diagnosisQuality": null,
+      "parentEvidenceVerified": null,
+      "usage": {
+        "inputTokens": 2188503,
+        "cachedInputTokens": 2097280,
+        "uncachedInputTokens": 91223,
+        "outputTokens": 19767,
+        "totalTokens": 2208270
+      },
+      "fullWorkflowUsage": null,
+      "agentDurationMs": 574482.6432909998,
+      "fullWorkflowAgentDurationMs": null,
+      "humanInterventionMs": null,
+      "actualCostUsd": null,
+      "setup": {
+        "durationMs": null,
+        "installDurationMs": 20.717667000135407,
+        "indexDurationMs": 842.891917000059,
+        "version": "1.6.0",
+        "sourceCommit": "290e03f7bc582b8726a104428f39bc178bac30bd",
+        "globalConfigurationModified": null,
+        "scope": "pre-downloaded fixed source; private installation only",
+        "freshInstallTotalMs": null,
+        "maintenanceHumanTimeMs": null
+      },
+      "manualReviewEvidenceVerified": false,
+      "rounds": [
+        {
+          "index": 0,
+          "quality": true,
+          "executionPassed": true,
+          "sourceScopePassed": true,
+          "automatedPassed": true,
+          "modelEvidence": "local-turn-context",
+          "providerResolvedModel": null,
+          "activation": {
+            "status": "activated",
+            "nativeIntegration": null,
+            "instructionCount": null,
+            "isolationPassed": null,
+            "catalogCount": null,
+            "budgetWarnings": null,
+            "cliCallCount": 4,
+            "mcpCallCount": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "decision-memos-attachment-filename-search-block-4-ponytail",
+      "phase": "new-task",
+      "task": "memos-attachment-filename-search",
+      "arm": "ponytail",
+      "block": 4,
+      "status": "completed",
+      "firstQuality": true,
+      "quality": true,
+      "feedbackRounds": 0,
+      "diagnosisQuality": null,
+      "parentEvidenceVerified": null,
+      "usage": {
+        "inputTokens": 1439734,
+        "cachedInputTokens": 1371264,
+        "uncachedInputTokens": 68470,
+        "outputTokens": 11656,
+        "totalTokens": 1451390
+      },
+      "fullWorkflowUsage": null,
+      "agentDurationMs": 322568.8095829999,
+      "fullWorkflowAgentDurationMs": null,
+      "humanInterventionMs": null,
+      "actualCostUsd": null,
+      "setup": {
+        "durationMs": 245.86554199969396,
+        "installDurationMs": null,
+        "indexDurationMs": null,
+        "version": "4.10.0",
+        "sourceCommit": "e3ba2aa6f1e6f0bc4d69eb09c9f0d0a93af56156",
+        "globalConfigurationModified": false,
+        "scope": "pre-downloaded fixed source; private installation only",
+        "freshInstallTotalMs": null,
+        "maintenanceHumanTimeMs": null
+      },
+      "manualReviewEvidenceVerified": true,
+      "rounds": [
+        {
+          "index": 0,
+          "quality": true,
+          "executionPassed": true,
+          "sourceScopePassed": true,
+          "automatedPassed": true,
+          "modelEvidence": "local-turn-context",
+          "providerResolvedModel": null,
+          "activation": {
+            "status": "activated",
+            "nativeIntegration": null,
+            "instructionCount": 1,
+            "isolationPassed": true,
+            "catalogCount": 0,
+            "budgetWarnings": 0,
+            "cliCallCount": null,
+            "mcpCallCount": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "decision-memos-attachment-filename-search-block-4-baseline",
+      "phase": "new-task",
+      "task": "memos-attachment-filename-search",
+      "arm": "baseline",
+      "block": 4,
+      "status": "completed",
+      "firstQuality": true,
+      "quality": true,
+      "feedbackRounds": 0,
+      "diagnosisQuality": null,
+      "parentEvidenceVerified": null,
+      "usage": {
+        "inputTokens": 1895047,
+        "cachedInputTokens": 1825664,
+        "uncachedInputTokens": 69383,
+        "outputTokens": 12947,
+        "totalTokens": 1907994
+      },
+      "fullWorkflowUsage": null,
+      "agentDurationMs": 339755.890041,
+      "fullWorkflowAgentDurationMs": null,
+      "humanInterventionMs": null,
+      "actualCostUsd": null,
+      "setup": {
+        "durationMs": null,
+        "installDurationMs": null,
+        "indexDurationMs": null,
+        "version": null,
+        "sourceCommit": null,
+        "globalConfigurationModified": null,
+        "scope": "no tool installation measured",
+        "freshInstallTotalMs": null,
+        "maintenanceHumanTimeMs": null
+      },
+      "manualReviewEvidenceVerified": true,
+      "rounds": [
+        {
+          "index": 0,
+          "quality": true,
+          "executionPassed": true,
+          "sourceScopePassed": true,
+          "automatedPassed": true,
+          "modelEvidence": "local-turn-context",
+          "providerResolvedModel": null,
+          "activation": {
+            "status": "not-applicable",
+            "nativeIntegration": null,
+            "instructionCount": null,
+            "isolationPassed": null,
+            "catalogCount": null,
+            "budgetWarnings": null,
+            "cliCallCount": null,
+            "mcpCallCount": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "decision-httpie-cookie-scope-repair-block-4-baseline",
+      "phase": "new-task",
+      "task": "httpie-cookie-scope-repair",
+      "arm": "baseline",
+      "block": 4,
+      "status": "completed",
+      "firstQuality": false,
+      "quality": true,
+      "feedbackRounds": 1,
+      "diagnosisQuality": null,
+      "parentEvidenceVerified": null,
+      "usage": {
+        "inputTokens": 3301687,
+        "cachedInputTokens": 3191680,
+        "uncachedInputTokens": 110007,
+        "outputTokens": 24913,
+        "totalTokens": 3326600
+      },
+      "fullWorkflowUsage": null,
+      "agentDurationMs": 830140.736542,
+      "fullWorkflowAgentDurationMs": null,
+      "humanInterventionMs": null,
+      "actualCostUsd": null,
+      "setup": {
+        "durationMs": null,
+        "installDurationMs": null,
+        "indexDurationMs": null,
+        "version": null,
+        "sourceCommit": null,
+        "globalConfigurationModified": null,
+        "scope": "no tool installation measured",
+        "freshInstallTotalMs": null,
+        "maintenanceHumanTimeMs": null
+      },
+      "manualReviewEvidenceVerified": false,
+      "rounds": [
+        {
+          "index": 0,
+          "quality": false,
+          "executionPassed": true,
+          "sourceScopePassed": true,
+          "automatedPassed": false,
+          "modelEvidence": "local-turn-context",
+          "providerResolvedModel": null,
+          "activation": {
+            "status": "not-applicable",
+            "nativeIntegration": null,
+            "instructionCount": null,
+            "isolationPassed": null,
+            "catalogCount": null,
+            "budgetWarnings": null,
+            "cliCallCount": null,
+            "mcpCallCount": null
+          }
+        },
+        {
+          "index": 1,
+          "quality": true,
+          "executionPassed": true,
+          "sourceScopePassed": true,
+          "automatedPassed": true,
+          "modelEvidence": "local-turn-context",
+          "providerResolvedModel": null,
+          "activation": {
+            "status": "not-applicable",
+            "nativeIntegration": null,
+            "instructionCount": null,
+            "isolationPassed": null,
+            "catalogCount": null,
+            "budgetWarnings": null,
+            "cliCallCount": null,
+            "mcpCallCount": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "decision-httpie-cookie-scope-repair-block-4-codegraph",
+      "phase": "new-task",
+      "task": "httpie-cookie-scope-repair",
+      "arm": "codegraph",
+      "block": 4,
+      "status": "completed",
+      "firstQuality": false,
+      "quality": true,
+      "feedbackRounds": 1,
+      "diagnosisQuality": null,
+      "parentEvidenceVerified": null,
+      "usage": {
+        "inputTokens": 2402213,
+        "cachedInputTokens": 2260352,
+        "uncachedInputTokens": 141861,
+        "outputTokens": 21322,
+        "totalTokens": 2423535
+      },
+      "fullWorkflowUsage": null,
+      "agentDurationMs": 737242.9110839998,
+      "fullWorkflowAgentDurationMs": null,
+      "humanInterventionMs": null,
+      "actualCostUsd": null,
+      "setup": {
+        "durationMs": null,
+        "installDurationMs": 25.705582999857143,
+        "indexDurationMs": 744.5786249998491,
+        "version": "1.6.0",
+        "sourceCommit": "290e03f7bc582b8726a104428f39bc178bac30bd",
+        "globalConfigurationModified": null,
+        "scope": "pre-downloaded fixed source; private installation only",
+        "freshInstallTotalMs": null,
+        "maintenanceHumanTimeMs": null
+      },
+      "manualReviewEvidenceVerified": false,
+      "rounds": [
+        {
+          "index": 0,
+          "quality": false,
+          "executionPassed": true,
+          "sourceScopePassed": true,
+          "automatedPassed": false,
+          "modelEvidence": "local-turn-context",
+          "providerResolvedModel": null,
+          "activation": {
+            "status": "activated",
+            "nativeIntegration": null,
+            "instructionCount": null,
+            "isolationPassed": null,
+            "catalogCount": null,
+            "budgetWarnings": null,
+            "cliCallCount": 3,
+            "mcpCallCount": 0
+          }
+        },
+        {
+          "index": 1,
+          "quality": true,
+          "executionPassed": true,
+          "sourceScopePassed": true,
+          "automatedPassed": true,
+          "modelEvidence": "local-turn-context",
+          "providerResolvedModel": null,
+          "activation": {
+            "status": "activated",
+            "nativeIntegration": null,
+            "instructionCount": null,
+            "isolationPassed": null,
+            "catalogCount": null,
+            "budgetWarnings": null,
+            "cliCallCount": 1,
+            "mcpCallCount": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "decision-httpie-cookie-scope-repair-block-4-caveman",
+      "phase": "new-task",
+      "task": "httpie-cookie-scope-repair",
+      "arm": "caveman",
+      "block": 4,
+      "status": "completed",
+      "firstQuality": true,
+      "quality": true,
+      "feedbackRounds": 0,
+      "diagnosisQuality": null,
+      "parentEvidenceVerified": null,
+      "usage": {
+        "inputTokens": 1330591,
+        "cachedInputTokens": 1240576,
+        "uncachedInputTokens": 90015,
+        "outputTokens": 12595,
+        "totalTokens": 1343186
+      },
+      "fullWorkflowUsage": null,
+      "agentDurationMs": 510331.65625,
+      "fullWorkflowAgentDurationMs": null,
+      "humanInterventionMs": null,
+      "actualCostUsd": null,
+      "setup": {
+        "durationMs": 1.140459000132978,
+        "installDurationMs": null,
+        "indexDurationMs": null,
+        "version": null,
+        "sourceCommit": "2fd153c67988e980fb0b2455c90832159a6a5a25",
+        "globalConfigurationModified": false,
+        "scope": "pre-downloaded fixed source; private installation only",
+        "freshInstallTotalMs": null,
+        "maintenanceHumanTimeMs": null
+      },
+      "manualReviewEvidenceVerified": false,
+      "rounds": [
+        {
+          "index": 0,
+          "quality": true,
+          "executionPassed": true,
+          "sourceScopePassed": true,
+          "automatedPassed": true,
+          "modelEvidence": "local-turn-context",
+          "providerResolvedModel": null,
+          "activation": {
+            "status": "activated",
+            "nativeIntegration": null,
+            "instructionCount": 1,
+            "isolationPassed": true,
+            "catalogCount": 0,
+            "budgetWarnings": 0,
+            "cliCallCount": null,
+            "mcpCallCount": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "decision-httpie-diagnosis-followup-block-1-baseline",
+      "phase": "diagnosis-followup",
+      "task": "httpie-download-repair",
+      "arm": "baseline",
+      "block": 1,
+      "status": "completed",
+      "firstQuality": true,
+      "quality": true,
+      "feedbackRounds": 0,
+      "diagnosisQuality": true,
+      "parentEvidenceVerified": true,
+      "usage": {
+        "inputTokens": 3797189,
+        "cachedInputTokens": 3682688,
+        "uncachedInputTokens": 114501,
+        "outputTokens": 22956,
+        "totalTokens": 3820145
+      },
+      "fullWorkflowUsage": {
+        "inputTokens": 4066452,
+        "cachedInputTokens": 3897088,
+        "uncachedInputTokens": 169364,
+        "outputTokens": 32301,
+        "totalTokens": 4098753
+      },
+      "agentDurationMs": 894448.4006249998,
+      "fullWorkflowAgentDurationMs": 1113857.0489999996,
+      "humanInterventionMs": null,
+      "actualCostUsd": null,
+      "setup": {
+        "durationMs": null,
+        "installDurationMs": null,
+        "indexDurationMs": null,
+        "version": null,
+        "sourceCommit": null,
+        "globalConfigurationModified": null,
+        "scope": "no tool installation measured",
+        "freshInstallTotalMs": null,
+        "maintenanceHumanTimeMs": null
+      },
+      "manualReviewEvidenceVerified": false,
+      "rounds": [
+        {
+          "index": 0,
+          "quality": true,
+          "executionPassed": true,
+          "sourceScopePassed": true,
+          "automatedPassed": true,
+          "modelEvidence": "local-turn-context",
+          "providerResolvedModel": null,
+          "activation": {
+            "status": "inherited-frozen-instructions",
+            "nativeIntegration": false,
+            "instructionCount": null,
+            "isolationPassed": null,
+            "catalogCount": null,
+            "budgetWarnings": null,
+            "cliCallCount": null,
+            "mcpCallCount": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "decision-httpie-diagnosis-followup-block-1-caveman",
+      "phase": "diagnosis-followup",
+      "task": "httpie-download-repair",
+      "arm": "caveman",
+      "block": 1,
+      "status": "completed",
+      "firstQuality": false,
+      "quality": true,
+      "feedbackRounds": 1,
+      "diagnosisQuality": true,
+      "parentEvidenceVerified": true,
+      "usage": {
+        "inputTokens": 3660050,
+        "cachedInputTokens": 3537792,
+        "uncachedInputTokens": 122258,
+        "outputTokens": 17675,
+        "totalTokens": 3677725
+      },
+      "fullWorkflowUsage": {
+        "inputTokens": 3929630,
+        "cachedInputTokens": 3759104,
+        "uncachedInputTokens": 170526,
+        "outputTokens": 24423,
+        "totalTokens": 3954053
+      },
+      "agentDurationMs": 570813.9984170008,
+      "fullWorkflowAgentDurationMs": 743231.7467080008,
+      "humanInterventionMs": null,
+      "actualCostUsd": null,
+      "setup": {
+        "durationMs": null,
+        "installDurationMs": null,
+        "indexDurationMs": null,
+        "version": null,
+        "sourceCommit": null,
+        "globalConfigurationModified": null,
+        "scope": "inherited frozen historical configuration",
+        "freshInstallTotalMs": null,
+        "maintenanceHumanTimeMs": null
+      },
+      "manualReviewEvidenceVerified": false,
+      "rounds": [
+        {
+          "index": 0,
+          "quality": false,
+          "executionPassed": true,
+          "sourceScopePassed": true,
+          "automatedPassed": false,
+          "modelEvidence": "local-turn-context",
+          "providerResolvedModel": null,
+          "activation": {
+            "status": "inherited-frozen-instructions",
+            "nativeIntegration": false,
+            "instructionCount": null,
+            "isolationPassed": null,
+            "catalogCount": null,
+            "budgetWarnings": null,
+            "cliCallCount": null,
+            "mcpCallCount": null
+          }
+        },
+        {
+          "index": 1,
+          "quality": true,
+          "executionPassed": true,
+          "sourceScopePassed": true,
+          "automatedPassed": true,
+          "modelEvidence": "local-turn-context",
+          "providerResolvedModel": null,
+          "activation": {
+            "status": "inherited-frozen-instructions",
+            "nativeIntegration": false,
+            "instructionCount": null,
+            "isolationPassed": null,
+            "catalogCount": null,
+            "budgetWarnings": null,
+            "cliCallCount": null,
+            "mcpCallCount": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "decision-httpie-diagnosis-followup-block-1-codegraph",
+      "phase": "diagnosis-followup",
+      "task": "httpie-download-repair",
+      "arm": "codegraph",
+      "block": 1,
+      "status": "completed",
+      "firstQuality": true,
+      "quality": true,
+      "feedbackRounds": 0,
+      "diagnosisQuality": false,
+      "parentEvidenceVerified": true,
+      "usage": {
+        "inputTokens": 2442612,
+        "cachedInputTokens": 2338304,
+        "uncachedInputTokens": 104308,
+        "outputTokens": 16735,
+        "totalTokens": 2459347
+      },
+      "fullWorkflowUsage": {
+        "inputTokens": 2840375,
+        "cachedInputTokens": 2686848,
+        "uncachedInputTokens": 153527,
+        "outputTokens": 25268,
+        "totalTokens": 2865643
+      },
+      "agentDurationMs": 452819.77129099984,
+      "fullWorkflowAgentDurationMs": 668657.9445829998,
+      "humanInterventionMs": null,
+      "actualCostUsd": null,
+      "setup": {
+        "durationMs": null,
+        "installDurationMs": null,
+        "indexDurationMs": 766.7116250004619,
+        "version": "1.6.0",
+        "sourceCommit": "290e03f7bc582b8726a104428f39bc178bac30bd",
+        "globalConfigurationModified": null,
+        "scope": "inherited frozen historical configuration",
+        "freshInstallTotalMs": null,
+        "maintenanceHumanTimeMs": null
+      },
+      "manualReviewEvidenceVerified": false,
+      "rounds": [
+        {
+          "index": 0,
+          "quality": true,
+          "executionPassed": true,
+          "sourceScopePassed": true,
+          "automatedPassed": true,
+          "modelEvidence": "local-turn-context",
+          "providerResolvedModel": null,
+          "activation": {
+            "status": "activated",
+            "nativeIntegration": null,
+            "instructionCount": null,
+            "isolationPassed": null,
+            "catalogCount": null,
+            "budgetWarnings": null,
+            "cliCallCount": 0,
+            "mcpCallCount": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "decision-httpie-diagnosis-followup-block-2-baseline",
+      "phase": "diagnosis-followup",
+      "task": "httpie-download-repair",
+      "arm": "baseline",
+      "block": 2,
+      "status": "completed",
+      "firstQuality": true,
+      "quality": true,
+      "feedbackRounds": 0,
+      "diagnosisQuality": false,
+      "parentEvidenceVerified": true,
+      "usage": {
+        "inputTokens": 1658986,
+        "cachedInputTokens": 1553536,
+        "uncachedInputTokens": 105450,
+        "outputTokens": 15572,
+        "totalTokens": 1674558
+      },
+      "fullWorkflowUsage": {
+        "inputTokens": 1863605,
+        "cachedInputTokens": 1710976,
+        "uncachedInputTokens": 152629,
+        "outputTokens": 24288,
+        "totalTokens": 1887893
+      },
+      "agentDurationMs": 486922.63233400043,
+      "fullWorkflowAgentDurationMs": 684748.6858760004,
+      "humanInterventionMs": null,
+      "actualCostUsd": null,
+      "setup": {
+        "durationMs": null,
+        "installDurationMs": null,
+        "indexDurationMs": null,
+        "version": null,
+        "sourceCommit": null,
+        "globalConfigurationModified": null,
+        "scope": "no tool installation measured",
+        "freshInstallTotalMs": null,
+        "maintenanceHumanTimeMs": null
+      },
+      "manualReviewEvidenceVerified": false,
+      "rounds": [
+        {
+          "index": 0,
+          "quality": true,
+          "executionPassed": true,
+          "sourceScopePassed": true,
+          "automatedPassed": true,
+          "modelEvidence": "local-turn-context",
+          "providerResolvedModel": null,
+          "activation": {
+            "status": "inherited-frozen-instructions",
+            "nativeIntegration": false,
+            "instructionCount": null,
+            "isolationPassed": null,
+            "catalogCount": null,
+            "budgetWarnings": null,
+            "cliCallCount": null,
+            "mcpCallCount": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "decision-httpie-diagnosis-followup-block-2-caveman",
+      "phase": "diagnosis-followup",
+      "task": "httpie-download-repair",
+      "arm": "caveman",
+      "block": 2,
+      "status": "completed",
+      "firstQuality": true,
+      "quality": true,
+      "feedbackRounds": 0,
+      "diagnosisQuality": true,
+      "parentEvidenceVerified": true,
+      "usage": {
+        "inputTokens": 2305715,
+        "cachedInputTokens": 2200320,
+        "uncachedInputTokens": 105395,
+        "outputTokens": 19228,
+        "totalTokens": 2324943
+      },
+      "fullWorkflowUsage": {
+        "inputTokens": 2597012,
+        "cachedInputTokens": 2444416,
+        "uncachedInputTokens": 152596,
+        "outputTokens": 26482,
+        "totalTokens": 2623494
+      },
+      "agentDurationMs": 484926.2972090002,
+      "fullWorkflowAgentDurationMs": 673924.5303340002,
+      "humanInterventionMs": null,
+      "actualCostUsd": null,
+      "setup": {
+        "durationMs": null,
+        "installDurationMs": null,
+        "indexDurationMs": null,
+        "version": null,
+        "sourceCommit": null,
+        "globalConfigurationModified": null,
+        "scope": "inherited frozen historical configuration",
+        "freshInstallTotalMs": null,
+        "maintenanceHumanTimeMs": null
+      },
+      "manualReviewEvidenceVerified": false,
+      "rounds": [
+        {
+          "index": 0,
+          "quality": true,
+          "executionPassed": true,
+          "sourceScopePassed": true,
+          "automatedPassed": true,
+          "modelEvidence": "local-turn-context",
+          "providerResolvedModel": null,
+          "activation": {
+            "status": "inherited-frozen-instructions",
+            "nativeIntegration": false,
+            "instructionCount": null,
+            "isolationPassed": null,
+            "catalogCount": null,
+            "budgetWarnings": null,
+            "cliCallCount": null,
+            "mcpCallCount": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "decision-httpie-diagnosis-followup-block-2-codegraph",
+      "phase": "diagnosis-followup",
+      "task": "httpie-download-repair",
+      "arm": "codegraph",
+      "block": 2,
+      "status": "completed",
+      "firstQuality": true,
+      "quality": true,
+      "feedbackRounds": 0,
+      "diagnosisQuality": true,
+      "parentEvidenceVerified": true,
+      "usage": {
+        "inputTokens": 3438724,
+        "cachedInputTokens": 3298944,
+        "uncachedInputTokens": 139780,
+        "outputTokens": 20145,
+        "totalTokens": 3458869
+      },
+      "fullWorkflowUsage": {
+        "inputTokens": 3755959,
+        "cachedInputTokens": 3556736,
+        "uncachedInputTokens": 199223,
+        "outputTokens": 28652,
+        "totalTokens": 3784611
+      },
+      "agentDurationMs": 646754.9455829998,
+      "fullWorkflowAgentDurationMs": 846187.4935829999,
+      "humanInterventionMs": null,
+      "actualCostUsd": null,
+      "setup": {
+        "durationMs": null,
+        "installDurationMs": null,
+        "indexDurationMs": 809.4259580001235,
+        "version": "1.6.0",
+        "sourceCommit": "290e03f7bc582b8726a104428f39bc178bac30bd",
+        "globalConfigurationModified": null,
+        "scope": "inherited frozen historical configuration",
+        "freshInstallTotalMs": null,
+        "maintenanceHumanTimeMs": null
+      },
+      "manualReviewEvidenceVerified": false,
+      "rounds": [
+        {
+          "index": 0,
+          "quality": true,
+          "executionPassed": true,
+          "sourceScopePassed": true,
+          "automatedPassed": true,
+          "modelEvidence": "local-turn-context",
+          "providerResolvedModel": null,
+          "activation": {
+            "status": "activated",
+            "nativeIntegration": null,
+            "instructionCount": null,
+            "isolationPassed": null,
+            "catalogCount": null,
+            "budgetWarnings": null,
+            "cliCallCount": 0,
+            "mcpCallCount": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "decision-httpie-diagnosis-followup-block-3-baseline",
+      "phase": "diagnosis-followup",
+      "task": "httpie-download-repair",
+      "arm": "baseline",
+      "block": 3,
+      "status": "completed",
+      "firstQuality": true,
+      "quality": true,
+      "feedbackRounds": 0,
+      "diagnosisQuality": true,
+      "parentEvidenceVerified": true,
+      "usage": {
+        "inputTokens": 2414440,
+        "cachedInputTokens": 2294528,
+        "uncachedInputTokens": 119912,
+        "outputTokens": 16882,
+        "totalTokens": 2431322
+      },
+      "fullWorkflowUsage": {
+        "inputTokens": 2708777,
+        "cachedInputTokens": 2551680,
+        "uncachedInputTokens": 157097,
+        "outputTokens": 24935,
+        "totalTokens": 2733712
+      },
+      "agentDurationMs": 475926.4691669997,
+      "fullWorkflowAgentDurationMs": 665505.9212919998,
+      "humanInterventionMs": null,
+      "actualCostUsd": null,
+      "setup": {
+        "durationMs": null,
+        "installDurationMs": null,
+        "indexDurationMs": null,
+        "version": null,
+        "sourceCommit": null,
+        "globalConfigurationModified": null,
+        "scope": "no tool installation measured",
+        "freshInstallTotalMs": null,
+        "maintenanceHumanTimeMs": null
+      },
+      "manualReviewEvidenceVerified": false,
+      "rounds": [
+        {
+          "index": 0,
+          "quality": true,
+          "executionPassed": true,
+          "sourceScopePassed": true,
+          "automatedPassed": true,
+          "modelEvidence": "local-turn-context",
+          "providerResolvedModel": null,
+          "activation": {
+            "status": "inherited-frozen-instructions",
+            "nativeIntegration": false,
+            "instructionCount": null,
+            "isolationPassed": null,
+            "catalogCount": null,
+            "budgetWarnings": null,
+            "cliCallCount": null,
+            "mcpCallCount": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "decision-httpie-diagnosis-followup-block-3-caveman",
+      "phase": "diagnosis-followup",
+      "task": "httpie-download-repair",
+      "arm": "caveman",
+      "block": 3,
+      "status": "completed",
+      "firstQuality": true,
+      "quality": true,
+      "feedbackRounds": 0,
+      "diagnosisQuality": true,
+      "parentEvidenceVerified": true,
+      "usage": {
+        "inputTokens": 3722703,
+        "cachedInputTokens": 3576448,
+        "uncachedInputTokens": 146255,
+        "outputTokens": 18843,
+        "totalTokens": 3741546
+      },
+      "fullWorkflowUsage": {
+        "inputTokens": 4118886,
+        "cachedInputTokens": 3912192,
+        "uncachedInputTokens": 206694,
+        "outputTokens": 26432,
+        "totalTokens": 4145318
+      },
+      "agentDurationMs": 592022.1622910006,
+      "fullWorkflowAgentDurationMs": 782377.3267490007,
+      "humanInterventionMs": null,
+      "actualCostUsd": null,
+      "setup": {
+        "durationMs": null,
+        "installDurationMs": null,
+        "indexDurationMs": null,
+        "version": null,
+        "sourceCommit": null,
+        "globalConfigurationModified": null,
+        "scope": "inherited frozen historical configuration",
+        "freshInstallTotalMs": null,
+        "maintenanceHumanTimeMs": null
+      },
+      "manualReviewEvidenceVerified": false,
+      "rounds": [
+        {
+          "index": 0,
+          "quality": true,
+          "executionPassed": true,
+          "sourceScopePassed": true,
+          "automatedPassed": true,
+          "modelEvidence": "local-turn-context",
+          "providerResolvedModel": null,
+          "activation": {
+            "status": "inherited-frozen-instructions",
+            "nativeIntegration": false,
+            "instructionCount": null,
+            "isolationPassed": null,
+            "catalogCount": null,
+            "budgetWarnings": null,
+            "cliCallCount": null,
+            "mcpCallCount": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "decision-httpie-diagnosis-followup-block-3-codegraph",
+      "phase": "diagnosis-followup",
+      "task": "httpie-download-repair",
+      "arm": "codegraph",
+      "block": 3,
+      "status": "completed",
+      "firstQuality": true,
+      "quality": true,
+      "feedbackRounds": 0,
+      "diagnosisQuality": true,
+      "parentEvidenceVerified": true,
+      "usage": {
+        "inputTokens": 2804994,
+        "cachedInputTokens": 2693760,
+        "uncachedInputTokens": 111234,
+        "outputTokens": 19527,
+        "totalTokens": 2824521
+      },
+      "fullWorkflowUsage": {
+        "inputTokens": 3174452,
+        "cachedInputTokens": 3015552,
+        "uncachedInputTokens": 158900,
+        "outputTokens": 28260,
+        "totalTokens": 3202712
+      },
+      "agentDurationMs": 474136.9427089989,
+      "fullWorkflowAgentDurationMs": 698986.035125999,
+      "humanInterventionMs": null,
+      "actualCostUsd": null,
+      "setup": {
+        "durationMs": null,
+        "installDurationMs": null,
+        "indexDurationMs": 711.8145420011133,
+        "version": "1.6.0",
+        "sourceCommit": "290e03f7bc582b8726a104428f39bc178bac30bd",
+        "globalConfigurationModified": null,
+        "scope": "inherited frozen historical configuration",
+        "freshInstallTotalMs": null,
+        "maintenanceHumanTimeMs": null
+      },
+      "manualReviewEvidenceVerified": false,
+      "rounds": [
+        {
+          "index": 0,
+          "quality": true,
+          "executionPassed": true,
+          "sourceScopePassed": true,
+          "automatedPassed": true,
+          "modelEvidence": "local-turn-context",
+          "providerResolvedModel": null,
+          "activation": {
+            "status": "activated",
+            "nativeIntegration": null,
+            "instructionCount": null,
+            "isolationPassed": null,
+            "catalogCount": null,
+            "budgetWarnings": null,
+            "cliCallCount": 0,
+            "mcpCallCount": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "decision-httpie-diagnosis-followup-block-4-baseline",
+      "phase": "diagnosis-followup",
+      "task": "httpie-download-repair",
+      "arm": "baseline",
+      "block": 4,
+      "status": "completed",
+      "firstQuality": false,
+      "quality": true,
+      "feedbackRounds": 1,
+      "diagnosisQuality": true,
+      "parentEvidenceVerified": true,
+      "usage": {
+        "inputTokens": 4657193,
+        "cachedInputTokens": 4496384,
+        "uncachedInputTokens": 160809,
+        "outputTokens": 21542,
+        "totalTokens": 4678735
+      },
+      "fullWorkflowUsage": {
+        "inputTokens": 4981122,
+        "cachedInputTokens": 4776960,
+        "uncachedInputTokens": 204162,
+        "outputTokens": 29479,
+        "totalTokens": 5010601
+      },
+      "agentDurationMs": 812234.7145000007,
+      "fullWorkflowAgentDurationMs": 1010983.360458001,
+      "humanInterventionMs": null,
+      "actualCostUsd": null,
+      "setup": {
+        "durationMs": null,
+        "installDurationMs": null,
+        "indexDurationMs": null,
+        "version": null,
+        "sourceCommit": null,
+        "globalConfigurationModified": null,
+        "scope": "no tool installation measured",
+        "freshInstallTotalMs": null,
+        "maintenanceHumanTimeMs": null
+      },
+      "manualReviewEvidenceVerified": false,
+      "rounds": [
+        {
+          "index": 0,
+          "quality": false,
+          "executionPassed": true,
+          "sourceScopePassed": true,
+          "automatedPassed": false,
+          "modelEvidence": "local-turn-context",
+          "providerResolvedModel": null,
+          "activation": {
+            "status": "inherited-frozen-instructions",
+            "nativeIntegration": false,
+            "instructionCount": null,
+            "isolationPassed": null,
+            "catalogCount": null,
+            "budgetWarnings": null,
+            "cliCallCount": null,
+            "mcpCallCount": null
+          }
+        },
+        {
+          "index": 1,
+          "quality": true,
+          "executionPassed": true,
+          "sourceScopePassed": true,
+          "automatedPassed": true,
+          "modelEvidence": "local-turn-context",
+          "providerResolvedModel": null,
+          "activation": {
+            "status": "inherited-frozen-instructions",
+            "nativeIntegration": false,
+            "instructionCount": null,
+            "isolationPassed": null,
+            "catalogCount": null,
+            "budgetWarnings": null,
+            "cliCallCount": null,
+            "mcpCallCount": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "decision-httpie-diagnosis-followup-block-4-caveman",
+      "phase": "diagnosis-followup",
+      "task": "httpie-download-repair",
+      "arm": "caveman",
+      "block": 4,
+      "status": "completed",
+      "firstQuality": true,
+      "quality": true,
+      "feedbackRounds": 0,
+      "diagnosisQuality": false,
+      "parentEvidenceVerified": true,
+      "usage": {
+        "inputTokens": 2920725,
+        "cachedInputTokens": 2803328,
+        "uncachedInputTokens": 117397,
+        "outputTokens": 18263,
+        "totalTokens": 2938988
+      },
+      "fullWorkflowUsage": {
+        "inputTokens": 3148449,
+        "cachedInputTokens": 2989184,
+        "uncachedInputTokens": 159265,
+        "outputTokens": 25201,
+        "totalTokens": 3173650
+      },
+      "agentDurationMs": 568175.1502080001,
+      "fullWorkflowAgentDurationMs": 735917.1872500002,
+      "humanInterventionMs": null,
+      "actualCostUsd": null,
+      "setup": {
+        "durationMs": null,
+        "installDurationMs": null,
+        "indexDurationMs": null,
+        "version": null,
+        "sourceCommit": null,
+        "globalConfigurationModified": null,
+        "scope": "inherited frozen historical configuration",
+        "freshInstallTotalMs": null,
+        "maintenanceHumanTimeMs": null
+      },
+      "manualReviewEvidenceVerified": false,
+      "rounds": [
+        {
+          "index": 0,
+          "quality": true,
+          "executionPassed": true,
+          "sourceScopePassed": true,
+          "automatedPassed": true,
+          "modelEvidence": "local-turn-context",
+          "providerResolvedModel": null,
+          "activation": {
+            "status": "inherited-frozen-instructions",
+            "nativeIntegration": false,
+            "instructionCount": null,
+            "isolationPassed": null,
+            "catalogCount": null,
+            "budgetWarnings": null,
+            "cliCallCount": null,
+            "mcpCallCount": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "decision-httpie-diagnosis-followup-block-4-codegraph",
+      "phase": "diagnosis-followup",
+      "task": "httpie-download-repair",
+      "arm": "codegraph",
+      "block": 4,
+      "status": "completed",
+      "firstQuality": true,
+      "quality": true,
+      "feedbackRounds": 0,
+      "diagnosisQuality": false,
+      "parentEvidenceVerified": true,
+      "usage": {
+        "inputTokens": 3410822,
+        "cachedInputTokens": 3269248,
+        "uncachedInputTokens": 141574,
+        "outputTokens": 21256,
+        "totalTokens": 3432078
+      },
+      "fullWorkflowUsage": {
+        "inputTokens": 3808333,
+        "cachedInputTokens": 3583744,
+        "uncachedInputTokens": 224589,
+        "outputTokens": 30559,
+        "totalTokens": 3838892
+      },
+      "agentDurationMs": 661506.3711670004,
+      "fullWorkflowAgentDurationMs": 883454.9286250002,
+      "humanInterventionMs": null,
+      "actualCostUsd": null,
+      "setup": {
+        "durationMs": null,
+        "installDurationMs": null,
+        "indexDurationMs": 750.8807499986142,
+        "version": "1.6.0",
+        "sourceCommit": "290e03f7bc582b8726a104428f39bc178bac30bd",
+        "globalConfigurationModified": null,
+        "scope": "inherited frozen historical configuration",
+        "freshInstallTotalMs": null,
+        "maintenanceHumanTimeMs": null
+      },
+      "manualReviewEvidenceVerified": false,
+      "rounds": [
+        {
+          "index": 0,
+          "quality": true,
+          "executionPassed": true,
+          "sourceScopePassed": true,
+          "automatedPassed": true,
+          "modelEvidence": "local-turn-context",
+          "providerResolvedModel": null,
+          "activation": {
+            "status": "activated",
+            "nativeIntegration": null,
+            "instructionCount": null,
+            "isolationPassed": null,
+            "catalogCount": null,
+            "budgetWarnings": null,
+            "cliCallCount": 0,
+            "mcpCallCount": 2
+          }
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Native new-task results and inherited historical followups must be analyzed separately.",
+    "Total tokens include repeated cached context; token ratios do not measure supplier fees or subscription quota.",
+    "Human intervention time, total fresh installation time and maintenance time remain unknown.",
+    "Four repetitions per comparison and two project families do not establish a universal ranking.",
+    "Memos placeholder video playback remains unverified. RTK and Headroom effects remain unmeasured."
+  ],
+  "provenance": {
+    "evidenceAuditSha256": "7c90f501193edbf3dc093e6f88358fb276ca60ded635bd38bd51e55fd64cd4a3",
+    "pairAnalysisSha256": "304db4f0172f968cacc6297584ddd8c90d75d1c1b0eb3de6e10426365f9a7f1f",
+    "regressionAuditSha256": "3475a99ba9e8f2002b3a29fe20f36597fc356f1e8157717c439df1c08cbec6b8"
+  },
+  "comparisons": [
+    {
+      "phase": "new-task",
+      "task": "memos-attachment-filename-search",
+      "arm": "ponytail",
+      "acceptedPairCount": 4,
+      "summary": {
+        "totalTokens": {
+          "observed": 4,
+          "lower": 1,
+          "equal": 0,
+          "higher": 3,
+          "medianRatio": 1.108378066686563
+        },
+        "uncachedInputTokens": {
+          "observed": 4,
+          "lower": 2,
+          "equal": 0,
+          "higher": 2,
+          "medianRatio": 1.0531579688441495
+        },
+        "cachedInputTokens": {
+          "observed": 4,
+          "lower": 1,
+          "equal": 0,
+          "higher": 3,
+          "medianRatio": 1.0997207313021713
+        },
+        "outputTokens": {
+          "observed": 4,
+          "lower": 3,
+          "equal": 0,
+          "higher": 1,
+          "medianRatio": 0.9423824473324471
+        },
+        "agentDuration": {
+          "observed": 4,
+          "lower": 2,
+          "equal": 0,
+          "higher": 2,
+          "medianRatio": 1.0243390859288832
+        }
+      },
+      "pairs": [
+        {
+          "block": 1,
+          "baselineId": "decision-memos-attachment-filename-search-block-1-baseline",
+          "toolId": "decision-memos-attachment-filename-search-block-1-ponytail",
+          "accepted": true,
+          "metrics": {
+            "baselineUsage": {
+              "inputTokens": 1280324,
+              "cachedInputTokens": 1215616,
+              "outputTokens": 11771,
+              "totalTokens": 1292095,
+              "uncachedInputTokens": 64708
+            },
+            "toolUsage": {
+              "inputTokens": 1662319,
+              "cachedInputTokens": 1600000,
+              "outputTokens": 12518,
+              "totalTokens": 1674837,
+              "uncachedInputTokens": 62319
+            },
+            "ratios": {
+              "totalTokens": 1.2962181573336327,
+              "uncachedInputTokens": 0.9630802991902083,
+              "cachedInputTokens": 1.3162051174054965,
+              "outputTokens": 1.0634610483391385,
+              "agentDuration": 1.134455707678708
+            },
+            "baselineFeedbackRounds": 0,
+            "toolFeedbackRounds": 0
+          }
+        },
+        {
+          "block": 2,
+          "baselineId": "decision-memos-attachment-filename-search-block-2-baseline",
+          "toolId": "decision-memos-attachment-filename-search-block-2-ponytail",
+          "accepted": true,
+          "metrics": {
+            "baselineUsage": {
+              "inputTokens": 880809,
+              "cachedInputTokens": 833152,
+              "outputTokens": 12196,
+              "totalTokens": 893005,
+              "uncachedInputTokens": 47657
+            },
+            "toolUsage": {
+              "inputTokens": 920719,
+              "cachedInputTokens": 852352,
+              "outputTokens": 11586,
+              "totalTokens": 932305,
+              "uncachedInputTokens": 68367
+            },
+            "ratios": {
+              "totalTokens": 1.0440087121572668,
+              "uncachedInputTokens": 1.4345636527687433,
+              "cachedInputTokens": 1.023045014595176,
+              "outputTokens": 0.949983601180715,
+              "agentDuration": 0.5930251946380872
+            },
+            "baselineFeedbackRounds": 0,
+            "toolFeedbackRounds": 0
+          }
+        },
+        {
+          "block": 3,
+          "baselineId": "decision-memos-attachment-filename-search-block-3-baseline",
+          "toolId": "decision-memos-attachment-filename-search-block-3-ponytail",
+          "accepted": true,
+          "metrics": {
+            "baselineUsage": {
+              "inputTokens": 2313445,
+              "cachedInputTokens": 2234240,
+              "outputTokens": 16529,
+              "totalTokens": 2329974,
+              "uncachedInputTokens": 79205
+            },
+            "toolUsage": {
+              "inputTokens": 2717020,
+              "cachedInputTokens": 2628352,
+              "outputTokens": 15451,
+              "totalTokens": 2732471,
+              "uncachedInputTokens": 88668
+            },
+            "ratios": {
+              "totalTokens": 1.172747421215859,
+              "uncachedInputTokens": 1.1194747806325358,
+              "cachedInputTokens": 1.1763964480091664,
+              "outputTokens": 0.9347812934841794,
+              "agentDuration": 1.0992647281524226
+            },
+            "baselineFeedbackRounds": 0,
+            "toolFeedbackRounds": 0
+          }
+        },
+        {
+          "block": 4,
+          "baselineId": "decision-memos-attachment-filename-search-block-4-baseline",
+          "toolId": "decision-memos-attachment-filename-search-block-4-ponytail",
+          "accepted": true,
+          "metrics": {
+            "baselineUsage": {
+              "inputTokens": 1895047,
+              "cachedInputTokens": 1825664,
+              "outputTokens": 12947,
+              "totalTokens": 1907994,
+              "uncachedInputTokens": 69383
+            },
+            "toolUsage": {
+              "inputTokens": 1439734,
+              "cachedInputTokens": 1371264,
+              "outputTokens": 11656,
+              "totalTokens": 1451390,
+              "uncachedInputTokens": 68470
+            },
+            "ratios": {
+              "totalTokens": 0.760688974912919,
+              "uncachedInputTokens": 0.9868411570557629,
+              "cachedInputTokens": 0.751104255766669,
+              "outputTokens": 0.9002857804896888,
+              "agentDuration": 0.9494134437053438
+            },
+            "baselineFeedbackRounds": 0,
+            "toolFeedbackRounds": 0
+          }
+        }
+      ]
+    },
+    {
+      "phase": "new-task",
+      "task": "httpie-cookie-scope-repair",
+      "arm": "codegraph",
+      "acceptedPairCount": 4,
+      "summary": {
+        "totalTokens": {
+          "observed": 4,
+          "lower": 2,
+          "equal": 0,
+          "higher": 2,
+          "medianRatio": 1.029353036801949
+        },
+        "uncachedInputTokens": {
+          "observed": 4,
+          "lower": 0,
+          "equal": 0,
+          "higher": 4,
+          "medianRatio": 1.218309258329728
+        },
+        "cachedInputTokens": {
+          "observed": 4,
+          "lower": 2,
+          "equal": 0,
+          "higher": 2,
+          "medianRatio": 1.0257636354257824
+        },
+        "outputTokens": {
+          "observed": 4,
+          "lower": 3,
+          "equal": 0,
+          "higher": 1,
+          "medianRatio": 0.8700591282409338
+        },
+        "agentDuration": {
+          "observed": 4,
+          "lower": 2,
+          "equal": 0,
+          "higher": 2,
+          "medianRatio": 1.0031967819977305
+        }
+      },
+      "pairs": [
+        {
+          "block": 1,
+          "baselineId": "decision-httpie-cookie-scope-repair-block-1-baseline",
+          "toolId": "decision-httpie-cookie-scope-repair-block-1-codegraph",
+          "accepted": true,
+          "metrics": {
+            "baselineUsage": {
+              "inputTokens": 1423632,
+              "cachedInputTokens": 1352832,
+              "outputTokens": 17239,
+              "totalTokens": 1440871,
+              "uncachedInputTokens": 70800
+            },
+            "toolUsage": {
+              "inputTokens": 2002448,
+              "cachedInputTokens": 1903232,
+              "outputTokens": 15127,
+              "totalTokens": 2017575,
+              "uncachedInputTokens": 99216
+            },
+            "ratios": {
+              "totalTokens": 1.4002467951676452,
+              "uncachedInputTokens": 1.4013559322033897,
+              "cachedInputTokens": 1.4068502223483774,
+              "outputTokens": 0.8774870932188642,
+              "agentDuration": 1.1757298264384275
+            },
+            "baselineFeedbackRounds": 0,
+            "toolFeedbackRounds": 0
+          }
+        },
+        {
+          "block": 2,
+          "baselineId": "decision-httpie-cookie-scope-repair-block-2-baseline",
+          "toolId": "decision-httpie-cookie-scope-repair-block-2-codegraph",
+          "accepted": true,
+          "metrics": {
+            "baselineUsage": {
+              "inputTokens": 2262552,
+              "cachedInputTokens": 2185216,
+              "outputTokens": 17726,
+              "totalTokens": 2280278,
+              "uncachedInputTokens": 77336
+            },
+            "toolUsage": {
+              "inputTokens": 2100580,
+              "cachedInputTokens": 2012032,
+              "outputTokens": 15291,
+              "totalTokens": 2115871,
+              "uncachedInputTokens": 88548
+            },
+            "ratios": {
+              "totalTokens": 0.927900457751204,
+              "uncachedInputTokens": 1.1449777593876074,
+              "cachedInputTokens": 0.9207474226804123,
+              "outputTokens": 0.8626311632630035,
+              "agentDuration": 1.1182996798728384
+            },
+            "baselineFeedbackRounds": 1,
+            "toolFeedbackRounds": 0
+          }
+        },
+        {
+          "block": 3,
+          "baselineId": "decision-httpie-cookie-scope-repair-block-3-baseline",
+          "toolId": "decision-httpie-cookie-scope-repair-block-3-codegraph",
+          "accepted": true,
+          "metrics": {
+            "baselineUsage": {
+              "inputTokens": 1934248,
+              "cachedInputTokens": 1854720,
+              "outputTokens": 18581,
+              "totalTokens": 1952829,
+              "uncachedInputTokens": 79528
+            },
+            "toolUsage": {
+              "inputTokens": 2188503,
+              "cachedInputTokens": 2097280,
+              "outputTokens": 19767,
+              "totalTokens": 2208270,
+              "uncachedInputTokens": 91223
+            },
+            "ratios": {
+              "totalTokens": 1.1308056158526938,
+              "uncachedInputTokens": 1.1470551252389096,
+              "cachedInputTokens": 1.1307798481711526,
+              "outputTokens": 1.0638286421613476,
+              "agentDuration": 0.8571827537503596
+            },
+            "baselineFeedbackRounds": 0,
+            "toolFeedbackRounds": 0
+          }
+        },
+        {
+          "block": 4,
+          "baselineId": "decision-httpie-cookie-scope-repair-block-4-baseline",
+          "toolId": "decision-httpie-cookie-scope-repair-block-4-codegraph",
+          "accepted": true,
+          "metrics": {
+            "baselineUsage": {
+              "inputTokens": 3301687,
+              "cachedInputTokens": 3191680,
+              "outputTokens": 24913,
+              "totalTokens": 3326600,
+              "uncachedInputTokens": 110007
+            },
+            "toolUsage": {
+              "inputTokens": 2402213,
+              "cachedInputTokens": 2260352,
+              "outputTokens": 21322,
+              "totalTokens": 2423535,
+              "uncachedInputTokens": 141861
+            },
+            "ratios": {
+              "totalTokens": 0.7285321349125233,
+              "uncachedInputTokens": 1.289563391420546,
+              "cachedInputTokens": 0.7082013234409464,
+              "outputTokens": 0.8558583871874121,
+              "agentDuration": 0.8880938841226229
+            },
+            "baselineFeedbackRounds": 1,
+            "toolFeedbackRounds": 1
+          }
+        }
+      ]
+    },
+    {
+      "phase": "new-task",
+      "task": "httpie-cookie-scope-repair",
+      "arm": "caveman",
+      "acceptedPairCount": 4,
+      "summary": {
+        "totalTokens": {
+          "observed": 4,
+          "lower": 2,
+          "equal": 0,
+          "higher": 2,
+          "medianRatio": 0.921618661315659
+        },
+        "uncachedInputTokens": {
+          "observed": 4,
+          "lower": 1,
+          "equal": 0,
+          "higher": 3,
+          "medianRatio": 1.1353063002146095
+        },
+        "cachedInputTokens": {
+          "observed": 4,
+          "lower": 2,
+          "equal": 0,
+          "higher": 2,
+          "medianRatio": 0.9143579007401283
+        },
+        "outputTokens": {
+          "observed": 4,
+          "lower": 4,
+          "equal": 0,
+          "higher": 0,
+          "medianRatio": 0.7132126499110538
+        },
+        "agentDuration": {
+          "observed": 4,
+          "lower": 2,
+          "equal": 0,
+          "higher": 2,
+          "medianRatio": 0.858913489757382
+        }
+      },
+      "pairs": [
+        {
+          "block": 1,
+          "baselineId": "decision-httpie-cookie-scope-repair-block-1-baseline",
+          "toolId": "decision-httpie-cookie-scope-repair-block-1-caveman",
+          "accepted": true,
+          "metrics": {
+            "baselineUsage": {
+              "inputTokens": 1423632,
+              "cachedInputTokens": 1352832,
+              "outputTokens": 17239,
+              "totalTokens": 1440871,
+              "uncachedInputTokens": 70800
+            },
+            "toolUsage": {
+              "inputTokens": 2537798,
+              "cachedInputTokens": 2450944,
+              "outputTokens": 14343,
+              "totalTokens": 2552141,
+              "uncachedInputTokens": 86854
+            },
+            "ratios": {
+              "totalTokens": 1.7712487793841365,
+              "uncachedInputTokens": 1.2267514124293786,
+              "cachedInputTokens": 1.811713501750402,
+              "outputTokens": 0.8320088172167759,
+              "agentDuration": 1.2378117322890916
+            },
+            "baselineFeedbackRounds": 0,
+            "toolFeedbackRounds": 0
+          }
+        },
+        {
+          "block": 2,
+          "baselineId": "decision-httpie-cookie-scope-repair-block-2-baseline",
+          "toolId": "decision-httpie-cookie-scope-repair-block-2-caveman",
+          "accepted": true,
+          "metrics": {
+            "baselineUsage": {
+              "inputTokens": 2262552,
+              "cachedInputTokens": 2185216,
+              "outputTokens": 17726,
+              "totalTokens": 2280278,
+              "uncachedInputTokens": 77336
+            },
+            "toolUsage": {
+              "inputTokens": 2560680,
+              "cachedInputTokens": 2469504,
+              "outputTokens": 13049,
+              "totalTokens": 2573729,
+              "uncachedInputTokens": 91176
+            },
+            "ratios": {
+              "totalTokens": 1.1286908876900097,
+              "uncachedInputTokens": 1.1789593462294403,
+              "cachedInputTokens": 1.1300960637300843,
+              "outputTokens": 0.736150287712964,
+              "agentDuration": 1.0184346810129374
+            },
+            "baselineFeedbackRounds": 1,
+            "toolFeedbackRounds": 0
+          }
+        },
+        {
+          "block": 3,
+          "baselineId": "decision-httpie-cookie-scope-repair-block-3-baseline",
+          "toolId": "decision-httpie-cookie-scope-repair-block-3-caveman",
+          "accepted": true,
+          "metrics": {
+            "baselineUsage": {
+              "inputTokens": 1934248,
+              "cachedInputTokens": 1854720,
+              "outputTokens": 18581,
+              "totalTokens": 1952829,
+              "uncachedInputTokens": 79528
+            },
+            "toolUsage": {
+              "inputTokens": 1382561,
+              "cachedInputTokens": 1295744,
+              "outputTokens": 12826,
+              "totalTokens": 1395387,
+              "uncachedInputTokens": 86817
+            },
+            "ratios": {
+              "totalTokens": 0.7145464349413082,
+              "uncachedInputTokens": 1.0916532541997788,
+              "cachedInputTokens": 0.6986197377501725,
+              "outputTokens": 0.6902750121091438,
+              "agentDuration": 0.6993922985018266
+            },
+            "baselineFeedbackRounds": 0,
+            "toolFeedbackRounds": 0
+          }
+        },
+        {
+          "block": 4,
+          "baselineId": "decision-httpie-cookie-scope-repair-block-4-baseline",
+          "toolId": "decision-httpie-cookie-scope-repair-block-4-caveman",
+          "accepted": true,
+          "metrics": {
+            "baselineUsage": {
+              "inputTokens": 3301687,
+              "cachedInputTokens": 3191680,
+              "outputTokens": 24913,
+              "totalTokens": 3326600,
+              "uncachedInputTokens": 110007
+            },
+            "toolUsage": {
+              "inputTokens": 1330591,
+              "cachedInputTokens": 1240576,
+              "outputTokens": 12595,
+              "totalTokens": 1343186,
+              "uncachedInputTokens": 90015
+            },
+            "ratios": {
+              "totalTokens": 0.4037714182648951,
+              "uncachedInputTokens": 0.818266110338433,
+              "cachedInputTokens": 0.3886905955484259,
+              "outputTokens": 0.5055593465259102,
+              "agentDuration": 0.6147531783295161
+            },
+            "baselineFeedbackRounds": 1,
+            "toolFeedbackRounds": 0
+          }
+        }
+      ]
+    },
+    {
+      "phase": "diagnosis-followup",
+      "task": "httpie-download-repair",
+      "arm": "caveman",
+      "acceptedPairCount": 4,
+      "summary": {
+        "totalTokens": {
+          "observed": 4,
+          "lower": 2,
+          "equal": 0,
+          "higher": 2,
+          "medianRatio": 1.1771689179093674
+        },
+        "uncachedInputTokens": {
+          "observed": 4,
+          "lower": 2,
+          "equal": 0,
+          "higher": 2,
+          "medianRatio": 1.003322375819093
+        },
+        "cachedInputTokens": {
+          "observed": 4,
+          "lower": 2,
+          "equal": 0,
+          "higher": 2,
+          "medianRatio": 1.1966303321320524
+        },
+        "outputTokens": {
+          "observed": 4,
+          "lower": 2,
+          "equal": 0,
+          "higher": 2,
+          "medianRatio": 0.9574579193735728
+        },
+        "agentDuration": {
+          "observed": 4,
+          "lower": 3,
+          "equal": 0,
+          "higher": 1,
+          "medianRatio": 0.8560573347116959
+        }
+      },
+      "pairs": [
+        {
+          "block": 1,
+          "baselineId": "decision-httpie-diagnosis-followup-block-1-baseline",
+          "toolId": "decision-httpie-diagnosis-followup-block-1-caveman",
+          "accepted": true,
+          "metrics": {
+            "baselineUsage": {
+              "inputTokens": 4066452,
+              "cachedInputTokens": 3897088,
+              "outputTokens": 32301,
+              "totalTokens": 4098753,
+              "uncachedInputTokens": 169364
+            },
+            "toolUsage": {
+              "inputTokens": 3929630,
+              "cachedInputTokens": 3759104,
+              "outputTokens": 24423,
+              "totalTokens": 3954053,
+              "uncachedInputTokens": 170526
+            },
+            "ratios": {
+              "totalTokens": 0.9646965796670354,
+              "uncachedInputTokens": 1.0068609621879503,
+              "cachedInputTokens": 0.9645930499901465,
+              "outputTokens": 0.7561066220860035,
+              "agentDuration": 0.6672595440997213
+            },
+            "baselineFeedbackRounds": 0,
+            "toolFeedbackRounds": 1
+          }
+        },
+        {
+          "block": 2,
+          "baselineId": "decision-httpie-diagnosis-followup-block-2-baseline",
+          "toolId": "decision-httpie-diagnosis-followup-block-2-caveman",
+          "accepted": true,
+          "metrics": {
+            "baselineUsage": {
+              "inputTokens": 1863605,
+              "cachedInputTokens": 1710976,
+              "outputTokens": 24288,
+              "totalTokens": 1887893,
+              "uncachedInputTokens": 152629
+            },
+            "toolUsage": {
+              "inputTokens": 2597012,
+              "cachedInputTokens": 2444416,
+              "outputTokens": 26482,
+              "totalTokens": 2623494,
+              "uncachedInputTokens": 152596
+            },
+            "ratios": {
+              "totalTokens": 1.3896412561516993,
+              "uncachedInputTokens": 0.9997837894502355,
+              "cachedInputTokens": 1.4286676142739583,
+              "outputTokens": 1.090332674571805,
+              "agentDuration": 0.9841925135962067
+            },
+            "baselineFeedbackRounds": 0,
+            "toolFeedbackRounds": 0
+          }
+        },
+        {
+          "block": 3,
+          "baselineId": "decision-httpie-diagnosis-followup-block-3-baseline",
+          "toolId": "decision-httpie-diagnosis-followup-block-3-caveman",
+          "accepted": true,
+          "metrics": {
+            "baselineUsage": {
+              "inputTokens": 2708777,
+              "cachedInputTokens": 2551680,
+              "outputTokens": 24935,
+              "totalTokens": 2733712,
+              "uncachedInputTokens": 157097
+            },
+            "toolUsage": {
+              "inputTokens": 4118886,
+              "cachedInputTokens": 3912192,
+              "outputTokens": 26432,
+              "totalTokens": 4145318,
+              "uncachedInputTokens": 206694
+            },
+            "ratios": {
+              "totalTokens": 1.5163696834194678,
+              "uncachedInputTokens": 1.3157094024710847,
+              "cachedInputTokens": 1.5331828442437923,
+              "outputTokens": 1.0600360938439943,
+              "agentDuration": 1.1756128709269922
+            },
+            "baselineFeedbackRounds": 0,
+            "toolFeedbackRounds": 0
+          }
+        },
+        {
+          "block": 4,
+          "baselineId": "decision-httpie-diagnosis-followup-block-4-baseline",
+          "toolId": "decision-httpie-diagnosis-followup-block-4-caveman",
+          "accepted": true,
+          "metrics": {
+            "baselineUsage": {
+              "inputTokens": 4981122,
+              "cachedInputTokens": 4776960,
+              "outputTokens": 29479,
+              "totalTokens": 5010601,
+              "uncachedInputTokens": 204162
+            },
+            "toolUsage": {
+              "inputTokens": 3148449,
+              "cachedInputTokens": 2989184,
+              "outputTokens": 25201,
+              "totalTokens": 3173650,
+              "uncachedInputTokens": 159265
+            },
+            "ratios": {
+              "totalTokens": 0.633387092686087,
+              "uncachedInputTokens": 0.7800913000460419,
+              "cachedInputTokens": 0.6257502679528403,
+              "outputTokens": 0.8548797449031514,
+              "agentDuration": 0.727922155827185
+            },
+            "baselineFeedbackRounds": 1,
+            "toolFeedbackRounds": 0
+          }
+        }
+      ]
+    },
+    {
+      "phase": "diagnosis-followup",
+      "task": "httpie-download-repair",
+      "arm": "codegraph",
+      "acceptedPairCount": 4,
+      "summary": {
+        "totalTokens": {
+          "observed": 4,
+          "lower": 2,
+          "equal": 0,
+          "higher": 2,
+          "medianRatio": 0.9688577992921195
+        },
+        "uncachedInputTokens": {
+          "observed": 4,
+          "lower": 1,
+          "equal": 0,
+          "higher": 3,
+          "medianRatio": 1.0557649423625008
+        },
+        "cachedInputTokens": {
+          "observed": 4,
+          "lower": 2,
+          "equal": 0,
+          "higher": 2,
+          "medianRatio": 0.966002591218889
+        },
+        "outputTokens": {
+          "observed": 4,
+          "lower": 1,
+          "equal": 0,
+          "higher": 3,
+          "medianRatio": 1.0849914754786338
+        },
+        "agentDuration": {
+          "observed": 4,
+          "lower": 2,
+          "equal": 0,
+          "higher": 2,
+          "medianRatio": 0.9620824021258443
+        }
+      },
+      "pairs": [
+        {
+          "block": 1,
+          "baselineId": "decision-httpie-diagnosis-followup-block-1-baseline",
+          "toolId": "decision-httpie-diagnosis-followup-block-1-codegraph",
+          "accepted": true,
+          "metrics": {
+            "baselineUsage": {
+              "inputTokens": 4066452,
+              "cachedInputTokens": 3897088,
+              "outputTokens": 32301,
+              "totalTokens": 4098753,
+              "uncachedInputTokens": 169364
+            },
+            "toolUsage": {
+              "inputTokens": 2840375,
+              "cachedInputTokens": 2686848,
+              "outputTokens": 25268,
+              "totalTokens": 2865643,
+              "uncachedInputTokens": 153527
+            },
+            "ratios": {
+              "totalTokens": 0.6991499609759358,
+              "uncachedInputTokens": 0.9064913440872913,
+              "cachedInputTokens": 0.6894501740786967,
+              "outputTokens": 0.7822668028853595,
+              "agentDuration": 0.6003085810547311
+            },
+            "baselineFeedbackRounds": 0,
+            "toolFeedbackRounds": 0
+          }
+        },
+        {
+          "block": 2,
+          "baselineId": "decision-httpie-diagnosis-followup-block-2-baseline",
+          "toolId": "decision-httpie-diagnosis-followup-block-2-codegraph",
+          "accepted": true,
+          "metrics": {
+            "baselineUsage": {
+              "inputTokens": 1863605,
+              "cachedInputTokens": 1710976,
+              "outputTokens": 24288,
+              "totalTokens": 1887893,
+              "uncachedInputTokens": 152629
+            },
+            "toolUsage": {
+              "inputTokens": 3755959,
+              "cachedInputTokens": 3556736,
+              "outputTokens": 28652,
+              "totalTokens": 3784611,
+              "uncachedInputTokens": 199223
+            },
+            "ratios": {
+              "totalTokens": 2.004674523397248,
+              "uncachedInputTokens": 1.305276192597737,
+              "cachedInputTokens": 2.0787760903718113,
+              "outputTokens": 1.1796772068511199,
+              "agentDuration": 1.2357635889442715
+            },
+            "baselineFeedbackRounds": 0,
+            "toolFeedbackRounds": 0
+          }
+        },
+        {
+          "block": 3,
+          "baselineId": "decision-httpie-diagnosis-followup-block-3-baseline",
+          "toolId": "decision-httpie-diagnosis-followup-block-3-codegraph",
+          "accepted": true,
+          "metrics": {
+            "baselineUsage": {
+              "inputTokens": 2708777,
+              "cachedInputTokens": 2551680,
+              "outputTokens": 24935,
+              "totalTokens": 2733712,
+              "uncachedInputTokens": 157097
+            },
+            "toolUsage": {
+              "inputTokens": 3174452,
+              "cachedInputTokens": 3015552,
+              "outputTokens": 28260,
+              "totalTokens": 3202712,
+              "uncachedInputTokens": 158900
+            },
+            "ratios": {
+              "totalTokens": 1.1715615982956507,
+              "uncachedInputTokens": 1.0114769855566943,
+              "cachedInputTokens": 1.181790820165538,
+              "outputTokens": 1.1333467014237015,
+              "agentDuration": 1.050307762504955
+            },
+            "baselineFeedbackRounds": 0,
+            "toolFeedbackRounds": 0
+          }
+        },
+        {
+          "block": 4,
+          "baselineId": "decision-httpie-diagnosis-followup-block-4-baseline",
+          "toolId": "decision-httpie-diagnosis-followup-block-4-codegraph",
+          "accepted": true,
+          "metrics": {
+            "baselineUsage": {
+              "inputTokens": 4981122,
+              "cachedInputTokens": 4776960,
+              "outputTokens": 29479,
+              "totalTokens": 5010601,
+              "uncachedInputTokens": 204162
+            },
+            "toolUsage": {
+              "inputTokens": 3808333,
+              "cachedInputTokens": 3583744,
+              "outputTokens": 30559,
+              "totalTokens": 3838892,
+              "uncachedInputTokens": 224589
+            },
+            "ratios": {
+              "totalTokens": 0.7661540002885882,
+              "uncachedInputTokens": 1.1000528991683076,
+              "cachedInputTokens": 0.75021436227224,
+              "outputTokens": 1.0366362495335664,
+              "agentDuration": 0.8738570417467334
+            },
+            "baselineFeedbackRounds": 1,
+            "toolFeedbackRounds": 0
+          }
+        }
+      ]
+    }
+  ],
+  "regressionCoverage": {
+    "httpieRounds": [
+      {
+        "id": "decision-httpie-cookie-scope-repair-block-1-baseline",
+        "round": 0,
+        "quality": true,
+        "knownUpstreamFailuresOnly": true,
+        "originalSummary": "3 failed, 1016 passed, 5 skipped, 4 xfailed, 141 warnings in 76.36s (0:01:16)"
+      },
+      {
+        "id": "decision-httpie-cookie-scope-repair-block-1-codegraph",
+        "round": 0,
+        "quality": true,
+        "knownUpstreamFailuresOnly": true,
+        "originalSummary": "3 failed, 1016 passed, 5 skipped, 4 xfailed, 141 warnings in 85.83s (0:01:25)"
+      },
+      {
+        "id": "decision-httpie-cookie-scope-repair-block-1-caveman",
+        "round": 0,
+        "quality": true,
+        "knownUpstreamFailuresOnly": true,
+        "originalSummary": "3 failed, 1016 passed, 5 skipped, 4 xfailed, 141 warnings in 78.61s (0:01:18)"
+      },
+      {
+        "id": "decision-httpie-cookie-scope-repair-block-2-codegraph",
+        "round": 0,
+        "quality": true,
+        "knownUpstreamFailuresOnly": true,
+        "originalSummary": "3 failed, 1016 passed, 5 skipped, 4 xfailed, 141 warnings in 82.89s (0:01:22)"
+      },
+      {
+        "id": "decision-httpie-cookie-scope-repair-block-2-caveman",
+        "round": 0,
+        "quality": true,
+        "knownUpstreamFailuresOnly": true,
+        "originalSummary": "3 failed, 1016 passed, 5 skipped, 4 xfailed, 141 warnings in 74.64s (0:01:14)"
+      },
+      {
+        "id": "decision-httpie-cookie-scope-repair-block-2-baseline",
+        "round": 0,
+        "quality": false,
+        "knownUpstreamFailuresOnly": false,
+        "originalSummary": "5 failed, 1014 passed, 5 skipped, 4 xfailed, 138 warnings in 80.70s (0:01:20)"
+      },
+      {
+        "id": "decision-httpie-cookie-scope-repair-block-2-baseline",
+        "round": 1,
+        "quality": true,
+        "knownUpstreamFailuresOnly": true,
+        "originalSummary": "3 failed, 1016 passed, 5 skipped, 4 xfailed, 141 warnings in 77.50s (0:01:17)"
+      },
+      {
+        "id": "decision-httpie-cookie-scope-repair-block-3-caveman",
+        "round": 0,
+        "quality": true,
+        "knownUpstreamFailuresOnly": true,
+        "originalSummary": "3 failed, 1016 passed, 5 skipped, 4 xfailed, 141 warnings in 75.39s (0:01:15)"
+      },
+      {
+        "id": "decision-httpie-cookie-scope-repair-block-3-baseline",
+        "round": 0,
+        "quality": true,
+        "knownUpstreamFailuresOnly": true,
+        "originalSummary": "3 failed, 1016 passed, 5 skipped, 4 xfailed, 141 warnings in 76.77s (0:01:16)"
+      },
+      {
+        "id": "decision-httpie-cookie-scope-repair-block-3-codegraph",
+        "round": 0,
+        "quality": true,
+        "knownUpstreamFailuresOnly": true,
+        "originalSummary": "3 failed, 1016 passed, 5 skipped, 4 xfailed, 140 warnings in 79.35s (0:01:19)"
+      },
+      {
+        "id": "decision-httpie-cookie-scope-repair-block-4-baseline",
+        "round": 0,
+        "quality": false,
+        "knownUpstreamFailuresOnly": true,
+        "originalSummary": "3 failed, 1016 passed, 5 skipped, 4 xfailed, 141 warnings in 71.44s (0:01:11)"
+      },
+      {
+        "id": "decision-httpie-cookie-scope-repair-block-4-baseline",
+        "round": 1,
+        "quality": true,
+        "knownUpstreamFailuresOnly": true,
+        "originalSummary": "3 failed, 1016 passed, 5 skipped, 4 xfailed, 141 warnings in 89.14s (0:01:29)"
+      },
+      {
+        "id": "decision-httpie-cookie-scope-repair-block-4-codegraph",
+        "round": 0,
+        "quality": false,
+        "knownUpstreamFailuresOnly": false,
+        "originalSummary": "4 failed, 1015 passed, 5 skipped, 4 xfailed, 145 warnings in 74.05s (0:01:14)"
+      },
+      {
+        "id": "decision-httpie-cookie-scope-repair-block-4-codegraph",
+        "round": 1,
+        "quality": true,
+        "knownUpstreamFailuresOnly": true,
+        "originalSummary": "3 failed, 1016 passed, 5 skipped, 4 xfailed, 141 warnings in 75.33s (0:01:15)"
+      },
+      {
+        "id": "decision-httpie-cookie-scope-repair-block-4-caveman",
+        "round": 0,
+        "quality": true,
+        "knownUpstreamFailuresOnly": true,
+        "originalSummary": "3 failed, 1016 passed, 5 skipped, 4 xfailed, 141 warnings in 79.59s (0:01:19)"
+      },
+      {
+        "id": "decision-httpie-diagnosis-followup-block-1-baseline",
+        "round": 0,
+        "quality": true,
+        "knownUpstreamFailuresOnly": true,
+        "originalSummary": "3 failed, 1016 passed, 5 skipped, 4 xfailed, 141 warnings in 78.50s (0:01:18)"
+      },
+      {
+        "id": "decision-httpie-diagnosis-followup-block-1-caveman",
+        "round": 0,
+        "quality": false,
+        "knownUpstreamFailuresOnly": false,
+        "originalSummary": "4 failed, 1015 passed, 5 skipped, 4 xfailed, 138 warnings in 95.46s (0:01:35)"
+      },
+      {
+        "id": "decision-httpie-diagnosis-followup-block-1-caveman",
+        "round": 1,
+        "quality": true,
+        "knownUpstreamFailuresOnly": true,
+        "originalSummary": "3 failed, 1016 passed, 5 skipped, 4 xfailed, 139 warnings in 80.02s (0:01:20)"
+      },
+      {
+        "id": "decision-httpie-diagnosis-followup-block-1-codegraph",
+        "round": 0,
+        "quality": true,
+        "knownUpstreamFailuresOnly": true,
+        "originalSummary": "3 failed, 1016 passed, 5 skipped, 4 xfailed, 139 warnings in 87.37s (0:01:27)"
+      },
+      {
+        "id": "decision-httpie-diagnosis-followup-block-2-baseline",
+        "round": 0,
+        "quality": true,
+        "knownUpstreamFailuresOnly": true,
+        "originalSummary": "3 failed, 1016 passed, 5 skipped, 4 xfailed, 141 warnings in 89.06s (0:01:29)"
+      },
+      {
+        "id": "decision-httpie-diagnosis-followup-block-2-caveman",
+        "round": 0,
+        "quality": true,
+        "knownUpstreamFailuresOnly": true,
+        "originalSummary": "3 failed, 1016 passed, 5 skipped, 4 xfailed, 141 warnings in 70.78s (0:01:10)"
+      },
+      {
+        "id": "decision-httpie-diagnosis-followup-block-2-codegraph",
+        "round": 0,
+        "quality": true,
+        "knownUpstreamFailuresOnly": true,
+        "originalSummary": "3 failed, 1005 passed, 16 skipped, 4 xfailed, 139 warnings in 68.20s (0:01:08)"
+      },
+      {
+        "id": "decision-httpie-diagnosis-followup-block-3-baseline",
+        "round": 0,
+        "quality": true,
+        "knownUpstreamFailuresOnly": true,
+        "originalSummary": "3 failed, 1016 passed, 5 skipped, 4 xfailed, 147 warnings in 74.68s (0:01:14)"
+      },
+      {
+        "id": "decision-httpie-diagnosis-followup-block-3-caveman",
+        "round": 0,
+        "quality": true,
+        "knownUpstreamFailuresOnly": true,
+        "originalSummary": "3 failed, 1016 passed, 5 skipped, 4 xfailed, 139 warnings in 77.82s (0:01:17)"
+      },
+      {
+        "id": "decision-httpie-diagnosis-followup-block-3-codegraph",
+        "round": 0,
+        "quality": true,
+        "knownUpstreamFailuresOnly": true,
+        "originalSummary": "3 failed, 1016 passed, 5 skipped, 4 xfailed, 141 warnings in 75.35s (0:01:15)"
+      },
+      {
+        "id": "decision-httpie-diagnosis-followup-block-4-baseline",
+        "round": 0,
+        "quality": false,
+        "knownUpstreamFailuresOnly": false,
+        "originalSummary": "4 failed, 1015 passed, 5 skipped, 4 xfailed, 138 warnings in 78.26s (0:01:18)"
+      },
+      {
+        "id": "decision-httpie-diagnosis-followup-block-4-baseline",
+        "round": 1,
+        "quality": true,
+        "knownUpstreamFailuresOnly": true,
+        "originalSummary": "3 failed, 1016 passed, 5 skipped, 4 xfailed, 139 warnings in 75.67s (0:01:15)"
+      },
+      {
+        "id": "decision-httpie-diagnosis-followup-block-4-caveman",
+        "round": 0,
+        "quality": true,
+        "knownUpstreamFailuresOnly": true,
+        "originalSummary": "3 failed, 1016 passed, 5 skipped, 4 xfailed, 139 warnings in 80.00s (0:01:20)"
+      },
+      {
+        "id": "decision-httpie-diagnosis-followup-block-4-codegraph",
+        "round": 0,
+        "quality": true,
+        "knownUpstreamFailuresOnly": true,
+        "originalSummary": "3 failed, 1016 passed, 5 skipped, 4 xfailed, 141 warnings in 77.13s (0:01:17)"
+      }
+    ],
+    "supplement": {
+      "positionId": "decision-httpie-diagnosis-followup-block-2-codegraph",
+      "originalPassed": 1005,
+      "originalSkipped": 16,
+      "extraSkipped": 11,
+      "supplementalPassed": 22,
+      "originalGradeChanged": false,
+      "cause": "temporary DNS failure inferred from fixture; exact original skip reason unavailable"
+    }
+  }
+}

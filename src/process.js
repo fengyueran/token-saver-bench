@@ -11,8 +11,8 @@ function terminate(child, signal) {
 
 export async function execute(binary, args, options = {}) {
   const { timeoutMs = 180000, input = '', cwd, env = process.env } = options;
-  if (!Number.isSafeInteger(timeoutMs) || timeoutMs < 1) {
-    throw new Error('timeoutMs must be a positive integer');
+  if (timeoutMs !== null && (!Number.isSafeInteger(timeoutMs) || timeoutMs < 1)) {
+    throw new Error('timeoutMs must be null or a positive integer');
   }
   return new Promise((resolve, reject) => {
     const child = spawn(binary, args, {
@@ -29,15 +29,19 @@ export async function execute(binary, args, options = {}) {
       inputError: null,
     };
     let killTimer;
-    const timer = setTimeout(() => {
+    const timer = timeoutMs === null ? undefined : setTimeout(() => {
       result.timedOut = true;
-      terminate(child, 'SIGTERM');
-      killTimer = setTimeout(() => terminate(child, 'SIGKILL'), 1000);
+      try { terminate(child, 'SIGTERM'); }
+      catch (error) { reject(error); return; }
+      killTimer = setTimeout(() => {
+        try { terminate(child, 'SIGKILL'); }
+        catch (error) { reject(error); }
+      }, 1000);
     }, timeoutMs);
-    const cleanup = () => {
+    const cleanup = (groupTerminated = false) => {
       clearTimeout(timer);
       clearTimeout(killTimer);
-      terminate(child, 'SIGKILL');
+      if (!groupTerminated) terminate(child, 'SIGKILL');
     };
     child.stdout.on('data', (data) => {
       result.stdout += data;
@@ -51,11 +55,13 @@ export async function execute(binary, args, options = {}) {
       result.inputError = error.code;
     });
     child.on('error', (error) => {
-      cleanup();
+      try { cleanup(); }
+      catch (cleanupError) { reject(cleanupError); return; }
       reject(error);
     });
     child.on('close', (code, signal) => {
-      cleanup();
+      try { cleanup(result.timedOut && signal !== null); }
+      catch (error) { reject(error); return; }
       resolve({ ...result, code, signal });
     });
     child.stdin.end(input);

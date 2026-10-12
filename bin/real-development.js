@@ -5,12 +5,39 @@ import { randomUUID } from 'node:crypto';
 import { tmpdir } from 'node:os';
 import { createRealDevelopmentSchedule, preflightRealDevelopment } from '../src/real-development.js';
 import { prepareRealDevelopmentWorkspace, runRealDevelopmentCase } from '../src/real-development-runner.js';
+import { scenarioPlan, simulateScenario } from '../src/scenario-runner.js';
+import { createScenarioSimulator } from '../src/scenario-simulator.js';
+import { runLiveScenario } from '../src/live-scenario-runner.js';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const mode = process.argv[2] ?? 'plan';
 const print = (value) => process.stdout.write(JSON.stringify(value, null, 2) + '\n');
 
-if (mode === 'plan') {
+if (mode === 'start' || mode === 'resume')
+  throw new Error('Full benchmark implementation and calibration required; current runner supports only the Ponytail subset');
+
+if (mode === 'scenario-plan') {
+  print(scenarioPlan());
+} else if (mode === 'scenario-calibrate') {
+  if (process.argv.length !== 5) throw new Error('Calibration requires exactly scenario and arm');
+  const run = { scenario: process.argv[3], arm: process.argv[4], model: 'gpt-5.6-sol' };
+  if (!(run.scenario === 'httpie-diagnosis' ? ['baseline', 'caveman', 'codegraph'] :
+    run.scenario === 'httpie-iteration' ? ['baseline'] : []).includes(run.arm))
+    throw new Error('Unsupported live scenario arm');
+  await mkdir(path.join(root, 'runs'), { recursive: true, mode: 0o700 });
+  const output = path.join(root, 'runs', `scenario-calibration-${Date.now()}-${randomUUID().slice(0, 8)}`);
+  const result = await runLiveScenario(root, run, output);
+  print({ ...result, output });
+  if (result.status !== 'completed') process.exitCode = 1;
+} else if (mode === 'scenario-check') {
+  if (process.argv.length > 5) throw new Error('Unexpected scenario arguments');
+  const run = { scenario: process.argv[3] ?? 'httpie-diagnosis', arm: process.argv[4] ?? 'baseline' };
+  const output = path.join(root, 'runs', `scenario-offline-${Date.now()}-${randomUUID().slice(0, 8)}`);
+  await mkdir(path.join(root, 'runs'), { recursive: true, mode: 0o700 });
+  const result = await simulateScenario(root, run, output, { agentExecute: createScenarioSimulator() });
+  print({ ...result, output });
+  if (result.status === 'stopped') process.exitCode = 1;
+} else if (mode === 'plan') {
   print(createRealDevelopmentSchedule());
 } else if (mode === 'preflight') {
   const result = await preflightRealDevelopment(root);
@@ -50,7 +77,7 @@ if (mode === 'plan') {
       identityHash: preflight.identityHash,
       identity: preflight.identity,
       schedule: preflight.schedule,
-      timeoutSeconds: 600,
+      timeoutSeconds: null,
       concurrency: 1,
     };
     await writeFile(path.join(campaign, 'manifest.json'), JSON.stringify(manifest, null, 2), { mode: 0o600 });
@@ -102,5 +129,5 @@ if (mode === 'plan') {
     print({ event: 'campaign-execution-completed', id, qualityReview: 'pending' });
   }
 } else {
-  throw new Error('Usage: real-development.js plan|preflight|prepare|start|resume <campaign-id>');
+  throw new Error('Usage: real-development.js plan|preflight|prepare|scenario-plan|scenario-check [scenario] [arm]|scenario-calibrate <scenario> <arm>|start|resume <campaign-id>');
 }

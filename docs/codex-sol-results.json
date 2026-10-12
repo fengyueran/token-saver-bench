@@ -1,0 +1,829 @@
+{
+  "model": "gpt-5.6-sol",
+  "reasoningEffort": "medium",
+  "agentTimeoutMs": null,
+  "actualResolvedModel": null,
+  "actualCostUsd": null,
+  "rows": [
+    {
+      "positionId": "codex-httpie-diagnosis-block-1-baseline",
+      "environment": "codex",
+      "scenario": "httpie-diagnosis",
+      "arm": "baseline",
+      "block": 1,
+      "order": 1,
+      "baselineId": "codex-httpie-diagnosis-block-1-baseline",
+      "stageCount": 1,
+      "model": "gpt-5.6-sol",
+      "reasoningEffort": "medium",
+      "status": "completed",
+      "quality": true,
+      "accountingVerified": true,
+      "usage": {
+        "inputTokens": 269263,
+        "cachedInputTokens": 214400,
+        "outputTokens": 9345,
+        "totalTokens": 278608,
+        "uncachedInputTokens": 54863
+      },
+      "durationMs": 219408.648375,
+      "activation": "not-applicable",
+      "actualResolvedModel": null,
+      "actualCostUsd": null
+    },
+    {
+      "positionId": "codex-httpie-diagnosis-block-1-caveman",
+      "environment": "codex",
+      "scenario": "httpie-diagnosis",
+      "arm": "caveman",
+      "block": 1,
+      "order": 2,
+      "baselineId": "codex-httpie-diagnosis-block-1-baseline",
+      "stageCount": 1,
+      "model": "gpt-5.6-sol",
+      "reasoningEffort": "medium",
+      "status": "completed",
+      "quality": true,
+      "accountingVerified": true,
+      "usage": {
+        "inputTokens": 269580,
+        "cachedInputTokens": 221312,
+        "outputTokens": 6748,
+        "totalTokens": 276328,
+        "uncachedInputTokens": 48268
+      },
+      "durationMs": 172417.748291,
+      "activation": "processed",
+      "actualResolvedModel": null,
+      "actualCostUsd": null
+    },
+    {
+      "positionId": "codex-httpie-diagnosis-block-1-codegraph",
+      "environment": "codex",
+      "scenario": "httpie-diagnosis",
+      "arm": "codegraph",
+      "block": 1,
+      "order": 3,
+      "baselineId": "codex-httpie-diagnosis-block-1-baseline",
+      "stageCount": 1,
+      "model": "gpt-5.6-sol",
+      "reasoningEffort": "medium",
+      "status": "completed",
+      "quality": false,
+      "accountingVerified": true,
+      "usage": {
+        "inputTokens": 397763,
+        "cachedInputTokens": 348544,
+        "outputTokens": 8533,
+        "totalTokens": 406296,
+        "uncachedInputTokens": 49219
+      },
+      "durationMs": 215838.17329199996,
+      "activation": "processed",
+      "actualResolvedModel": null,
+      "actualCostUsd": null
+    },
+    {
+      "positionId": "codex-httpie-diagnosis-block-2-baseline",
+      "environment": "codex",
+      "scenario": "httpie-diagnosis",
+      "arm": "baseline",
+      "block": 2,
+      "order": 1,
+      "baselineId": "codex-httpie-diagnosis-block-2-baseline",
+      "stageCount": 1,
+      "model": "gpt-5.6-sol",
+      "reasoningEffort": "medium",
+      "status": "completed",
+      "quality": false,
+      "accountingVerified": true,
+      "usage": {
+        "inputTokens": 204619,
+        "cachedInputTokens": 157440,
+        "outputTokens": 8716,
+        "totalTokens": 213335,
+        "uncachedInputTokens": 47179
+      },
+      "durationMs": 197826.053542,
+      "activation": "not-applicable",
+      "actualResolvedModel": null,
+      "actualCostUsd": null
+    },
+    {
+      "positionId": "codex-httpie-diagnosis-block-2-codegraph",
+      "environment": "codex",
+      "scenario": "httpie-diagnosis",
+      "arm": "codegraph",
+      "block": 2,
+      "order": 2,
+      "baselineId": "codex-httpie-diagnosis-block-2-baseline",
+      "stageCount": 1,
+      "model": "gpt-5.6-sol",
+      "reasoningEffort": "medium",
+      "status": "completed",
+      "quality": true,
+      "accountingVerified": true,
+      "usage": {
+        "inputTokens": 317235,
+        "cachedInputTokens": 257792,
+        "outputTokens": 8507,
+        "totalTokens": 325742,
+        "uncachedInputTokens": 59443
+      },
+      "durationMs": 199432.54800000007,
+      "activation": "processed",
+      "actualResolvedModel": null,
+      "actualCostUsd": null
+    },
+    {
+      "positionId": "codex-httpie-diagnosis-block-2-caveman",
+      "environment": "codex",
+      "scenario": "httpie-diagnosis",
+      "arm": "caveman",
+      "block": 2,
+      "order": 3,
+      "baselineId": "codex-httpie-diagnosis-block-2-baseline",
+      "stageCount": 1,
+      "model": "gpt-5.6-sol",
+      "reasoningEffort": "medium",
+      "status": "completed",
+      "quality": true,
+      "accountingVerified": true,
+      "usage": {
+        "inputTokens": 291297,
+        "cachedInputTokens": 244096,
+        "outputTokens": 7254,
+        "totalTokens": 298551,
+        "uncachedInputTokens": 47201
+      },
+      "durationMs": 188998.23312500003,
+      "activation": "processed",
+      "actualResolvedModel": null,
+      "actualCostUsd": null
+    },
+    {
+      "positionId": "codex-httpie-diagnosis-block-3-codegraph",
+      "environment": "codex",
+      "scenario": "httpie-diagnosis",
+      "arm": "codegraph",
+      "block": 3,
+      "order": 1,
+      "baselineId": "codex-httpie-diagnosis-block-3-baseline",
+      "stageCount": 1,
+      "model": "gpt-5.6-sol",
+      "reasoningEffort": "medium",
+      "status": "completed",
+      "quality": true,
+      "accountingVerified": true,
+      "usage": {
+        "inputTokens": 369458,
+        "cachedInputTokens": 321792,
+        "outputTokens": 8733,
+        "totalTokens": 378191,
+        "uncachedInputTokens": 47666
+      },
+      "durationMs": 224849.0924170001,
+      "activation": "processed",
+      "actualResolvedModel": null,
+      "actualCostUsd": null
+    },
+    {
+      "positionId": "codex-httpie-diagnosis-block-3-baseline",
+      "environment": "codex",
+      "scenario": "httpie-diagnosis",
+      "arm": "baseline",
+      "block": 3,
+      "order": 2,
+      "baselineId": "codex-httpie-diagnosis-block-3-baseline",
+      "stageCount": 1,
+      "model": "gpt-5.6-sol",
+      "reasoningEffort": "medium",
+      "status": "completed",
+      "quality": true,
+      "accountingVerified": true,
+      "usage": {
+        "inputTokens": 294337,
+        "cachedInputTokens": 257152,
+        "outputTokens": 8053,
+        "totalTokens": 302390,
+        "uncachedInputTokens": 37185
+      },
+      "durationMs": 189579.45212500007,
+      "activation": "not-applicable",
+      "actualResolvedModel": null,
+      "actualCostUsd": null
+    },
+    {
+      "positionId": "codex-httpie-diagnosis-block-3-caveman",
+      "environment": "codex",
+      "scenario": "httpie-diagnosis",
+      "arm": "caveman",
+      "block": 3,
+      "order": 3,
+      "baselineId": "codex-httpie-diagnosis-block-3-baseline",
+      "stageCount": 1,
+      "model": "gpt-5.6-sol",
+      "reasoningEffort": "medium",
+      "status": "completed",
+      "quality": true,
+      "accountingVerified": true,
+      "usage": {
+        "inputTokens": 396183,
+        "cachedInputTokens": 335744,
+        "outputTokens": 7589,
+        "totalTokens": 403772,
+        "uncachedInputTokens": 60439
+      },
+      "durationMs": 190355.1644580001,
+      "activation": "processed",
+      "actualResolvedModel": null,
+      "actualCostUsd": null
+    },
+    {
+      "positionId": "codex-httpie-diagnosis-block-4-codegraph",
+      "environment": "codex",
+      "scenario": "httpie-diagnosis",
+      "arm": "codegraph",
+      "block": 4,
+      "order": 1,
+      "baselineId": "codex-httpie-diagnosis-block-4-baseline",
+      "stageCount": 1,
+      "model": "gpt-5.6-sol",
+      "reasoningEffort": "medium",
+      "status": "completed",
+      "quality": false,
+      "accountingVerified": true,
+      "usage": {
+        "inputTokens": 397511,
+        "cachedInputTokens": 314496,
+        "outputTokens": 9303,
+        "totalTokens": 406814,
+        "uncachedInputTokens": 83015
+      },
+      "durationMs": 221948.5574579998,
+      "activation": "processed",
+      "actualResolvedModel": null,
+      "actualCostUsd": null
+    },
+    {
+      "positionId": "codex-httpie-diagnosis-block-4-caveman",
+      "environment": "codex",
+      "scenario": "httpie-diagnosis",
+      "arm": "caveman",
+      "block": 4,
+      "order": 2,
+      "baselineId": "codex-httpie-diagnosis-block-4-baseline",
+      "stageCount": 1,
+      "model": "gpt-5.6-sol",
+      "reasoningEffort": "medium",
+      "status": "completed",
+      "quality": false,
+      "accountingVerified": true,
+      "usage": {
+        "inputTokens": 227724,
+        "cachedInputTokens": 185856,
+        "outputTokens": 6938,
+        "totalTokens": 234662,
+        "uncachedInputTokens": 41868
+      },
+      "durationMs": 167742.0370420001,
+      "activation": "processed",
+      "actualResolvedModel": null,
+      "actualCostUsd": null
+    },
+    {
+      "positionId": "codex-httpie-diagnosis-block-4-baseline",
+      "environment": "codex",
+      "scenario": "httpie-diagnosis",
+      "arm": "baseline",
+      "block": 4,
+      "order": 3,
+      "baselineId": "codex-httpie-diagnosis-block-4-baseline",
+      "stageCount": 1,
+      "model": "gpt-5.6-sol",
+      "reasoningEffort": "medium",
+      "status": "completed",
+      "quality": true,
+      "accountingVerified": true,
+      "usage": {
+        "inputTokens": 323929,
+        "cachedInputTokens": 280576,
+        "outputTokens": 7937,
+        "totalTokens": 331866,
+        "uncachedInputTokens": 43353
+      },
+      "durationMs": 198748.64595800033,
+      "activation": "not-applicable",
+      "actualResolvedModel": null,
+      "actualCostUsd": null
+    },
+    {
+      "positionId": "codex-memos-bulk-archive-block-1-baseline",
+      "environment": "codex",
+      "scenario": "memos-bulk-archive",
+      "arm": "baseline",
+      "block": 1,
+      "order": 1,
+      "baselineId": "codex-memos-bulk-archive-block-1-baseline",
+      "stageCount": 1,
+      "model": "gpt-5.6-sol",
+      "reasoningEffort": "medium",
+      "status": "completed",
+      "quality": true,
+      "accountingVerified": true,
+      "usage": {
+        "inputTokens": 2429282,
+        "cachedInputTokens": 2350976,
+        "outputTokens": 15522,
+        "totalTokens": 2444804,
+        "uncachedInputTokens": 78306
+      },
+      "durationMs": 424874,
+      "activation": "not-applicable",
+      "actualResolvedModel": null,
+      "actualCostUsd": null
+    },
+    {
+      "positionId": "codex-memos-bulk-archive-block-1-ponytail",
+      "environment": "codex",
+      "scenario": "memos-bulk-archive",
+      "arm": "ponytail",
+      "block": 1,
+      "order": 2,
+      "baselineId": "codex-memos-bulk-archive-block-1-baseline",
+      "stageCount": 1,
+      "model": "gpt-5.6-sol",
+      "reasoningEffort": "medium",
+      "status": "completed",
+      "quality": true,
+      "accountingVerified": true,
+      "usage": {
+        "inputTokens": 3769570,
+        "cachedInputTokens": 3663616,
+        "outputTokens": 18941,
+        "totalTokens": 3788511,
+        "uncachedInputTokens": 105954
+      },
+      "durationMs": 657284,
+      "activation": "processed",
+      "actualResolvedModel": null,
+      "actualCostUsd": null
+    },
+    {
+      "positionId": "codex-memos-bulk-archive-block-2-baseline",
+      "environment": "codex",
+      "scenario": "memos-bulk-archive",
+      "arm": "baseline",
+      "block": 2,
+      "order": 1,
+      "baselineId": "codex-memos-bulk-archive-block-2-baseline",
+      "stageCount": 1,
+      "model": "gpt-5.6-sol",
+      "reasoningEffort": "medium",
+      "status": "completed",
+      "quality": true,
+      "accountingVerified": true,
+      "usage": {
+        "inputTokens": 3574340,
+        "cachedInputTokens": 3469824,
+        "outputTokens": 26159,
+        "totalTokens": 3600499,
+        "uncachedInputTokens": 104516
+      },
+      "durationMs": 624436,
+      "activation": "not-applicable",
+      "actualResolvedModel": null,
+      "actualCostUsd": null
+    },
+    {
+      "positionId": "codex-memos-bulk-archive-block-2-ponytail",
+      "environment": "codex",
+      "scenario": "memos-bulk-archive",
+      "arm": "ponytail",
+      "block": 2,
+      "order": 2,
+      "baselineId": "codex-memos-bulk-archive-block-2-baseline",
+      "stageCount": 1,
+      "model": "gpt-5.6-sol",
+      "reasoningEffort": "medium",
+      "status": "completed",
+      "quality": true,
+      "accountingVerified": true,
+      "usage": {
+        "inputTokens": 2270151,
+        "cachedInputTokens": 2179712,
+        "outputTokens": 16699,
+        "totalTokens": 2286850,
+        "uncachedInputTokens": 90439
+      },
+      "durationMs": 484720,
+      "activation": "processed",
+      "actualResolvedModel": null,
+      "actualCostUsd": null
+    },
+    {
+      "positionId": "codex-memos-bulk-archive-block-3-baseline",
+      "environment": "codex",
+      "scenario": "memos-bulk-archive",
+      "arm": "baseline",
+      "block": 3,
+      "order": 1,
+      "baselineId": "codex-memos-bulk-archive-block-3-baseline",
+      "stageCount": 1,
+      "model": "gpt-5.6-sol",
+      "reasoningEffort": "medium",
+      "status": "completed",
+      "quality": true,
+      "accountingVerified": true,
+      "usage": {
+        "inputTokens": 2505421,
+        "cachedInputTokens": 2409600,
+        "outputTokens": 17072,
+        "totalTokens": 2522493,
+        "uncachedInputTokens": 95821
+      },
+      "durationMs": 469476,
+      "activation": "not-applicable",
+      "actualResolvedModel": null,
+      "actualCostUsd": null
+    },
+    {
+      "positionId": "codex-memos-bulk-archive-block-3-ponytail",
+      "environment": "codex",
+      "scenario": "memos-bulk-archive",
+      "arm": "ponytail",
+      "block": 3,
+      "order": 2,
+      "baselineId": "codex-memos-bulk-archive-block-3-baseline",
+      "stageCount": 1,
+      "model": "gpt-5.6-sol",
+      "reasoningEffort": "medium",
+      "status": "completed",
+      "quality": true,
+      "accountingVerified": true,
+      "usage": {
+        "inputTokens": 1902914,
+        "cachedInputTokens": 1777664,
+        "outputTokens": 14983,
+        "totalTokens": 1917897,
+        "uncachedInputTokens": 125250
+      },
+      "durationMs": 450272,
+      "activation": "processed",
+      "actualResolvedModel": null,
+      "actualCostUsd": null
+    },
+    {
+      "positionId": "codex-memos-bulk-archive-block-4-baseline",
+      "environment": "codex",
+      "scenario": "memos-bulk-archive",
+      "arm": "baseline",
+      "block": 4,
+      "order": 1,
+      "baselineId": "codex-memos-bulk-archive-block-4-baseline",
+      "stageCount": 1,
+      "model": "gpt-5.6-sol",
+      "reasoningEffort": "medium",
+      "status": "completed",
+      "quality": true,
+      "accountingVerified": true,
+      "usage": {
+        "inputTokens": 2209935,
+        "cachedInputTokens": 2140928,
+        "outputTokens": 16345,
+        "totalTokens": 2226280,
+        "uncachedInputTokens": 69007
+      },
+      "durationMs": 478035,
+      "activation": "not-applicable",
+      "actualResolvedModel": null,
+      "actualCostUsd": null
+    },
+    {
+      "positionId": "codex-memos-bulk-archive-block-4-ponytail",
+      "environment": "codex",
+      "scenario": "memos-bulk-archive",
+      "arm": "ponytail",
+      "block": 4,
+      "order": 2,
+      "baselineId": "codex-memos-bulk-archive-block-4-baseline",
+      "stageCount": 1,
+      "model": "gpt-5.6-sol",
+      "reasoningEffort": "medium",
+      "status": "completed",
+      "quality": true,
+      "accountingVerified": true,
+      "usage": {
+        "inputTokens": 1460148,
+        "cachedInputTokens": 1376768,
+        "outputTokens": 13656,
+        "totalTokens": 1473804,
+        "uncachedInputTokens": 83380
+      },
+      "durationMs": 353810,
+      "activation": "processed",
+      "actualResolvedModel": null,
+      "actualCostUsd": null
+    }
+  ],
+  "pairs": [
+    {
+      "scenario": "httpie-diagnosis",
+      "arm": "caveman",
+      "block": 1,
+      "eligible": true,
+      "baselineQuality": true,
+      "toolQuality": true,
+      "delta": {
+        "totalTokens": {
+          "difference": -2280,
+          "percent": -0.818354103256188
+        },
+        "outputTokens": {
+          "difference": -2597,
+          "percent": -27.790262172284645
+        },
+        "uncachedInputTokens": {
+          "difference": -6595,
+          "percent": -12.020851940287626
+        }
+      },
+      "durationMs": -46990.90008399999
+    },
+    {
+      "scenario": "httpie-diagnosis",
+      "arm": "codegraph",
+      "block": 1,
+      "eligible": false,
+      "baselineQuality": true,
+      "toolQuality": false,
+      "delta": {
+        "totalTokens": {
+          "difference": 127688,
+          "percent": 45.83070120025268
+        },
+        "outputTokens": {
+          "difference": -812,
+          "percent": -8.689138576779026
+        },
+        "uncachedInputTokens": {
+          "difference": -5644,
+          "percent": -10.287443267776096
+        }
+      },
+      "durationMs": -3570.4750830000266
+    },
+    {
+      "scenario": "httpie-diagnosis",
+      "arm": "codegraph",
+      "block": 2,
+      "eligible": false,
+      "baselineQuality": false,
+      "toolQuality": true,
+      "delta": {
+        "totalTokens": {
+          "difference": 112407,
+          "percent": 52.69036960648745
+        },
+        "outputTokens": {
+          "difference": -209,
+          "percent": -2.397888939880679
+        },
+        "uncachedInputTokens": {
+          "difference": 12264,
+          "percent": 25.994616248754742
+        }
+      },
+      "durationMs": 1606.4944580000592
+    },
+    {
+      "scenario": "httpie-diagnosis",
+      "arm": "caveman",
+      "block": 2,
+      "eligible": false,
+      "baselineQuality": false,
+      "toolQuality": true,
+      "delta": {
+        "totalTokens": {
+          "difference": 85216,
+          "percent": 39.94468793212553
+        },
+        "outputTokens": {
+          "difference": -1462,
+          "percent": -16.77374942634236
+        },
+        "uncachedInputTokens": {
+          "difference": 22,
+          "percent": 0.046630916297505244
+        }
+      },
+      "durationMs": -8827.82041699998
+    },
+    {
+      "scenario": "httpie-diagnosis",
+      "arm": "codegraph",
+      "block": 3,
+      "eligible": true,
+      "baselineQuality": true,
+      "toolQuality": true,
+      "delta": {
+        "totalTokens": {
+          "difference": 75801,
+          "percent": 25.067297198981446
+        },
+        "outputTokens": {
+          "difference": 680,
+          "percent": 8.444058114988204
+        },
+        "uncachedInputTokens": {
+          "difference": 10481,
+          "percent": 28.1860965443055
+        }
+      },
+      "durationMs": 35269.640292000026
+    },
+    {
+      "scenario": "httpie-diagnosis",
+      "arm": "caveman",
+      "block": 3,
+      "eligible": true,
+      "baselineQuality": true,
+      "toolQuality": true,
+      "delta": {
+        "totalTokens": {
+          "difference": 101382,
+          "percent": 33.52690234465425
+        },
+        "outputTokens": {
+          "difference": -464,
+          "percent": -5.761827890227244
+        },
+        "uncachedInputTokens": {
+          "difference": 23254,
+          "percent": 62.53596880462552
+        }
+      },
+      "durationMs": 775.7123330000322
+    },
+    {
+      "scenario": "httpie-diagnosis",
+      "arm": "codegraph",
+      "block": 4,
+      "eligible": false,
+      "baselineQuality": true,
+      "toolQuality": false,
+      "delta": {
+        "totalTokens": {
+          "difference": 74948,
+          "percent": 22.583813949003513
+        },
+        "outputTokens": {
+          "difference": 1366,
+          "percent": 17.21053294695729
+        },
+        "uncachedInputTokens": {
+          "difference": 39662,
+          "percent": 91.48617166055405
+        }
+      },
+      "durationMs": 23199.911499999464
+    },
+    {
+      "scenario": "httpie-diagnosis",
+      "arm": "caveman",
+      "block": 4,
+      "eligible": false,
+      "baselineQuality": true,
+      "toolQuality": false,
+      "delta": {
+        "totalTokens": {
+          "difference": -97204,
+          "percent": -29.29013517504053
+        },
+        "outputTokens": {
+          "difference": -999,
+          "percent": -12.586619629582966
+        },
+        "uncachedInputTokens": {
+          "difference": -1485,
+          "percent": -3.425368486609923
+        }
+      },
+      "durationMs": -31006.60891600023
+    },
+    {
+      "scenario": "memos-bulk-archive",
+      "arm": "ponytail",
+      "block": 1,
+      "eligible": true,
+      "baselineQuality": true,
+      "toolQuality": true,
+      "delta": {
+        "totalTokens": {
+          "difference": 1343707,
+          "percent": 54.96174744478494
+        },
+        "outputTokens": {
+          "difference": 3419,
+          "percent": 22.02680067001675
+        },
+        "uncachedInputTokens": {
+          "difference": 27648,
+          "percent": 35.307639261359284
+        }
+      },
+      "durationMs": 232410
+    },
+    {
+      "scenario": "memos-bulk-archive",
+      "arm": "ponytail",
+      "block": 2,
+      "eligible": true,
+      "baselineQuality": true,
+      "toolQuality": true,
+      "delta": {
+        "totalTokens": {
+          "difference": -1313649,
+          "percent": -36.48519274689425
+        },
+        "outputTokens": {
+          "difference": -9460,
+          "percent": -36.16346190603616
+        },
+        "uncachedInputTokens": {
+          "difference": -14077,
+          "percent": -13.468751195989132
+        }
+      },
+      "durationMs": -139716
+    },
+    {
+      "scenario": "memos-bulk-archive",
+      "arm": "ponytail",
+      "block": 3,
+      "eligible": true,
+      "baselineQuality": true,
+      "toolQuality": true,
+      "delta": {
+        "totalTokens": {
+          "difference": -604596,
+          "percent": -23.968193370605984
+        },
+        "outputTokens": {
+          "difference": -2089,
+          "percent": -12.236410496719776
+        },
+        "uncachedInputTokens": {
+          "difference": 29429,
+          "percent": 30.712474301040483
+        }
+      },
+      "durationMs": -19204
+    },
+    {
+      "scenario": "memos-bulk-archive",
+      "arm": "ponytail",
+      "block": 4,
+      "eligible": true,
+      "baselineQuality": true,
+      "toolQuality": true,
+      "delta": {
+        "totalTokens": {
+          "difference": -752476,
+          "percent": -33.79970174461433
+        },
+        "outputTokens": {
+          "difference": -2689,
+          "percent": -16.451514224533497
+        },
+        "uncachedInputTokens": {
+          "difference": 14373,
+          "percent": 20.82832176445868
+        }
+      },
+      "durationMs": -124225
+    }
+  ],
+  "exclusions": [
+    {
+      "environment": "codex",
+      "scenario": "httpie-iteration",
+      "arm": "headroom",
+      "phase": "pre-formal-calibration",
+      "reasonCode": "transport-not-verified",
+      "privateReasonWithheld": true,
+      "effectResult": null
+    },
+    {
+      "environment": "codex",
+      "scenario": "httpie-iteration",
+      "arm": "rtk",
+      "phase": "pre-formal-calibration",
+      "reasonCode": "activation-not-verified",
+      "privateReasonWithheld": true,
+      "effectResult": null
+    }
+  ],
+  "evaluationRevision": 3,
+  "reviewerBlind": false
+}

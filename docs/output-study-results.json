@@ -1,0 +1,2187 @@
+{
+  "scope": "rtk-headroom-output-study",
+  "model": "gpt-5.6-sol",
+  "reasoningEffort": "medium",
+  "positions": [
+    {
+      "id": "output-iteration-block-1-baseline",
+      "block": 1,
+      "arm": "baseline",
+      "order": 1,
+      "status": "completed",
+      "qualityPassed": true,
+      "recordedQualityPassed": true,
+      "activation": "not-applicable",
+      "totalUsage": {
+        "inputTokens": 3646422,
+        "cachedInputTokens": 3515648,
+        "uncachedInputTokens": 130774,
+        "outputTokens": 27644,
+        "totalTokens": 3674066
+      },
+      "agentDurationMs": 787702.503501,
+      "roundCount": 3,
+      "feedbackCount": 0,
+      "firstStageQuality": [
+        true,
+        true,
+        true
+      ],
+      "finalStageQuality": [
+        true,
+        true,
+        true
+      ],
+      "preparationMs": 1326.6075830000002,
+      "rtkHookCommands": null,
+      "rtkRewrites": null,
+      "headroomRequestCount": null,
+      "headroomUniqueRewrittenOutputs": null,
+      "reviewedQualityPassed": true,
+      "rounds": [
+        {
+          "stage": 1,
+          "feedback": 0,
+          "qualityPassed": true,
+          "executionPassed": true,
+          "failureCategory": null,
+          "usage": {
+            "inputTokens": 806651,
+            "cachedInputTokens": 754560,
+            "uncachedInputTokens": 52091,
+            "outputTokens": 9152,
+            "totalTokens": 815803,
+            "reasoningTokens": null
+          },
+          "agentDurationMs": 264473.400042,
+          "verificationDurationMs": 94858.96933300002,
+          "knownFailuresIncludedInFeedback": []
+        },
+        {
+          "stage": 2,
+          "feedback": 0,
+          "qualityPassed": true,
+          "executionPassed": true,
+          "failureCategory": null,
+          "usage": {
+            "inputTokens": 1752557,
+            "cachedInputTokens": 1699328,
+            "outputTokens": 14017,
+            "uncachedInputTokens": 53229,
+            "totalTokens": 1766574,
+            "reasoningTokens": null
+          },
+          "agentDurationMs": 366824.76075,
+          "verificationDurationMs": 92667.99858299992,
+          "knownFailuresIncludedInFeedback": []
+        },
+        {
+          "stage": 3,
+          "feedback": 0,
+          "qualityPassed": true,
+          "executionPassed": true,
+          "failureCategory": null,
+          "usage": {
+            "inputTokens": 1087214,
+            "cachedInputTokens": 1061760,
+            "outputTokens": 4475,
+            "uncachedInputTokens": 25454,
+            "totalTokens": 1091689,
+            "reasoningTokens": null
+          },
+          "agentDurationMs": 156404.342709,
+          "verificationDurationMs": 93667.62087500014,
+          "knownFailuresIncludedInFeedback": []
+        }
+      ],
+      "verification": [
+        {
+          "stage": 1,
+          "feedback": 0,
+          "originalQuality": true,
+          "reviewedQuality": true,
+          "originalFullCounts": {
+            "failed": 3,
+            "passed": 1016,
+            "skipped": 5,
+            "xfailed": 4,
+            "xpassed": 0
+          },
+          "originalFullTimedOut": false,
+          "originalFullExitCode": 1,
+          "fullSupplement": null,
+          "extraSkippedCount": 0,
+          "extraSkipCoveragePassed": null
+        },
+        {
+          "stage": 2,
+          "feedback": 0,
+          "originalQuality": true,
+          "reviewedQuality": true,
+          "originalFullCounts": {
+            "failed": 3,
+            "passed": 1016,
+            "skipped": 5,
+            "xfailed": 4,
+            "xpassed": 0
+          },
+          "originalFullTimedOut": false,
+          "originalFullExitCode": 1,
+          "fullSupplement": null,
+          "extraSkippedCount": 0,
+          "extraSkipCoveragePassed": null
+        },
+        {
+          "stage": 3,
+          "feedback": 0,
+          "originalQuality": true,
+          "reviewedQuality": true,
+          "originalFullCounts": {
+            "failed": 3,
+            "passed": 1016,
+            "skipped": 5,
+            "xfailed": 4,
+            "xpassed": 0
+          },
+          "originalFullTimedOut": false,
+          "originalFullExitCode": 1,
+          "fullSupplement": null,
+          "extraSkippedCount": 0,
+          "extraSkipCoveragePassed": null
+        }
+      ]
+    },
+    {
+      "id": "output-iteration-block-1-rtk",
+      "block": 1,
+      "arm": "rtk",
+      "order": 2,
+      "status": "completed",
+      "qualityPassed": true,
+      "recordedQualityPassed": true,
+      "activation": "observed",
+      "totalUsage": {
+        "inputTokens": 2585675,
+        "cachedInputTokens": 2492160,
+        "uncachedInputTokens": 93515,
+        "outputTokens": 21984,
+        "totalTokens": 2607659
+      },
+      "agentDurationMs": 689238.5703749999,
+      "roundCount": 3,
+      "feedbackCount": 0,
+      "firstStageQuality": [
+        true,
+        true,
+        true
+      ],
+      "finalStageQuality": [
+        true,
+        true,
+        true
+      ],
+      "preparationMs": 1364.3095840001479,
+      "rtkHookCommands": 32,
+      "rtkRewrites": 23,
+      "headroomRequestCount": null,
+      "headroomUniqueRewrittenOutputs": null,
+      "reviewedQualityPassed": true,
+      "rounds": [
+        {
+          "stage": 1,
+          "feedback": 0,
+          "qualityPassed": true,
+          "executionPassed": true,
+          "failureCategory": null,
+          "usage": {
+            "inputTokens": 616478,
+            "cachedInputTokens": 574336,
+            "uncachedInputTokens": 42142,
+            "outputTokens": 5916,
+            "totalTokens": 622394,
+            "reasoningTokens": null
+          },
+          "agentDurationMs": 219165.30454199994,
+          "verificationDurationMs": 92243.61975000007,
+          "knownFailuresIncludedInFeedback": []
+        },
+        {
+          "stage": 2,
+          "feedback": 0,
+          "qualityPassed": true,
+          "executionPassed": true,
+          "failureCategory": null,
+          "usage": {
+            "inputTokens": 1416935,
+            "cachedInputTokens": 1375488,
+            "outputTokens": 13453,
+            "uncachedInputTokens": 41447,
+            "totalTokens": 1430388,
+            "reasoningTokens": null
+          },
+          "agentDurationMs": 366496.62416699994,
+          "verificationDurationMs": 94362.03666600003,
+          "knownFailuresIncludedInFeedback": []
+        },
+        {
+          "stage": 3,
+          "feedback": 0,
+          "qualityPassed": true,
+          "executionPassed": true,
+          "failureCategory": null,
+          "usage": {
+            "inputTokens": 552262,
+            "cachedInputTokens": 542336,
+            "outputTokens": 2615,
+            "uncachedInputTokens": 9926,
+            "totalTokens": 554877,
+            "reasoningTokens": null
+          },
+          "agentDurationMs": 103576.64166600001,
+          "verificationDurationMs": 97294.62658299995,
+          "knownFailuresIncludedInFeedback": []
+        }
+      ],
+      "verification": [
+        {
+          "stage": 1,
+          "feedback": 0,
+          "originalQuality": true,
+          "reviewedQuality": true,
+          "originalFullCounts": {
+            "failed": 3,
+            "passed": 1016,
+            "skipped": 5,
+            "xfailed": 4,
+            "xpassed": 0
+          },
+          "originalFullTimedOut": false,
+          "originalFullExitCode": 1,
+          "fullSupplement": null,
+          "extraSkippedCount": 0,
+          "extraSkipCoveragePassed": null
+        },
+        {
+          "stage": 2,
+          "feedback": 0,
+          "originalQuality": true,
+          "reviewedQuality": true,
+          "originalFullCounts": {
+            "failed": 3,
+            "passed": 1016,
+            "skipped": 5,
+            "xfailed": 4,
+            "xpassed": 0
+          },
+          "originalFullTimedOut": false,
+          "originalFullExitCode": 1,
+          "fullSupplement": null,
+          "extraSkippedCount": 0,
+          "extraSkipCoveragePassed": null
+        },
+        {
+          "stage": 3,
+          "feedback": 0,
+          "originalQuality": true,
+          "reviewedQuality": true,
+          "originalFullCounts": {
+            "failed": 3,
+            "passed": 1016,
+            "skipped": 5,
+            "xfailed": 4,
+            "xpassed": 0
+          },
+          "originalFullTimedOut": false,
+          "originalFullExitCode": 1,
+          "fullSupplement": null,
+          "extraSkippedCount": 0,
+          "extraSkipCoveragePassed": null
+        }
+      ]
+    },
+    {
+      "id": "output-iteration-block-1-headroom",
+      "block": 1,
+      "arm": "headroom",
+      "order": 3,
+      "status": "completed",
+      "qualityPassed": true,
+      "recordedQualityPassed": true,
+      "activation": "observed",
+      "totalUsage": {
+        "inputTokens": 7410684,
+        "cachedInputTokens": 7227520,
+        "uncachedInputTokens": 183164,
+        "outputTokens": 40010,
+        "totalTokens": 7450694
+      },
+      "agentDurationMs": 1699263.6667500003,
+      "roundCount": 4,
+      "feedbackCount": 1,
+      "firstStageQuality": [
+        true,
+        false,
+        true
+      ],
+      "finalStageQuality": [
+        true,
+        true,
+        true
+      ],
+      "preparationMs": 4951.3480830001645,
+      "rtkHookCommands": null,
+      "rtkRewrites": null,
+      "headroomRequestCount": 82,
+      "headroomUniqueRewrittenOutputs": 19,
+      "reviewedQualityPassed": true,
+      "rounds": [
+        {
+          "stage": 1,
+          "feedback": 0,
+          "qualityPassed": true,
+          "executionPassed": true,
+          "failureCategory": null,
+          "usage": {
+            "inputTokens": 785370,
+            "cachedInputTokens": 728832,
+            "uncachedInputTokens": 56538,
+            "outputTokens": 10726,
+            "totalTokens": 796096,
+            "reasoningTokens": null
+          },
+          "agentDurationMs": 419890.6889999998,
+          "verificationDurationMs": 131073.08945799991,
+          "knownFailuresIncludedInFeedback": []
+        },
+        {
+          "stage": 2,
+          "feedback": 0,
+          "qualityPassed": false,
+          "executionPassed": true,
+          "failureCategory": null,
+          "usage": {
+            "inputTokens": 1397635,
+            "cachedInputTokens": 1345536,
+            "outputTokens": 14757,
+            "uncachedInputTokens": 52099,
+            "totalTokens": 1412392,
+            "reasoningTokens": null
+          },
+          "agentDurationMs": 439093.5613330002,
+          "verificationDurationMs": 94753.47774999961,
+          "knownFailuresIncludedInFeedback": []
+        },
+        {
+          "stage": 2,
+          "feedback": 1,
+          "qualityPassed": true,
+          "executionPassed": true,
+          "failureCategory": null,
+          "usage": {
+            "inputTokens": 3613306,
+            "cachedInputTokens": 3559040,
+            "outputTokens": 10319,
+            "uncachedInputTokens": 54266,
+            "totalTokens": 3623625,
+            "reasoningTokens": null
+          },
+          "agentDurationMs": 634816.0455420003,
+          "verificationDurationMs": 100360.02791600022,
+          "knownFailuresIncludedInFeedback": [
+            "test_terminal_output_response_charset_detection",
+            "test_terminal_output_request_charset_detection",
+            "test_double_quiet_on_error"
+          ]
+        },
+        {
+          "stage": 3,
+          "feedback": 0,
+          "qualityPassed": true,
+          "executionPassed": true,
+          "failureCategory": null,
+          "usage": {
+            "inputTokens": 1614373,
+            "cachedInputTokens": 1594112,
+            "outputTokens": 4208,
+            "uncachedInputTokens": 20261,
+            "totalTokens": 1618581,
+            "reasoningTokens": null
+          },
+          "agentDurationMs": 205463.37087500002,
+          "verificationDurationMs": 84898.7028330001,
+          "knownFailuresIncludedInFeedback": []
+        }
+      ],
+      "verification": [
+        {
+          "stage": 1,
+          "feedback": 0,
+          "originalQuality": true,
+          "reviewedQuality": true,
+          "originalFullCounts": {
+            "failed": 3,
+            "passed": 1016,
+            "skipped": 5,
+            "xfailed": 4,
+            "xpassed": 0
+          },
+          "originalFullTimedOut": false,
+          "originalFullExitCode": 1,
+          "fullSupplement": null,
+          "extraSkippedCount": 0,
+          "extraSkipCoveragePassed": null
+        },
+        {
+          "stage": 2,
+          "feedback": 0,
+          "originalQuality": false,
+          "reviewedQuality": false,
+          "originalFullCounts": {
+            "failed": 4,
+            "passed": 1015,
+            "skipped": 5,
+            "xfailed": 4,
+            "xpassed": 0
+          },
+          "originalFullTimedOut": false,
+          "originalFullExitCode": 1,
+          "fullSupplement": null,
+          "extraSkippedCount": 0,
+          "extraSkipCoveragePassed": null
+        },
+        {
+          "stage": 2,
+          "feedback": 1,
+          "originalQuality": true,
+          "reviewedQuality": true,
+          "originalFullCounts": {
+            "failed": 0,
+            "passed": 1019,
+            "skipped": 5,
+            "xfailed": 4,
+            "xpassed": 0
+          },
+          "originalFullTimedOut": false,
+          "originalFullExitCode": 0,
+          "fullSupplement": null,
+          "extraSkippedCount": 0,
+          "extraSkipCoveragePassed": null
+        },
+        {
+          "stage": 3,
+          "feedback": 0,
+          "originalQuality": true,
+          "reviewedQuality": true,
+          "originalFullCounts": {
+            "failed": 0,
+            "passed": 1019,
+            "skipped": 5,
+            "xfailed": 4,
+            "xpassed": 0
+          },
+          "originalFullTimedOut": false,
+          "originalFullExitCode": 0,
+          "fullSupplement": null,
+          "extraSkippedCount": 0,
+          "extraSkipCoveragePassed": null
+        }
+      ]
+    },
+    {
+      "id": "output-iteration-block-2-rtk",
+      "block": 2,
+      "arm": "rtk",
+      "order": 1,
+      "status": "completed",
+      "qualityPassed": true,
+      "recordedQualityPassed": true,
+      "activation": "observed",
+      "totalUsage": {
+        "inputTokens": 8193764,
+        "cachedInputTokens": 7988480,
+        "uncachedInputTokens": 205284,
+        "outputTokens": 35356,
+        "totalTokens": 8229120
+      },
+      "agentDurationMs": 1601806.301415999,
+      "roundCount": 4,
+      "feedbackCount": 1,
+      "firstStageQuality": [
+        true,
+        true,
+        false
+      ],
+      "finalStageQuality": [
+        true,
+        true,
+        true
+      ],
+      "preparationMs": 1601.1932079996914,
+      "rtkHookCommands": 43,
+      "rtkRewrites": 25,
+      "headroomRequestCount": null,
+      "headroomUniqueRewrittenOutputs": null,
+      "reviewedQualityPassed": true,
+      "rounds": [
+        {
+          "stage": 1,
+          "feedback": 0,
+          "qualityPassed": true,
+          "executionPassed": true,
+          "failureCategory": null,
+          "usage": {
+            "inputTokens": 1261499,
+            "cachedInputTokens": 1182720,
+            "uncachedInputTokens": 78779,
+            "outputTokens": 9554,
+            "totalTokens": 1271053,
+            "reasoningTokens": null
+          },
+          "agentDurationMs": 394544.49483299954,
+          "verificationDurationMs": 92283.1815419998,
+          "knownFailuresIncludedInFeedback": []
+        },
+        {
+          "stage": 2,
+          "feedback": 0,
+          "qualityPassed": true,
+          "executionPassed": true,
+          "failureCategory": null,
+          "usage": {
+            "inputTokens": 1914889,
+            "cachedInputTokens": 1864192,
+            "outputTokens": 13257,
+            "uncachedInputTokens": 50697,
+            "totalTokens": 1928146,
+            "reasoningTokens": null
+          },
+          "agentDurationMs": 613770.71275,
+          "verificationDurationMs": 92832.4316250002,
+          "knownFailuresIncludedInFeedback": []
+        },
+        {
+          "stage": 3,
+          "feedback": 0,
+          "qualityPassed": false,
+          "executionPassed": true,
+          "failureCategory": null,
+          "usage": {
+            "inputTokens": 2003943,
+            "cachedInputTokens": 1964416,
+            "outputTokens": 6003,
+            "uncachedInputTokens": 39527,
+            "totalTokens": 2009946,
+            "reasoningTokens": null
+          },
+          "agentDurationMs": 303934.30220799986,
+          "verificationDurationMs": 108891.32745799981,
+          "knownFailuresIncludedInFeedback": []
+        },
+        {
+          "stage": 3,
+          "feedback": 1,
+          "qualityPassed": true,
+          "executionPassed": true,
+          "failureCategory": null,
+          "usage": {
+            "inputTokens": 3013433,
+            "cachedInputTokens": 2977152,
+            "outputTokens": 6542,
+            "uncachedInputTokens": 36281,
+            "totalTokens": 3019975,
+            "reasoningTokens": null
+          },
+          "agentDurationMs": 289556.7916249996,
+          "verificationDurationMs": 84949.75229200069,
+          "knownFailuresIncludedInFeedback": [
+            "test_terminal_output_response_charset_detection",
+            "test_terminal_output_request_charset_detection",
+            "test_double_quiet_on_error"
+          ]
+        }
+      ],
+      "verification": [
+        {
+          "stage": 1,
+          "feedback": 0,
+          "originalQuality": true,
+          "reviewedQuality": true,
+          "originalFullCounts": {
+            "failed": 3,
+            "passed": 1016,
+            "skipped": 5,
+            "xfailed": 4,
+            "xpassed": 0
+          },
+          "originalFullTimedOut": false,
+          "originalFullExitCode": 1,
+          "fullSupplement": null,
+          "extraSkippedCount": 0,
+          "extraSkipCoveragePassed": null
+        },
+        {
+          "stage": 2,
+          "feedback": 0,
+          "originalQuality": true,
+          "reviewedQuality": true,
+          "originalFullCounts": {
+            "failed": 3,
+            "passed": 1016,
+            "skipped": 5,
+            "xfailed": 4,
+            "xpassed": 0
+          },
+          "originalFullTimedOut": false,
+          "originalFullExitCode": 1,
+          "fullSupplement": null,
+          "extraSkippedCount": 0,
+          "extraSkipCoveragePassed": null
+        },
+        {
+          "stage": 3,
+          "feedback": 0,
+          "originalQuality": false,
+          "reviewedQuality": false,
+          "originalFullCounts": {
+            "failed": 4,
+            "passed": 1015,
+            "skipped": 5,
+            "xfailed": 4,
+            "xpassed": 0
+          },
+          "originalFullTimedOut": false,
+          "originalFullExitCode": 1,
+          "fullSupplement": null,
+          "extraSkippedCount": 0,
+          "extraSkipCoveragePassed": null
+        },
+        {
+          "stage": 3,
+          "feedback": 1,
+          "originalQuality": true,
+          "reviewedQuality": true,
+          "originalFullCounts": {
+            "failed": 0,
+            "passed": 1019,
+            "skipped": 5,
+            "xfailed": 4,
+            "xpassed": 0
+          },
+          "originalFullTimedOut": false,
+          "originalFullExitCode": 0,
+          "fullSupplement": null,
+          "extraSkippedCount": 0,
+          "extraSkipCoveragePassed": null
+        }
+      ]
+    },
+    {
+      "id": "output-iteration-block-2-headroom",
+      "block": 2,
+      "arm": "headroom",
+      "order": 2,
+      "status": "completed",
+      "qualityPassed": true,
+      "recordedQualityPassed": true,
+      "activation": "observed",
+      "totalUsage": {
+        "inputTokens": 3834996,
+        "cachedInputTokens": 3687680,
+        "uncachedInputTokens": 147316,
+        "outputTokens": 29578,
+        "totalTokens": 3864574
+      },
+      "agentDurationMs": 1348109.3679590002,
+      "roundCount": 3,
+      "feedbackCount": 0,
+      "firstStageQuality": [
+        true,
+        true,
+        true
+      ],
+      "finalStageQuality": [
+        true,
+        true,
+        true
+      ],
+      "preparationMs": 5621.790000000037,
+      "rtkHookCommands": null,
+      "rtkRewrites": null,
+      "headroomRequestCount": 57,
+      "headroomUniqueRewrittenOutputs": 12,
+      "reviewedQualityPassed": true,
+      "rounds": [
+        {
+          "stage": 1,
+          "feedback": 0,
+          "qualityPassed": true,
+          "executionPassed": true,
+          "failureCategory": null,
+          "usage": {
+            "inputTokens": 774702,
+            "cachedInputTokens": 715904,
+            "uncachedInputTokens": 58798,
+            "outputTokens": 9610,
+            "totalTokens": 784312,
+            "reasoningTokens": null
+          },
+          "agentDurationMs": 459819.44279200025,
+          "verificationDurationMs": 89090.2195410002,
+          "knownFailuresIncludedInFeedback": []
+        },
+        {
+          "stage": 2,
+          "feedback": 0,
+          "qualityPassed": true,
+          "executionPassed": true,
+          "failureCategory": null,
+          "usage": {
+            "inputTokens": 1824046,
+            "cachedInputTokens": 1758208,
+            "outputTokens": 15813,
+            "uncachedInputTokens": 65838,
+            "totalTokens": 1839859,
+            "reasoningTokens": null
+          },
+          "agentDurationMs": 587195.8532499997,
+          "verificationDurationMs": 88524.90433300007,
+          "knownFailuresIncludedInFeedback": []
+        },
+        {
+          "stage": 3,
+          "feedback": 0,
+          "qualityPassed": true,
+          "executionPassed": true,
+          "failureCategory": null,
+          "usage": {
+            "inputTokens": 1236248,
+            "cachedInputTokens": 1213568,
+            "outputTokens": 4155,
+            "uncachedInputTokens": 22680,
+            "totalTokens": 1240403,
+            "reasoningTokens": null
+          },
+          "agentDurationMs": 301094.0719170002,
+          "verificationDurationMs": 86464.8646250004,
+          "knownFailuresIncludedInFeedback": []
+        }
+      ],
+      "verification": [
+        {
+          "stage": 1,
+          "feedback": 0,
+          "originalQuality": true,
+          "reviewedQuality": true,
+          "originalFullCounts": {
+            "failed": 3,
+            "passed": 1016,
+            "skipped": 5,
+            "xfailed": 4,
+            "xpassed": 0
+          },
+          "originalFullTimedOut": false,
+          "originalFullExitCode": 1,
+          "fullSupplement": null,
+          "extraSkippedCount": 0,
+          "extraSkipCoveragePassed": null
+        },
+        {
+          "stage": 2,
+          "feedback": 0,
+          "originalQuality": true,
+          "reviewedQuality": true,
+          "originalFullCounts": {
+            "failed": 3,
+            "passed": 1016,
+            "skipped": 5,
+            "xfailed": 4,
+            "xpassed": 0
+          },
+          "originalFullTimedOut": false,
+          "originalFullExitCode": 1,
+          "fullSupplement": null,
+          "extraSkippedCount": 0,
+          "extraSkipCoveragePassed": null
+        },
+        {
+          "stage": 3,
+          "feedback": 0,
+          "originalQuality": true,
+          "reviewedQuality": true,
+          "originalFullCounts": {
+            "failed": 3,
+            "passed": 1016,
+            "skipped": 5,
+            "xfailed": 4,
+            "xpassed": 0
+          },
+          "originalFullTimedOut": false,
+          "originalFullExitCode": 1,
+          "fullSupplement": null,
+          "extraSkippedCount": 0,
+          "extraSkipCoveragePassed": null
+        }
+      ]
+    },
+    {
+      "id": "output-iteration-block-2-baseline",
+      "block": 2,
+      "arm": "baseline",
+      "order": 3,
+      "status": "completed",
+      "qualityPassed": true,
+      "recordedQualityPassed": true,
+      "activation": "not-applicable",
+      "totalUsage": {
+        "inputTokens": 2995543,
+        "cachedInputTokens": 2875904,
+        "uncachedInputTokens": 119639,
+        "outputTokens": 22946,
+        "totalTokens": 3018489
+      },
+      "agentDurationMs": 794866.3935409999,
+      "roundCount": 3,
+      "feedbackCount": 0,
+      "firstStageQuality": [
+        true,
+        true,
+        true
+      ],
+      "finalStageQuality": [
+        true,
+        true,
+        true
+      ],
+      "preparationMs": 1457.3217500001192,
+      "rtkHookCommands": null,
+      "rtkRewrites": null,
+      "headroomRequestCount": null,
+      "headroomUniqueRewrittenOutputs": null,
+      "reviewedQualityPassed": true,
+      "rounds": [
+        {
+          "stage": 1,
+          "feedback": 0,
+          "qualityPassed": true,
+          "executionPassed": true,
+          "failureCategory": null,
+          "usage": {
+            "inputTokens": 649679,
+            "cachedInputTokens": 601472,
+            "uncachedInputTokens": 48207,
+            "outputTokens": 7419,
+            "totalTokens": 657098,
+            "reasoningTokens": null
+          },
+          "agentDurationMs": 271924.80495799985,
+          "verificationDurationMs": 87867.0625,
+          "knownFailuresIncludedInFeedback": []
+        },
+        {
+          "stage": 2,
+          "feedback": 0,
+          "qualityPassed": true,
+          "executionPassed": true,
+          "failureCategory": null,
+          "usage": {
+            "inputTokens": 1471345,
+            "cachedInputTokens": 1422720,
+            "outputTokens": 11532,
+            "uncachedInputTokens": 48625,
+            "totalTokens": 1482877,
+            "reasoningTokens": null
+          },
+          "agentDurationMs": 333461.71408299915,
+          "verificationDurationMs": 89166.81025000103,
+          "knownFailuresIncludedInFeedback": []
+        },
+        {
+          "stage": 3,
+          "feedback": 0,
+          "qualityPassed": true,
+          "executionPassed": true,
+          "failureCategory": null,
+          "usage": {
+            "inputTokens": 874519,
+            "cachedInputTokens": 851712,
+            "outputTokens": 3995,
+            "uncachedInputTokens": 22807,
+            "totalTokens": 878514,
+            "reasoningTokens": null
+          },
+          "agentDurationMs": 189479.87450000085,
+          "verificationDurationMs": 90640.64745800011,
+          "knownFailuresIncludedInFeedback": []
+        }
+      ],
+      "verification": [
+        {
+          "stage": 1,
+          "feedback": 0,
+          "originalQuality": true,
+          "reviewedQuality": true,
+          "originalFullCounts": {
+            "failed": 3,
+            "passed": 1016,
+            "skipped": 5,
+            "xfailed": 4,
+            "xpassed": 0
+          },
+          "originalFullTimedOut": false,
+          "originalFullExitCode": 1,
+          "fullSupplement": null,
+          "extraSkippedCount": 0,
+          "extraSkipCoveragePassed": null
+        },
+        {
+          "stage": 2,
+          "feedback": 0,
+          "originalQuality": true,
+          "reviewedQuality": true,
+          "originalFullCounts": {
+            "failed": 3,
+            "passed": 1016,
+            "skipped": 5,
+            "xfailed": 4,
+            "xpassed": 0
+          },
+          "originalFullTimedOut": false,
+          "originalFullExitCode": 1,
+          "fullSupplement": null,
+          "extraSkippedCount": 0,
+          "extraSkipCoveragePassed": null
+        },
+        {
+          "stage": 3,
+          "feedback": 0,
+          "originalQuality": true,
+          "reviewedQuality": true,
+          "originalFullCounts": {
+            "failed": 3,
+            "passed": 1016,
+            "skipped": 5,
+            "xfailed": 4,
+            "xpassed": 0
+          },
+          "originalFullTimedOut": false,
+          "originalFullExitCode": 1,
+          "fullSupplement": null,
+          "extraSkippedCount": 0,
+          "extraSkipCoveragePassed": null
+        }
+      ]
+    },
+    {
+      "id": "output-iteration-block-3-headroom",
+      "block": 3,
+      "arm": "headroom",
+      "order": 1,
+      "status": "completed",
+      "qualityPassed": true,
+      "recordedQualityPassed": true,
+      "activation": "observed",
+      "totalUsage": {
+        "inputTokens": 1964009,
+        "cachedInputTokens": 1857408,
+        "uncachedInputTokens": 106601,
+        "outputTokens": 23803,
+        "totalTokens": 1987812
+      },
+      "agentDurationMs": 741457.8078739997,
+      "roundCount": 3,
+      "feedbackCount": 0,
+      "firstStageQuality": [
+        true,
+        true,
+        true
+      ],
+      "finalStageQuality": [
+        true,
+        true,
+        true
+      ],
+      "preparationMs": 5983.433125000447,
+      "rtkHookCommands": null,
+      "rtkRewrites": null,
+      "headroomRequestCount": 40,
+      "headroomUniqueRewrittenOutputs": 12,
+      "reviewedQualityPassed": true,
+      "rounds": [
+        {
+          "stage": 1,
+          "feedback": 0,
+          "qualityPassed": true,
+          "executionPassed": true,
+          "failureCategory": null,
+          "usage": {
+            "inputTokens": 554941,
+            "cachedInputTokens": 502144,
+            "uncachedInputTokens": 52797,
+            "outputTokens": 7518,
+            "totalTokens": 562459,
+            "reasoningTokens": null
+          },
+          "agentDurationMs": 295872.7405830007,
+          "verificationDurationMs": 86521.66154100001,
+          "knownFailuresIncludedInFeedback": []
+        },
+        {
+          "stage": 2,
+          "feedback": 0,
+          "qualityPassed": true,
+          "executionPassed": true,
+          "failureCategory": null,
+          "usage": {
+            "inputTokens": 932800,
+            "cachedInputTokens": 888576,
+            "outputTokens": 12289,
+            "uncachedInputTokens": 44224,
+            "totalTokens": 945089,
+            "reasoningTokens": null
+          },
+          "agentDurationMs": 329246.9512499999,
+          "verificationDurationMs": 86281.06670799851,
+          "knownFailuresIncludedInFeedback": []
+        },
+        {
+          "stage": 3,
+          "feedback": 0,
+          "qualityPassed": true,
+          "executionPassed": true,
+          "failureCategory": null,
+          "usage": {
+            "inputTokens": 476268,
+            "cachedInputTokens": 466688,
+            "outputTokens": 3996,
+            "uncachedInputTokens": 9580,
+            "totalTokens": 480264,
+            "reasoningTokens": null
+          },
+          "agentDurationMs": 116338.11604099907,
+          "verificationDurationMs": 90314.95545900054,
+          "knownFailuresIncludedInFeedback": []
+        }
+      ],
+      "verification": [
+        {
+          "stage": 1,
+          "feedback": 0,
+          "originalQuality": true,
+          "reviewedQuality": true,
+          "originalFullCounts": {
+            "failed": 3,
+            "passed": 1016,
+            "skipped": 5,
+            "xfailed": 4,
+            "xpassed": 0
+          },
+          "originalFullTimedOut": false,
+          "originalFullExitCode": 1,
+          "fullSupplement": null,
+          "extraSkippedCount": 0,
+          "extraSkipCoveragePassed": null
+        },
+        {
+          "stage": 2,
+          "feedback": 0,
+          "originalQuality": true,
+          "reviewedQuality": true,
+          "originalFullCounts": {
+            "failed": 3,
+            "passed": 1016,
+            "skipped": 5,
+            "xfailed": 4,
+            "xpassed": 0
+          },
+          "originalFullTimedOut": false,
+          "originalFullExitCode": 1,
+          "fullSupplement": null,
+          "extraSkippedCount": 0,
+          "extraSkipCoveragePassed": null
+        },
+        {
+          "stage": 3,
+          "feedback": 0,
+          "originalQuality": true,
+          "reviewedQuality": true,
+          "originalFullCounts": {
+            "failed": 3,
+            "passed": 1016,
+            "skipped": 5,
+            "xfailed": 4,
+            "xpassed": 0
+          },
+          "originalFullTimedOut": false,
+          "originalFullExitCode": 1,
+          "fullSupplement": null,
+          "extraSkippedCount": 0,
+          "extraSkipCoveragePassed": null
+        }
+      ]
+    },
+    {
+      "id": "output-iteration-block-3-baseline",
+      "block": 3,
+      "arm": "baseline",
+      "order": 2,
+      "status": "completed",
+      "qualityPassed": true,
+      "recordedQualityPassed": true,
+      "activation": "not-applicable",
+      "totalUsage": {
+        "inputTokens": 3793803,
+        "cachedInputTokens": 3629440,
+        "uncachedInputTokens": 164363,
+        "outputTokens": 26654,
+        "totalTokens": 3820457
+      },
+      "agentDurationMs": 901373.1764589995,
+      "roundCount": 3,
+      "feedbackCount": 0,
+      "firstStageQuality": [
+        true,
+        true,
+        true
+      ],
+      "finalStageQuality": [
+        true,
+        true,
+        true
+      ],
+      "preparationMs": 1317.2223749998957,
+      "rtkHookCommands": null,
+      "rtkRewrites": null,
+      "headroomRequestCount": null,
+      "headroomUniqueRewrittenOutputs": null,
+      "reviewedQualityPassed": true,
+      "rounds": [
+        {
+          "stage": 1,
+          "feedback": 0,
+          "qualityPassed": true,
+          "executionPassed": true,
+          "failureCategory": null,
+          "usage": {
+            "inputTokens": 759096,
+            "cachedInputTokens": 667904,
+            "uncachedInputTokens": 91192,
+            "outputTokens": 7898,
+            "totalTokens": 766994,
+            "reasoningTokens": null
+          },
+          "agentDurationMs": 273568.377249999,
+          "verificationDurationMs": 96813.34108299948,
+          "knownFailuresIncludedInFeedback": []
+        },
+        {
+          "stage": 2,
+          "feedback": 0,
+          "qualityPassed": true,
+          "executionPassed": true,
+          "failureCategory": null,
+          "usage": {
+            "inputTokens": 1493105,
+            "cachedInputTokens": 1444992,
+            "outputTokens": 13793,
+            "uncachedInputTokens": 48113,
+            "totalTokens": 1506898,
+            "reasoningTokens": null
+          },
+          "agentDurationMs": 368516.31087500043,
+          "verificationDurationMs": 88920.53129100055,
+          "knownFailuresIncludedInFeedback": []
+        },
+        {
+          "stage": 3,
+          "feedback": 0,
+          "qualityPassed": true,
+          "executionPassed": true,
+          "failureCategory": null,
+          "usage": {
+            "inputTokens": 1541602,
+            "cachedInputTokens": 1516544,
+            "outputTokens": 4963,
+            "uncachedInputTokens": 25058,
+            "totalTokens": 1546565,
+            "reasoningTokens": null
+          },
+          "agentDurationMs": 259288.4883340001,
+          "verificationDurationMs": 88534.48079199903,
+          "knownFailuresIncludedInFeedback": []
+        }
+      ],
+      "verification": [
+        {
+          "stage": 1,
+          "feedback": 0,
+          "originalQuality": true,
+          "reviewedQuality": true,
+          "originalFullCounts": {
+            "failed": 3,
+            "passed": 1016,
+            "skipped": 5,
+            "xfailed": 4,
+            "xpassed": 0
+          },
+          "originalFullTimedOut": false,
+          "originalFullExitCode": 1,
+          "fullSupplement": null,
+          "extraSkippedCount": 0,
+          "extraSkipCoveragePassed": null
+        },
+        {
+          "stage": 2,
+          "feedback": 0,
+          "originalQuality": true,
+          "reviewedQuality": true,
+          "originalFullCounts": {
+            "failed": 3,
+            "passed": 1016,
+            "skipped": 5,
+            "xfailed": 4,
+            "xpassed": 0
+          },
+          "originalFullTimedOut": false,
+          "originalFullExitCode": 1,
+          "fullSupplement": null,
+          "extraSkippedCount": 0,
+          "extraSkipCoveragePassed": null
+        },
+        {
+          "stage": 3,
+          "feedback": 0,
+          "originalQuality": true,
+          "reviewedQuality": true,
+          "originalFullCounts": {
+            "failed": 3,
+            "passed": 1016,
+            "skipped": 5,
+            "xfailed": 4,
+            "xpassed": 0
+          },
+          "originalFullTimedOut": false,
+          "originalFullExitCode": 1,
+          "fullSupplement": null,
+          "extraSkippedCount": 0,
+          "extraSkipCoveragePassed": null
+        }
+      ]
+    },
+    {
+      "id": "output-iteration-block-3-rtk",
+      "block": 3,
+      "arm": "rtk",
+      "order": 3,
+      "status": "completed",
+      "qualityPassed": true,
+      "recordedQualityPassed": true,
+      "activation": "observed",
+      "totalUsage": {
+        "inputTokens": 2528080,
+        "cachedInputTokens": 2416384,
+        "uncachedInputTokens": 111696,
+        "outputTokens": 24951,
+        "totalTokens": 2553031
+      },
+      "agentDurationMs": 575099.1994579975,
+      "roundCount": 3,
+      "feedbackCount": 0,
+      "firstStageQuality": [
+        true,
+        true,
+        true
+      ],
+      "finalStageQuality": [
+        true,
+        true,
+        true
+      ],
+      "preparationMs": 1320.967457998544,
+      "rtkHookCommands": 25,
+      "rtkRewrites": 14,
+      "headroomRequestCount": null,
+      "headroomUniqueRewrittenOutputs": null,
+      "reviewedQualityPassed": true,
+      "rounds": [
+        {
+          "stage": 1,
+          "feedback": 0,
+          "qualityPassed": true,
+          "executionPassed": true,
+          "failureCategory": null,
+          "usage": {
+            "inputTokens": 609474,
+            "cachedInputTokens": 564864,
+            "uncachedInputTokens": 44610,
+            "outputTokens": 7742,
+            "totalTokens": 617216,
+            "reasoningTokens": null
+          },
+          "agentDurationMs": 180342.10229199938,
+          "verificationDurationMs": 85716.56920799986,
+          "knownFailuresIncludedInFeedback": []
+        },
+        {
+          "stage": 2,
+          "feedback": 0,
+          "qualityPassed": true,
+          "executionPassed": true,
+          "failureCategory": null,
+          "usage": {
+            "inputTokens": 1194135,
+            "cachedInputTokens": 1150592,
+            "outputTokens": 13879,
+            "uncachedInputTokens": 43543,
+            "totalTokens": 1208014,
+            "reasoningTokens": null
+          },
+          "agentDurationMs": 290849.4744999986,
+          "verificationDurationMs": 86897.5126670003,
+          "knownFailuresIncludedInFeedback": []
+        },
+        {
+          "stage": 3,
+          "feedback": 0,
+          "qualityPassed": true,
+          "executionPassed": true,
+          "failureCategory": null,
+          "usage": {
+            "inputTokens": 724471,
+            "cachedInputTokens": 700928,
+            "outputTokens": 3330,
+            "uncachedInputTokens": 23543,
+            "totalTokens": 727801,
+            "reasoningTokens": null
+          },
+          "agentDurationMs": 103907.62266599946,
+          "verificationDurationMs": 88427.07545900159,
+          "knownFailuresIncludedInFeedback": []
+        }
+      ],
+      "verification": [
+        {
+          "stage": 1,
+          "feedback": 0,
+          "originalQuality": true,
+          "reviewedQuality": true,
+          "originalFullCounts": {
+            "failed": 3,
+            "passed": 1016,
+            "skipped": 5,
+            "xfailed": 4,
+            "xpassed": 0
+          },
+          "originalFullTimedOut": false,
+          "originalFullExitCode": 1,
+          "fullSupplement": null,
+          "extraSkippedCount": 0,
+          "extraSkipCoveragePassed": null
+        },
+        {
+          "stage": 2,
+          "feedback": 0,
+          "originalQuality": true,
+          "reviewedQuality": true,
+          "originalFullCounts": {
+            "failed": 3,
+            "passed": 1016,
+            "skipped": 5,
+            "xfailed": 4,
+            "xpassed": 0
+          },
+          "originalFullTimedOut": false,
+          "originalFullExitCode": 1,
+          "fullSupplement": null,
+          "extraSkippedCount": 0,
+          "extraSkipCoveragePassed": null
+        },
+        {
+          "stage": 3,
+          "feedback": 0,
+          "originalQuality": true,
+          "reviewedQuality": true,
+          "originalFullCounts": {
+            "failed": 3,
+            "passed": 1016,
+            "skipped": 5,
+            "xfailed": 4,
+            "xpassed": 0
+          },
+          "originalFullTimedOut": false,
+          "originalFullExitCode": 1,
+          "fullSupplement": null,
+          "extraSkippedCount": 0,
+          "extraSkipCoveragePassed": null
+        }
+      ]
+    },
+    {
+      "id": "output-iteration-block-4-headroom",
+      "block": 4,
+      "arm": "headroom",
+      "order": 1,
+      "status": "completed",
+      "qualityPassed": true,
+      "recordedQualityPassed": true,
+      "activation": "observed",
+      "totalUsage": {
+        "inputTokens": 3141054,
+        "cachedInputTokens": 3011200,
+        "uncachedInputTokens": 129854,
+        "outputTokens": 25285,
+        "totalTokens": 3166339
+      },
+      "agentDurationMs": 842454.1050829999,
+      "roundCount": 3,
+      "feedbackCount": 0,
+      "firstStageQuality": [
+        true,
+        true,
+        true
+      ],
+      "finalStageQuality": [
+        true,
+        true,
+        true
+      ],
+      "preparationMs": 4844.9252920001745,
+      "rtkHookCommands": null,
+      "rtkRewrites": null,
+      "headroomRequestCount": 49,
+      "headroomUniqueRewrittenOutputs": 12,
+      "reviewedQualityPassed": true,
+      "rounds": [
+        {
+          "stage": 1,
+          "feedback": 0,
+          "qualityPassed": true,
+          "executionPassed": true,
+          "failureCategory": null,
+          "usage": {
+            "inputTokens": 405385,
+            "cachedInputTokens": 357120,
+            "uncachedInputTokens": 48265,
+            "outputTokens": 6558,
+            "totalTokens": 411943,
+            "reasoningTokens": null
+          },
+          "agentDurationMs": 229120.9798750002,
+          "verificationDurationMs": 91028.41291599907,
+          "knownFailuresIncludedInFeedback": []
+        },
+        {
+          "stage": 2,
+          "feedback": 0,
+          "qualityPassed": true,
+          "executionPassed": true,
+          "failureCategory": null,
+          "usage": {
+            "inputTokens": 1612451,
+            "cachedInputTokens": 1555200,
+            "outputTokens": 14075,
+            "uncachedInputTokens": 57251,
+            "totalTokens": 1626526,
+            "reasoningTokens": null
+          },
+          "agentDurationMs": 423096.73900000006,
+          "verificationDurationMs": 86850.21174999885,
+          "knownFailuresIncludedInFeedback": []
+        },
+        {
+          "stage": 3,
+          "feedback": 0,
+          "qualityPassed": true,
+          "executionPassed": true,
+          "failureCategory": null,
+          "usage": {
+            "inputTokens": 1123218,
+            "cachedInputTokens": 1098880,
+            "outputTokens": 4652,
+            "uncachedInputTokens": 24338,
+            "totalTokens": 1127870,
+            "reasoningTokens": null
+          },
+          "agentDurationMs": 190236.38620799966,
+          "verificationDurationMs": 84202.76391700096,
+          "knownFailuresIncludedInFeedback": []
+        }
+      ],
+      "verification": [
+        {
+          "stage": 1,
+          "feedback": 0,
+          "originalQuality": true,
+          "reviewedQuality": true,
+          "originalFullCounts": {
+            "failed": 3,
+            "passed": 1016,
+            "skipped": 5,
+            "xfailed": 4,
+            "xpassed": 0
+          },
+          "originalFullTimedOut": false,
+          "originalFullExitCode": 1,
+          "fullSupplement": null,
+          "extraSkippedCount": 0,
+          "extraSkipCoveragePassed": null
+        },
+        {
+          "stage": 2,
+          "feedback": 0,
+          "originalQuality": true,
+          "reviewedQuality": true,
+          "originalFullCounts": {
+            "failed": 3,
+            "passed": 1016,
+            "skipped": 5,
+            "xfailed": 4,
+            "xpassed": 0
+          },
+          "originalFullTimedOut": false,
+          "originalFullExitCode": 1,
+          "fullSupplement": null,
+          "extraSkippedCount": 0,
+          "extraSkipCoveragePassed": null
+        },
+        {
+          "stage": 3,
+          "feedback": 0,
+          "originalQuality": true,
+          "reviewedQuality": true,
+          "originalFullCounts": {
+            "failed": 3,
+            "passed": 1016,
+            "skipped": 5,
+            "xfailed": 4,
+            "xpassed": 0
+          },
+          "originalFullTimedOut": false,
+          "originalFullExitCode": 1,
+          "fullSupplement": null,
+          "extraSkippedCount": 0,
+          "extraSkipCoveragePassed": null
+        }
+      ]
+    },
+    {
+      "id": "output-iteration-block-4-rtk",
+      "block": 4,
+      "arm": "rtk",
+      "order": 2,
+      "status": "completed",
+      "qualityPassed": true,
+      "recordedQualityPassed": true,
+      "activation": "observed",
+      "totalUsage": {
+        "inputTokens": 3773046,
+        "cachedInputTokens": 3654656,
+        "uncachedInputTokens": 118390,
+        "outputTokens": 29056,
+        "totalTokens": 3802102
+      },
+      "agentDurationMs": 679184.9810429998,
+      "roundCount": 3,
+      "feedbackCount": 0,
+      "firstStageQuality": [
+        true,
+        true,
+        true
+      ],
+      "finalStageQuality": [
+        true,
+        true,
+        true
+      ],
+      "preparationMs": 1396.8879170008004,
+      "rtkHookCommands": 32,
+      "rtkRewrites": 21,
+      "headroomRequestCount": null,
+      "headroomUniqueRewrittenOutputs": null,
+      "reviewedQualityPassed": true,
+      "rounds": [
+        {
+          "stage": 1,
+          "feedback": 0,
+          "qualityPassed": true,
+          "executionPassed": true,
+          "failureCategory": null,
+          "usage": {
+            "inputTokens": 793471,
+            "cachedInputTokens": 735744,
+            "uncachedInputTokens": 57727,
+            "outputTokens": 9388,
+            "totalTokens": 802859,
+            "reasoningTokens": null
+          },
+          "agentDurationMs": 199370.39095900021,
+          "verificationDurationMs": 90079.77145799994,
+          "knownFailuresIncludedInFeedback": []
+        },
+        {
+          "stage": 2,
+          "feedback": 0,
+          "qualityPassed": true,
+          "executionPassed": true,
+          "failureCategory": null,
+          "usage": {
+            "inputTokens": 1823658,
+            "cachedInputTokens": 1776512,
+            "outputTokens": 15308,
+            "uncachedInputTokens": 47146,
+            "totalTokens": 1838966,
+            "reasoningTokens": null
+          },
+          "agentDurationMs": 367545.325584,
+          "verificationDurationMs": 91244.33074999973,
+          "knownFailuresIncludedInFeedback": []
+        },
+        {
+          "stage": 3,
+          "feedback": 0,
+          "qualityPassed": true,
+          "executionPassed": true,
+          "failureCategory": null,
+          "usage": {
+            "inputTokens": 1155917,
+            "cachedInputTokens": 1142400,
+            "outputTokens": 4360,
+            "uncachedInputTokens": 13517,
+            "totalTokens": 1160277,
+            "reasoningTokens": null
+          },
+          "agentDurationMs": 112269.26449999958,
+          "verificationDurationMs": 89246.73070799932,
+          "knownFailuresIncludedInFeedback": []
+        }
+      ],
+      "verification": [
+        {
+          "stage": 1,
+          "feedback": 0,
+          "originalQuality": true,
+          "reviewedQuality": true,
+          "originalFullCounts": {
+            "failed": 3,
+            "passed": 1016,
+            "skipped": 5,
+            "xfailed": 4,
+            "xpassed": 0
+          },
+          "originalFullTimedOut": false,
+          "originalFullExitCode": 1,
+          "fullSupplement": null,
+          "extraSkippedCount": 0,
+          "extraSkipCoveragePassed": null
+        },
+        {
+          "stage": 2,
+          "feedback": 0,
+          "originalQuality": true,
+          "reviewedQuality": true,
+          "originalFullCounts": {
+            "failed": 3,
+            "passed": 1016,
+            "skipped": 5,
+            "xfailed": 4,
+            "xpassed": 0
+          },
+          "originalFullTimedOut": false,
+          "originalFullExitCode": 1,
+          "fullSupplement": null,
+          "extraSkippedCount": 0,
+          "extraSkipCoveragePassed": null
+        },
+        {
+          "stage": 3,
+          "feedback": 0,
+          "originalQuality": true,
+          "reviewedQuality": true,
+          "originalFullCounts": {
+            "failed": 3,
+            "passed": 1016,
+            "skipped": 5,
+            "xfailed": 4,
+            "xpassed": 0
+          },
+          "originalFullTimedOut": false,
+          "originalFullExitCode": 1,
+          "fullSupplement": null,
+          "extraSkippedCount": 0,
+          "extraSkipCoveragePassed": null
+        }
+      ]
+    },
+    {
+      "id": "output-iteration-block-4-baseline",
+      "block": 4,
+      "arm": "baseline",
+      "order": 3,
+      "status": "completed",
+      "qualityPassed": true,
+      "recordedQualityPassed": true,
+      "activation": "not-applicable",
+      "totalUsage": {
+        "inputTokens": 3110211,
+        "cachedInputTokens": 2970240,
+        "uncachedInputTokens": 139971,
+        "outputTokens": 25728,
+        "totalTokens": 3135939
+      },
+      "agentDurationMs": 625471.9989990015,
+      "roundCount": 3,
+      "feedbackCount": 0,
+      "firstStageQuality": [
+        true,
+        true,
+        true
+      ],
+      "finalStageQuality": [
+        true,
+        true,
+        true
+      ],
+      "preparationMs": 1409.060833999887,
+      "rtkHookCommands": null,
+      "rtkRewrites": null,
+      "headroomRequestCount": null,
+      "headroomUniqueRewrittenOutputs": null,
+      "reviewedQualityPassed": true,
+      "rounds": [
+        {
+          "stage": 1,
+          "feedback": 0,
+          "qualityPassed": true,
+          "executionPassed": true,
+          "failureCategory": null,
+          "usage": {
+            "inputTokens": 550314,
+            "cachedInputTokens": 497280,
+            "uncachedInputTokens": 53034,
+            "outputTokens": 6564,
+            "totalTokens": 556878,
+            "reasoningTokens": null
+          },
+          "agentDurationMs": 186349.034500001,
+          "verificationDurationMs": 89819.69641700014,
+          "knownFailuresIncludedInFeedback": []
+        },
+        {
+          "stage": 2,
+          "feedback": 0,
+          "qualityPassed": true,
+          "executionPassed": true,
+          "failureCategory": null,
+          "usage": {
+            "inputTokens": 1602960,
+            "cachedInputTokens": 1542784,
+            "outputTokens": 14924,
+            "uncachedInputTokens": 60176,
+            "totalTokens": 1617884,
+            "reasoningTokens": null
+          },
+          "agentDurationMs": 288449.1159160007,
+          "verificationDurationMs": 87664.18633399904,
+          "knownFailuresIncludedInFeedback": []
+        },
+        {
+          "stage": 3,
+          "feedback": 0,
+          "qualityPassed": true,
+          "executionPassed": true,
+          "failureCategory": null,
+          "usage": {
+            "inputTokens": 956937,
+            "cachedInputTokens": 930176,
+            "outputTokens": 4240,
+            "uncachedInputTokens": 26761,
+            "totalTokens": 961177,
+            "reasoningTokens": null
+          },
+          "agentDurationMs": 150673.84858299978,
+          "verificationDurationMs": 88646.19841600023,
+          "knownFailuresIncludedInFeedback": []
+        }
+      ],
+      "verification": [
+        {
+          "stage": 1,
+          "feedback": 0,
+          "originalQuality": true,
+          "reviewedQuality": true,
+          "originalFullCounts": {
+            "failed": 3,
+            "passed": 1016,
+            "skipped": 5,
+            "xfailed": 4,
+            "xpassed": 0
+          },
+          "originalFullTimedOut": false,
+          "originalFullExitCode": 1,
+          "fullSupplement": null,
+          "extraSkippedCount": 0,
+          "extraSkipCoveragePassed": null
+        },
+        {
+          "stage": 2,
+          "feedback": 0,
+          "originalQuality": true,
+          "reviewedQuality": true,
+          "originalFullCounts": {
+            "failed": 3,
+            "passed": 1016,
+            "skipped": 5,
+            "xfailed": 4,
+            "xpassed": 0
+          },
+          "originalFullTimedOut": false,
+          "originalFullExitCode": 1,
+          "fullSupplement": null,
+          "extraSkippedCount": 0,
+          "extraSkipCoveragePassed": null
+        },
+        {
+          "stage": 3,
+          "feedback": 0,
+          "originalQuality": true,
+          "reviewedQuality": true,
+          "originalFullCounts": {
+            "failed": 3,
+            "passed": 1016,
+            "skipped": 5,
+            "xfailed": 4,
+            "xpassed": 0
+          },
+          "originalFullTimedOut": false,
+          "originalFullExitCode": 1,
+          "fullSupplement": null,
+          "extraSkippedCount": 0,
+          "extraSkipCoveragePassed": null
+        }
+      ]
+    }
+  ],
+  "comparisons": [
+    {
+      "arm": "rtk",
+      "pairs": [
+        {
+          "block": 1,
+          "baselineQuality": true,
+          "toolQuality": true,
+          "activation": "observed",
+          "delta": {
+            "inputTokens": -1060747,
+            "cachedInputTokens": -1023488,
+            "uncachedInputTokens": -37259,
+            "outputTokens": -5660,
+            "totalTokens": -1066407
+          },
+          "percent": {
+            "inputTokens": -29.09007789005222,
+            "cachedInputTokens": -29.112357096046022,
+            "uncachedInputTokens": -28.491137382048418,
+            "outputTokens": -20.474605701056287,
+            "totalTokens": -29.02525430953064
+          }
+        },
+        {
+          "block": 2,
+          "baselineQuality": true,
+          "toolQuality": true,
+          "activation": "observed",
+          "delta": {
+            "inputTokens": 5198221,
+            "cachedInputTokens": 5112576,
+            "uncachedInputTokens": 85645,
+            "outputTokens": 12410,
+            "totalTokens": 5210631
+          },
+          "percent": {
+            "inputTokens": 173.531843809286,
+            "cachedInputTokens": 177.77283247285027,
+            "uncachedInputTokens": 71.58618845025451,
+            "outputTokens": 54.083500392225226,
+            "totalTokens": 172.62381940103145
+          }
+        },
+        {
+          "block": 3,
+          "baselineQuality": true,
+          "toolQuality": true,
+          "activation": "observed",
+          "delta": {
+            "inputTokens": -1265723,
+            "cachedInputTokens": -1213056,
+            "uncachedInputTokens": -52667,
+            "outputTokens": -1703,
+            "totalTokens": -1267426
+          },
+          "percent": {
+            "inputTokens": -33.362907878980536,
+            "cachedInputTokens": -33.42267677658261,
+            "uncachedInputTokens": -32.04309972439052,
+            "outputTokens": -6.389284910332408,
+            "totalTokens": -33.1747222910767
+          }
+        },
+        {
+          "block": 4,
+          "baselineQuality": true,
+          "toolQuality": true,
+          "activation": "observed",
+          "delta": {
+            "inputTokens": 662835,
+            "cachedInputTokens": 684416,
+            "uncachedInputTokens": -21581,
+            "outputTokens": 3328,
+            "totalTokens": 666163
+          },
+          "percent": {
+            "inputTokens": 21.31157661007565,
+            "cachedInputTokens": 23.0424477483301,
+            "uncachedInputTokens": -15.418193768709232,
+            "outputTokens": 12.935323383084578,
+            "totalTokens": 21.24285580810086
+          }
+        }
+      ],
+      "knownUsagePairs": 4,
+      "missingUsagePairs": 0,
+      "totalTokensLower": 2,
+      "totalTokensHigher": 2,
+      "medianTotalTokensPercent": -3.891199250714891,
+      "medianUncachedInputPercent": -21.954665575378826
+    },
+    {
+      "arm": "headroom",
+      "pairs": [
+        {
+          "block": 1,
+          "baselineQuality": true,
+          "toolQuality": true,
+          "activation": "observed",
+          "delta": {
+            "inputTokens": 3764262,
+            "cachedInputTokens": 3711872,
+            "uncachedInputTokens": 52390,
+            "outputTokens": 12366,
+            "totalTokens": 3776628
+          },
+          "percent": {
+            "inputTokens": 103.23166106391416,
+            "cachedInputTokens": 105.58144615160562,
+            "uncachedInputTokens": 40.06148011072538,
+            "outputTokens": 44.73303429315584,
+            "totalTokens": 102.79151218296025
+          }
+        },
+        {
+          "block": 2,
+          "baselineQuality": true,
+          "toolQuality": true,
+          "activation": "observed",
+          "delta": {
+            "inputTokens": 839453,
+            "cachedInputTokens": 811776,
+            "uncachedInputTokens": 27677,
+            "outputTokens": 6632,
+            "totalTokens": 846085
+          },
+          "percent": {
+            "inputTokens": 28.023400098079048,
+            "cachedInputTokens": 28.226811465194945,
+            "uncachedInputTokens": 23.133760730196673,
+            "outputTokens": 28.902640983177896,
+            "totalTokens": 28.0300839260968
+          }
+        },
+        {
+          "block": 3,
+          "baselineQuality": true,
+          "toolQuality": true,
+          "activation": "observed",
+          "delta": {
+            "inputTokens": -1829794,
+            "cachedInputTokens": -1772032,
+            "uncachedInputTokens": -57762,
+            "outputTokens": -2851,
+            "totalTokens": -1832645
+          },
+          "percent": {
+            "inputTokens": -48.23112850087366,
+            "cachedInputTokens": -48.8238405924881,
+            "uncachedInputTokens": -35.14294579680342,
+            "outputTokens": -10.696330757109626,
+            "totalTokens": -47.96926126900525
+          }
+        },
+        {
+          "block": 4,
+          "baselineQuality": true,
+          "toolQuality": true,
+          "activation": "observed",
+          "delta": {
+            "inputTokens": 30843,
+            "cachedInputTokens": 40960,
+            "uncachedInputTokens": -10117,
+            "outputTokens": -443,
+            "totalTokens": 30400
+          },
+          "percent": {
+            "inputTokens": 0.991669053964506,
+            "cachedInputTokens": 1.379013143719026,
+            "uncachedInputTokens": -7.227925784626816,
+            "outputTokens": -1.7218594527363185,
+            "totalTokens": 0.969406611544421
+          }
+        }
+      ],
+      "knownUsagePairs": 4,
+      "missingUsagePairs": 0,
+      "totalTokensLower": 1,
+      "totalTokensHigher": 3,
+      "medianTotalTokensPercent": 14.499745268820611,
+      "medianUncachedInputPercent": 7.952917472784929
+    }
+  ],
+  "actualCostUsd": null,
+  "humanInterventionMs": null,
+  "completed": true,
+  "limitations": [
+    "four repeats, one three-stage maintenance task",
+    "requested model checked against native session; supplier resolved model unavailable",
+    "tool-local counters and character reductions are not supplier costs"
+  ],
+  "sourceCommit": "5b604c37c6c67e18e7c3e9aee6c88a8c22b98345",
+  "cliVersion": "0.158.0",
+  "headroomProfile": "native-offline",
+  "subscriptionQuotaChange": null,
+  "toolPins": {
+    "rtk": {
+      "version": "0.49.0",
+      "sourceCommit": "7efbaef462911f0fcb112c8a01025dc90f280617",
+      "binarySha256": "47fb447178df42a2cfb65640724b64f1956c6f8780655ac84e597af49ac7e51c"
+    },
+    "headroom": {
+      "version": "0.39.1",
+      "sourceCommit": "d13e1966f820220b482a33c30bde1e926743939a",
+      "wheelSha256": "0f61fd0ccaa5e48337592e11e97fbe12bc8d4634c4981c9774ac7cecb19658b0"
+    }
+  },
+  "remoteFailureDiagnostic": {
+    "modelInvoked": false,
+    "originalRecordsRewritten": false,
+    "enrollments": 2,
+    "interpretation": "supports or weakens the external variability hypothesis; does not prove causal tool harm or benefit",
+    "results": [
+      {
+        "id": "output-iteration-block-1-headroom",
+        "stage": 2,
+        "feedback": 0,
+        "target": "tests/test_uploads.py::test_chunked_form",
+        "originalQuality": false,
+        "observations": [
+          {
+            "kind": "failed-snapshot",
+            "attempts": 1,
+            "modelInvoked": false,
+            "sourceUnchanged": true,
+            "durationMs": 845.017875,
+            "exitCode": 0,
+            "timedOut": false,
+            "passed": true,
+            "counts": {
+              "passed": 1,
+              "failed": null,
+              "skipped": null,
+              "xfailed": null,
+              "xpassed": null,
+              "error": null
+            },
+            "observationSha256": "877cd1c252343fe231fe62366d8fba48be8cf84f91128cd6dffe075ab25767ca"
+          },
+          {
+            "kind": "fixed-original",
+            "attempts": 1,
+            "modelInvoked": false,
+            "sourceUnchanged": true,
+            "durationMs": 2317.486833,
+            "exitCode": 0,
+            "timedOut": false,
+            "passed": true,
+            "counts": {
+              "passed": 1,
+              "failed": null,
+              "skipped": null,
+              "xfailed": null,
+              "xpassed": null,
+              "error": null
+            },
+            "observationSha256": "82d7534475dbdb7cdee94949da29fdce26d59111cc28189aa5f9da59dc02cd65"
+          }
+        ]
+      },
+      {
+        "id": "output-iteration-block-2-rtk",
+        "stage": 3,
+        "feedback": 0,
+        "target": "tests/test_uploads.py::test_chunked_json",
+        "originalQuality": false,
+        "observations": [
+          {
+            "kind": "failed-snapshot",
+            "attempts": 1,
+            "modelInvoked": false,
+            "sourceUnchanged": true,
+            "durationMs": 778.7457910000003,
+            "exitCode": 0,
+            "timedOut": false,
+            "passed": true,
+            "counts": {
+              "passed": 1,
+              "failed": null,
+              "skipped": null,
+              "xfailed": null,
+              "xpassed": null,
+              "error": null
+            },
+            "observationSha256": "befc1f257a03e4568875edf709c2779f756af8e27fe3cb53ce7faad723ab1ef1"
+          },
+          {
+            "kind": "fixed-original",
+            "attempts": 1,
+            "modelInvoked": false,
+            "sourceUnchanged": true,
+            "durationMs": 1977.1490839999988,
+            "exitCode": 0,
+            "timedOut": false,
+            "passed": true,
+            "counts": {
+              "passed": 1,
+              "failed": null,
+              "skipped": null,
+              "xfailed": null,
+              "xpassed": null,
+              "error": null
+            },
+            "observationSha256": "2dbdb3088a9aa098a218eb05c98d0b5f0bcb26d4dc844afb38ac7356e05dd64c"
+          }
+        ]
+      }
+    ]
+  },
+  "qualityPolicy": "cumulative stage-specific external downloads plus original fixed tests; three known upstream failures retained",
+  "preparationPolicy": "per-position preparation excludes historical source build and human maintenance time",
+  "installationBuildMs": null,
+  "headroomProfileLimitations": [
+    "Headroom offline native recent-turn guards; Kompress and its fallback disabled, no learned-model download",
+    "Headroom response cache, memory and image optimization disabled; pipeline configuration explicitly recorded"
+  ],
+  "audit": {
+    "passed": true,
+    "replaySha256": "1c68fa9b95bdbe891dcf76549fcf0181733f44180f19deb32f0dd54f41ec78b5",
+    "supplementalReviewSha256": "3ff103ab5ae4a86b43f784b549e18d946e4b3732ddfd00b0002412f21ff5df14",
+    "originalRecordsPreserved": true,
+    "modelInvokedForSupplements": false
+  }
+}

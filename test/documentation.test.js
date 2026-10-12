@@ -44,37 +44,16 @@ test('README provides focused navigation and quick-start links without redundanc
 
 });
 
-test('benchmark-protocol contains unified methodology and protocol specifications', async () => {
+test('protocol distinguishes completed batches and retains accounting rules', async () => {
   const content = await readFile(path.join(root, 'docs/benchmark-protocol.md'), 'utf8');
-  const essentialKeywords = [
-    'baseline',
-    'ponytail',
-    'caveman',
-    'rtk',
-    'headroom',
-    'codegraph',
-    'cursor',
-    'memos',
-    'httpie',
-    'gpt-6-sol',
-    'medium',
-    '场景匹配主实验',
-    '共同任务补充检查',
-    '作用机会',
-    '首次交付',
-    '返工成本未测',
-    '未冻结',
-    '缓存',
-    'token',
-    '指标',
-    '独立质量验收',
-    '源码',
-  ];
-  for (const keyword of essentialKeywords) {
-    assert.ok(
-      content.toLowerCase().includes(keyword.toLowerCase()),
-      `Unified protocol document must cover ${keyword}`
-    );
+  const overview = content.split('## 研究问题')[0];
+  for (const [file, count] of [['codex-sol-results.md', 20], ['decision-study-results.md', 32], ['output-study-results.md', 12]]) {
+    const row = overview.split('\n').find(line => line.includes(`](${file})`));
+    assert.ok(row, `Missing completed batch link: ${file}`);
+    assert.match(row, new RegExp(`${count} 个位置`));
+  }
+  for (const rule of ['输入 Token + 输出 Token', '输入 Token − 缓存输入', 'null', '独立质量验收', 'gpt-5.6-sol']) {
+    assert.ok(content.includes(rule), `Missing current protocol rule: ${rule}`);
   }
 });
 
